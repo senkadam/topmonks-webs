@@ -180,6 +180,7 @@
 
     .hc-card {
       background-color: var(--hc-background-color);
+      border: 1px solid #f2f2f2;
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.07);
       padding: var(--mdc-layout-grid-gutter-phone);
     }
@@ -327,6 +328,29 @@
       }
     }
 
+    h1 {
+      text-align: center;
+      margin-top: 2em;
+    }
+    [typeof="Question"]:target {
+      scroll-margin-top: 7em;
+    }
+    [typeof="Question"] [property="name"] {
+      padding-right: 48px;
+      margin: 0;
+    }
+    [typeof="Question"]:target [property="name"]{
+      border-bottom: 1px solid #f2f2f2;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
+    [typeof="Question"] [typeof="Answer"] {
+      display:none;
+    }
+    [typeof="Question"]:target [typeof="Answer"] {
+      display: block;
+    }
+
   </style>
   <link rel="canonical" href="https://www.hackercamp.cz/"/>
   <link rel="author" href="/humans.txt" type="text/plain"/>
@@ -443,8 +467,8 @@
 <main id="faq" class="mdc-layout-grid">
   <div class="mdc-layout-grid__inner">
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Na co se můžu těšit?</h2>
+    <div id="faq-1" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-1"><h2 property="name">Na co se můžu těšit?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Hacker Camp je na nás všech. Ale není to chaos. <em>Inspiraci si bereme
@@ -485,8 +509,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Můžu přijet jen na část programu?</h2>
+    <div id="faq-2" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-2"><h2 property="name">Můžu přijet jen na část programu?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Pamatuješ si na tábory? Taky jsme jezdili na celou dobu. Tohle je dost
@@ -500,8 +524,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Kdo tam bude?</h2>
+    <div id="faq-3" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-3"><h2 property="name">Kdo tam bude?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Konkrétní jména lidí najdeš ve Slacku&nbsp;&ndash; koukni do kanálu
@@ -517,8 +541,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Co když bude pršet?</h2>
+    <div id="faq-4" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-4"><h2 property="name">Co když bude pršet?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Hlavní program bude probíhat v&nbsp;<em>šapitó</em>, kam se všichni vejdeme.
@@ -530,8 +554,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Co budeme dělat večer?</h2>
+    <div id="faq-5" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-5"><h2 property="name">Co budeme dělat večer?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Hacker camp není jen technologický barcamp. Chceme ho říznout
@@ -552,8 +576,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Budu se tam moct i&nbsp;hýbat, ať využiju pohyb na čerstvém vzduchu?</h2>
+    <div id="faq-6" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-6"><h2 property="name">Budu se tam moct i&nbsp;hýbat, ať využiju pohyb na čerstvém vzduchu?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Jasně, od toho bude celá human hacking zóna. Naučíme tě třeba, jak
@@ -570,8 +594,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Co tam budu jíst a pít?</h2>
+    <div id="faq-7" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-7"><h2 property="name">Co tam budu jíst a pít?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>S&nbsp;sebou si nemusíš brát nic. Snídaně jsou v&nbsp;ceně a postarají se
@@ -587,9 +611,9 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Jak se vlastně bude na campu spát? Jak vypadá ubytko a co
-        mám&nbsp;čekat?</h2>
+    <div id="faq-8" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-8"><h2 property="name">Jak se vlastně bude na campu spát? Jak vypadá ubytko a co
+          mám&nbsp;čekat?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Jedeme do areálu dětského tábora. K&nbsp;dispozici jsou různé typy
@@ -635,8 +659,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Jak s dopravou a parkováním?</h2>
+    <div id="faq-9" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-9"><h2 property="name">Jak s dopravou a parkováním?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Adresa konání: Rekreační středisko Sobeňák, Starý Rožmitál 148,
@@ -665,8 +689,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Jak řešíte bezpečnost areálu? Budu si mít kde zamknout&nbsp;věci?</h2>
+    <div id="faq-10" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-10"><h2 property="name">Jak řešíte bezpečnost areálu? Budu si mít kde zamknout&nbsp;věci?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Budeme mít na místě dobrovolníky. Většina chatek i&nbsp;pokojů se dají
@@ -680,8 +704,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Jak bude probíhat komunikace?</h2>
+    <div id="faq-11" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-11"><h2 property="name">Jak bude probíhat komunikace?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Jakmile zaplatíš fakturu za vstup a případně nám dáš kontakty na
@@ -697,8 +721,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Je to tábor, znamená to, že můžu vzít děti?</h2>
+    <div id="faq-12" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-12"><h2 property="name">Je to tábor, znamená to, že můžu vzít děti?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Jednou možná ano. I&nbsp;někteří z&nbsp;nás mají sami děti. Řešili jsme,
@@ -708,8 +732,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">A&nbsp;když jedu do lesa, můžu si vzít svého psa?</h2>
+    <div id="faq-13" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-13"><h2 property="name">A&nbsp;když jedu do lesa, můžu si vzít svého psa?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Nech svoje mazlíčky doma, prosím. Nepochybujeme, že jsou ti
@@ -719,10 +743,10 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Za jakých opatření bude akce probíhat (vzhledem ke COVID-19&nbsp;pandemii),
-        budou mi vráceny peníze, pokud se z&nbsp;těchto důvodů akce nebude
-        moci&nbsp;konat?</h2>
+    <div id="faq-14" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-14"><h2 property="name">Za jakých opatření bude akce probíhat (vzhledem ke COVID-19&nbsp;pandemii),
+          budou mi vráceny peníze, pokud se z&nbsp;těchto důvodů akce nebude
+          moci&nbsp;konat?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Hacker camp bude probíhat podle v&nbsp;tu dobu platných COVID-19&nbsp;opatření.
@@ -740,8 +764,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Za co platím? Na co prachy půjdou?</h2>
+    <div id="faq-15" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-15"><h2 property="name">Za co platím? Na co prachy půjdou?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Věříme, že za vaše peníze dostanete násobně vyšší hodnotu
@@ -761,8 +785,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Jak je to s&nbsp;internetem a elektřinou?</h2>
+    <div id="faq-16" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-16"><h2 property="name">Jak je to s&nbsp;internetem a elektřinou?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Na místě je pokrytí LTE signálem a budou free wi-fi spoty, vzhledem
@@ -782,8 +806,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Storno podmínky vstupenek?</h2>
+    <div id="faq-17" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-17"><h2 property="name">Storno podmínky vstupenek?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Pokud camp nezruší vyšší moc, nebo Covid nařízení vlády, Camp bude.
@@ -796,8 +820,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Co s sebou?</h2>
+    <div id="faq-18" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-18"><h2 property="name">Co s sebou?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Pamatuješ, jak ses vždycky balil na tábor? Tak podobný seznam si udělej
@@ -819,8 +843,8 @@
       </div>
     </div>
 
-    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <h2 property="name">Co když něco zapomenu?</h2>
+    <div id="faq-19" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <a href="#faq-19"><h2 property="name">Co když něco zapomenu?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Nevadí. Máme více variant. V&nbsp;rámci areálu bude k&nbsp;dispozici stánek,
