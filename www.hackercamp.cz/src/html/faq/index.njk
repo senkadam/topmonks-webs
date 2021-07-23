@@ -679,9 +679,30 @@
             }
           </style>
           <div style="display: flex; flex-wrap: wrap; justify-content: space-between">
-            {{ image("faq-ubytko-1.jpg", images, phoneWidth=200, phoneHeight=132, tabletWidth=300, width=340, alt="šestilůžkový pokoj", class="accommodation__image") }}
-            {{ image("faq-ubytko-2.jpg", images, phoneWidth=200, phoneHeight=132, tabletWidth=300, width=340, alt="čtyřlůžková chatka", class="accommodation__image") }}
-            {{ image("faq-ubytko-3.jpg", images, phoneWidth=100, phoneHeight=132, tabletWidth=150, width=170, alt="dvojlůžková chatka", class="accommodation__image accommodation__image--portrait") }}
+            {{ image("faq-ubytko-1.jpg", images,
+                phoneWidth=200,
+                phoneHeight=132,
+                tabletWidth=300,
+                width=340,
+                alt="šestilůžkový pokoj",
+                title="pokoj pro šest"
+                class="accommodation__image") }}
+            {{ image("faq-ubytko-2.jpg", images,
+                phoneWidth=200,
+                phoneHeight=132,
+                tabletWidth=300,
+                width=340,
+                alt="čtyřlůžková chatka",
+                title="chatka pro čtyři"
+                class="accommodation__image") }}
+            {{ image("faq-ubytko-3.jpg", images,
+                phoneWidth=100,
+                phoneHeight=132,
+                tabletWidth=150,
+                width=170,
+                alt="dvojlůžková chatka",
+                title="chatka pro dva"
+                class="accommodation__image accommodation__image--portrait") }}
           </div>
         </div>
       </div>

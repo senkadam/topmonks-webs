@@ -38,7 +38,7 @@
   </div>
 {% endmacro %}
 
-{% macro image(image, images, width, height, alt, style, class="responsive", phoneWidth, phoneHeight, tabletWidth) -%}
+{% macro image(image, images, width, height, alt, style, class="responsive", phoneWidth, phoneHeight, tabletWidth, title) -%}
   {% set imageUrl = images[image]["public_id"] %}
   {% set w = phoneWidth if phoneWidth else width %}
   {% set h = phoneHeight if phoneHeight else height %}
@@ -61,6 +61,7 @@
          height="{{ h }}"
          class="{{ class }}"
          style="{{ style }}"
+         title="{{ title }}"
          src="{{ imageUrl | cloudinaryUrl(dpr="auto",width=w) }}">
   </picture>
 {%- endmacro %}
