@@ -146,7 +146,8 @@
         "assertions": {
           "offscreen-images": "warn",
           "preload-lcp-image": "warn",
-          "is-crawlable": "warn"
+          "is-crawlable": "warn",
+          "errors-in-console": "warn"
         }
       },
       "upload": {
