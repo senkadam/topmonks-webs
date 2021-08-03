@@ -2085,7 +2085,7 @@ __metadata:
     lws-spa: ^3.0.0
     lws-static: ^2.0.0
     marked: ^2.1.3
-    node-fetch: 3.0.0-beta.9
+    node-fetch: 3.0.0-beta.10
     npm-run-all: ^4.1.5
     parse-duration: ^1.0.0
     prettier: ^2.3.2
@@ -6427,13 +6427,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fetch-blob@npm:^2.1.1":
-  version: 2.1.2
-  resolution: "fetch-blob@npm:2.1.2"
-  peerDependenciesMeta:
-    domexception:
-      optional: true
-  checksum: c11ab96a1961c61b4f200fa1bf8da2feb48e999ed661bf792469a0dc1e4cc4ee4fa5da1e0091687ca34cabb91b4f4f3fcc5177019709b0ea7fbc28cc07f55b9f
+"fetch-blob@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "fetch-blob@npm:3.1.2"
+  dependencies:
+    web-streams-polyfill: ^3.0.3
+  checksum: cbaf7334d2b21f7d05fcaf84b6cf369d57c8b052c8eaf8a1d8014a9d114cbd58c82e9a7cb365a74d140eebaf053aa2f6edef5916fb21d86da926d6dc5b42bf03
   languageName: node
   linkType: hard
 
@@ -10799,13 +10798,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:3.0.0-beta.9":
-  version: 3.0.0-beta.9
-  resolution: "node-fetch@npm:3.0.0-beta.9"
+"node-fetch@npm:3.0.0-beta.10":
+  version: 3.0.0-beta.10
+  resolution: "node-fetch@npm:3.0.0-beta.10"
   dependencies:
     data-uri-to-buffer: ^3.0.1
-    fetch-blob: ^2.1.1
-  checksum: e1b71946805b6dbe44394df4dcd7287bb18c2d93bb5b1d41de24c5d87bc3ec28be5e7ec0601dfc93a62d41c05a25dc5f7c0804912e2c11bfbb23252c8ff2a155
+    fetch-blob: ^3.1.2
+  checksum: 5ebb09373ee4c1132e26a21cd94217260407924268315929d5aabd3e1b98eb28b1487df376af06fa8742f18bee3879731891dbfc78465c0543b086ca0923b446
   languageName: node
   linkType: hard
 
@@ -16035,6 +16034,13 @@ typescript@~3.7.3:
   dependencies:
     defaults: ^1.0.3
   checksum: abf8ba432dd19a95af63895de6af932900a9451e175745551aeca0fd2d46604bc72ff80aa83adc3f67fb8389191329340e2864aefcf20655ffe91f0dbee5d953
+  languageName: node
+  linkType: hard
+
+"web-streams-polyfill@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "web-streams-polyfill@npm:3.0.3"
+  checksum: e7e0bc4410d89b29a7cece265a907b597ba8dd1681f497efd7c418cfde51d2ef5197310d0b3bcf291262da364a17846eb90c48857c4697c07e31a282a8aaba5a
   languageName: node
   linkType: hard
 
