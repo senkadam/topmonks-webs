@@ -13602,14 +13602,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass@npm:sass@1.37.2":
-  version: 1.37.2
-  resolution: "sass@npm:1.37.2"
+"sass@npm:sass@1.37.5":
+  version: 1.37.5
+  resolution: "sass@npm:1.37.5"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: dbeb640565442badb54e4a79a85f3db3a0493409ad5e44e6dd6133d37ccc2bd53af1c8022a1573aa81e94b00b639849fb8cc5da1c978e9c746799d04bde1b639
+  checksum: f7751f481cee57b075b49d5e992bcda66f353098a2fc6e6a906e7732fd5dc4544ce7cba0efdbd3d6c5734ebff792026a462f6fa36e99359b475e9094418a2373
   languageName: node
   linkType: hard
 
