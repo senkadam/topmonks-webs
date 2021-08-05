@@ -11,7 +11,7 @@
     "@material/layout-grid": "^12.0.0",
     "@material/top-app-bar": "^12.0.0",
     "@pulumi/aws": "^4.14.0",
-    "@pulumi/awsx": "^0.30.0",
+    "@pulumi/awsx": "^0.31.0",
     "@pulumi/pulumi": "^3.9.1",
     "@thi.ng/atom": "^4.1.37",
     "@topmonks/pulumi-aws": "^1.8.3",
