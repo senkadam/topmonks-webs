@@ -72,9 +72,11 @@ yarn start:www.topmonks.com
 Sites have ability to automatically upload images to Cloudinary and generate Cloudinary URLs.
 Cloudinary needs to be properly configured.
 Go to [Cloudinary console](https://cloudinary.com/console) (credentials are in TopMonks 1password vault)
-and copy the `Environment variable` with credentials. One time run this command:
+and copy the `Environment variable` with credentials. Insert copied credentials into `.env` file in root directory.
+Or use this command (copy it to console before you copy Cloudinary credentials, or simply write it):
 
 ```
+# in topmonks-webs
 pbpaste > .env
 ```
 
