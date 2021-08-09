@@ -1,23 +1,15 @@
 /* Background for Small Devices */
 @media screen and (min-width: 1440px) {
   body {
-    background: #fff cloudinaryUrl("arx.monks.cloud/header-bg.jpg", (width: 1920)) top right no-repeat;
-    background-size: 60% 744px;
+    background: #fff;
+    position: relative;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
-  body {
-    background: #fff cloudinaryUrl("arx.monks.cloud/header-bg.jpg", (width: 1440)) top right no-repeat;
-    background-size: 70% 744px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .intro {
-    background: cloudinaryUrl("arx.monks.cloud/header-bg.jpg", (width: 1024)) bottom center no-repeat;
-    background-size: 100% 75%;
-  }
+.intro__video video {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* Section: About */
