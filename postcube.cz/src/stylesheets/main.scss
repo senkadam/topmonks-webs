@@ -78,6 +78,10 @@ svg {
     margin: 0 auto;
     position: relative;
 
+  a {
+    text-decoration: none;
+  }
+
     @media (min-width: 800px) {
       &--wide {
         margin-top: 4em;
