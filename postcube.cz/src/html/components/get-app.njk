@@ -3,37 +3,22 @@
 <link rel="stylesheet" href="/assets/css/components/get-app.css">
 <section class="get-app mdc-layout-grid">
   <div class="mdc-layout-grid__inner layout-wrapper">
-    <div
-      class="get-app__content mdc-layout-grid__cell mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-7-desktop">
+    <div class="get-app__content mdc-layout-grid__cell mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-7-desktop">
       <h2>Aplikace ke stažení zdarma</h2>
-      <p>Stáhněte si aplikaci do svého mobilního telefonu
-a staňte se pánem příjmu i odesílání zásilek.
-Vstupte do světa, kde se na zásilky nečeká!
-</p>
+      <p>Stáhněte si aplikaci do svého mobilního telefonu a staňte se pánem příjmu i odesílání zásilek. Vstupte do světa, kde se na zásilky nečeká!
+      </p>
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <button class="mdc-button content-btn">
-            <a href="https://app.postcube.cz/" class="mdc-button__label" target="_blank" rel="noopener">Stáhnout pro Android</a>
-          </button>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-          <button class="mdc-button content-btn" disabled>
-            <span class="mdc-button__label">Již brzy i pro iPhone</span>
+            <a href="https://app.postcube.cz/" class="mdc-button__label" target="_blank" rel="noopener">Stáhnout aplikaci</a>
           </button>
         </div>
       </div>
     </div>
     <div class="get-app__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-5-desktop">
-      <img
-        alt="Postcube jako mobilní aplikace"
-        loading="lazy"
-        src="{{ getApp | cloudinaryUrl(dpr="auto", width=540) }}"
-        srcset="{{ getApp | cloudinaryUrl(dpr="1", width=540) }} 1x,
-              {{ getApp | cloudinaryUrl(dpr="1.5", width=540) }} 1.5x,
-              {{ getApp | cloudinaryUrl(dpr="2", width=540) }} 2x"
-      width="540"
-      height="640">
+      <img alt="Postcube jako mobilní aplikace" loading="lazy" src="{{ getApp | cloudinaryUrl(dpr=" auto", width=540) }}" srcset="{{ getApp | cloudinaryUrl(dpr=" 1", width=540) }} 1x,
+              {{ getApp | cloudinaryUrl(dpr=" 1.5", width=540) }} 1.5x,
+              {{ getApp | cloudinaryUrl(dpr=" 2", width=540) }} 2x" width="540" height="640">
     </div>
   </div>
 </section>
-
