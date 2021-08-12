@@ -2,14 +2,31 @@
 @media screen and (min-width: 1440px) {
   body {
     background: #fff;
-    position: relative;
   }
 }
 
-.intro__video video {
-  position: absolute;
-  top: 0;
-  right: 0;
+section .intro {
+  position: relative;
+}
+
+.intro__video {
+  video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media (min-width: 1024px) and (max-width: 1539px) {
+      width: 840px;
+      height: 740px;
+    }
+    @media (min-width: 1540px) and (max-width: 2039px) {
+      width: 1140px;
+      height: 740px;
+    }
+    @media (min-width: 2040px) {
+      width: 80%;
+      height: 740px;
+    }
+  }
 }
 
 /* Section: About */
