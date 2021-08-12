@@ -138,7 +138,7 @@ html, body {
 
 /* Section: Intro */
 .intro {
-  margin: 2em 0 8em;
+  margin-bottom: 8em;
 
   .intro__box {
     z-index: 10;
@@ -146,6 +146,7 @@ html, body {
   }
 
   @media (max-width: 839px) {
+    margin-top: 5em;
     span {
       font-weight: bold;
     }
@@ -163,13 +164,13 @@ html, body {
     }
   }
 
-  @media (min-width: 740px) {
+  @media (min-width: 1024px) {
     .intro__box {
       width: 660px;
     }
   }
 
-  @media (min-width: 540px) {
+  @media (min-width: 840px) {
     p {
       font-size: 40px;
       font-weight: normal;
@@ -177,14 +178,14 @@ html, body {
       max-width: 500px;
     }
     .intro__box {
-      padding: 5em 4em 4em;
+      padding: 8em 4em 4em;
     }
   }
 
   @media (max-width: 539px) {
     p {
-      font-size: 24px;
-      line-height: 37px;
+      font-size: 20px;
+      line-height: 32px;
     }
   }
 }

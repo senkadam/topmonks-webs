@@ -5,26 +5,56 @@
   }
 }
 
-section .intro {
+.intro {
   position: relative;
-}
+  @media (max-width: 1023px) {
+    .mdc-layout-grid__inner {
+      display: block;
+    }
+    button {
+      position: absolute;
+      bottom: -20%;
+    }
+  }
 
-.intro__video {
-  video {
-    position: absolute;
-    top: 0;
-    right: 0;
-    @media (min-width: 1024px) and (max-width: 1539px) {
-      width: 840px;
-      height: 740px;
+  .intro__video {
+    @media (max-width: 1023px) {
+      max-height: 200px;
+      overflow: hidden;
+      video {
+        width: 100%;
+        height: auto;
+      }
     }
-    @media (min-width: 1540px) and (max-width: 2039px) {
-      width: 1140px;
-      height: 740px;
+    @media (min-width: 1024px) {
+      video {
+       display: none;
+      }
     }
-    @media (min-width: 2040px) {
-      width: 80%;
-      height: 740px;
+  }
+
+  .after-intro__video {
+    video {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: black;
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+      @media (min-width: 1024px) and (max-width: 2039px) {
+        width: 880px;
+        height: 780px;
+      }
+      @media (min-width: 1540px) and (max-width: 2039px) {
+        width: 1140px;
+        height: 740px;
+      }
+      @media (min-width: 2040px) {
+        width: 80%;
+        height: 740px;
+      }
     }
   }
 }
