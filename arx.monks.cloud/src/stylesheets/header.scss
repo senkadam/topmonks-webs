@@ -80,13 +80,16 @@ header {
     top: 0;
     z-index: 1000;
     width: 100vw;
-    background-color: var(--mdc-theme--primary);
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
     a {
       color: var(--mdc-theme--third);
     }
-    @media screen and (max-width: 1023px) {
+    @media (max-width: 1023px) {
+      background-color: var(--mdc-theme--fourth-light);
       height: 58px;
+    }
+    @media screen and (min-width: 1024px) {
+      background-color: var(--mdc-theme--primary);
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
     }
   }
   &.app-bar--open {
@@ -110,7 +113,7 @@ header {
     &.app-bar--open .app-bar_menu {
       transform: scaleY(1) translateY(-4px);
       visibility: visible;
-      z-index: 1000;
+      z-index: -1;
     }
     .logo {
       display: flex;
@@ -146,7 +149,7 @@ header {
   }
 
   .hamburger__bar {
-    background-color: var(--mdc-theme--third);
+    background-color: var(--mdc-theme--fifth);
     width: 20px;
     height: 2px;
     border-radius: 10px;
@@ -164,6 +167,7 @@ header {
   }
   .hamburger__bar-middle {
     width: 14px;
+    left: 13px
   }
 
   .hamburger__container--open {
@@ -183,23 +187,23 @@ header {
 
 .app-bar--sticky {
   .hamburger .hamburger__bar {
-    background: var(--mdc-theme--third);
+    background: #502CCC;
   }
 
   .hamburger .hamburger__container::after {
-    color: var(--mdc-theme--third);
+    color: #502CCC;
   }
 }
 
 .app-bar.app-bar--open {
-  color: var(--mdc-theme--primary);
+  color: #502CCC;
 
   .hamburger__container::after {
-    color: var(--mdc-theme--third);
+    color: #502CCC;
   }
 
   .hamburger__bar {
-    background-color: var(--mdc-theme--third);
+    background-color: #502CCC;
   }
 }
 
@@ -209,20 +213,22 @@ header {
     overflow: hidden;
     background-color: var(--mdc-theme--primary);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
+    margin-top: -6em;
     ul.menu__list {
       display: grid;
       padding-inline-start: 16px;
       padding-inline-end: 16px;
       width: auto;
+      padding-top: 6em;
     }
     .menu__list li {
       margin: 0 24px;
     }
     .menu__list li + li {
-      border-top: 1px solid var(--mdc-theme--third);
+      border-top: 1px solid #502CCC;
     }
     .menu__list a {
-      color: var(--mdc-theme--third);
+      color: #502CCC;
       display: block;
       padding: 12px;
       margin: 4px;
