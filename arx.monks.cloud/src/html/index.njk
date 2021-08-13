@@ -9,24 +9,38 @@
   <section class="intro">
     <div class="mdc-layout-grid layout-arx">
       <div class="mdc-layout-grid__inner">
-          <div class="intro__box box--white mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
-            <div><p><span><b>We are proud of our<br>20-year track record</b></span> of building great companies in
-                successful partnerships with business owners and managers.</p>
-            </div>
-            <div class="button">
-              <a class="button__info" href="/investments/">OUR PORTFOLIO</a>
-            </div>
+        <div
+          class="intro__box box--white mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+          <div><p><span><b>We are proud of our<br>20-year track record</b></span> of building great companies in
+              successful partnerships with business owners and managers.</p>
           </div>
-          <div class="intro__video mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-            <video aria-hidden="true" muted loop playsinline
-                   poster="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,h_622,q_auto,w_700/v1628518180/arx.monks.cloud/arx-poster-header.png">
-              <source
-                src="https://res.cloudinary.com/topmonks/video/upload/f_auto,h_744,q_auto,w_1177/v1628344441/arx.monks.cloud/arx-header.mp4"/>
-            </video>
+          <div class="button">
+            <a class="button__info" href="/investments/">OUR PORTFOLIO</a>
+          </div>
+        </div>
+        <div class="intro__video mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+          <video id="video" aria-hidden="true" muted loop playsinline
+                 poster="https://res.cloudinary.com/topmonks/image/upload/v1628779515/arx.monks.cloud/header-poster.png">
+            <source
+              src="https://res.cloudinary.com/topmonks/video/upload/f_auto,h_744,q_auto,w_1177/v1628344441/arx.monks.cloud/arx-header.mp4"/>
+          </video>
+          <button id="play-btn" class="play-btn" aria-label="Přehrát video o PostCube">
+            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle opacity="0.43" cx="34" cy="34" r="34" fill="#0A2137"/>
+              <path d="M48 33.5L26.25 46.0574L26.25 20.9426L48 33.5Z" fill="white"/>
+            </svg>
+          </button>
+          <script type="module">const video = document.getElementById("video");
+            const playButton = document.getElementById("play-btn");
+            playButton.addEventListener("click", () => {
+              video.play();
+              video.controls = true;
+              playButton.style.display = "none";
+            });</script>
         </div>
         <div class="after-intro__video">
           <video aria-hidden="true" muted autoplay loop playsinline
-                 poster="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,h_622,q_auto,w_700/v1628518180/arx.monks.cloud/arx-poster-header.png">
+                 poster="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,h_622,q_auto,w_700/v1628779515/arx.monks.cloud/header-poster.png">
             <source
               src="https://res.cloudinary.com/topmonks/video/upload/f_auto,h_744,q_auto,w_1177/v1628344441/arx.monks.cloud/arx-header.mp4"/>
           </video>

@@ -11,24 +11,48 @@
     .mdc-layout-grid__inner {
       display: block;
     }
-    button {
-      position: absolute;
-      bottom: -20%;
-    }
   }
 
   .intro__video {
+    position: relative;
     @media (max-width: 1023px) {
-      max-height: 200px;
+      max-height: 440px;
       overflow: hidden;
       video {
         width: 100%;
         height: auto;
       }
+      button.play-btn {
+        background: none;
+        border: none;
+      }
     }
     @media (min-width: 1024px) {
       video {
-       display: none;
+        display: none;
+      }
+    }
+
+    button.play-btn {
+      @media (max-width: 489px) {
+        position: absolute;
+        top: 30%;
+        left: 38%;
+      }
+      @media (min-width: 490px) and (max-width: 639px) {
+        position: absolute;
+        top: 40%;
+        left: 41%;
+      }
+      @media (min-width: 640px) and (max-width: 839px) {
+        position: absolute;
+        top: 45%;
+        left: 41%;
+      }
+      @media (min-width: 640px) and (max-width: 839px) {
+        position: absolute;
+        top: 45%;
+        left: 41%;
       }
     }
   }
