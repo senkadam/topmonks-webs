@@ -10,6 +10,7 @@
     "ecmaFeatures": {
       "spread": true
     },
+    "requireConfigFile": false,
     "sourceType": "module"
   },
   "plugins": [

@@ -3,7 +3,7 @@ const pathConfig = require("./path-config.json");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 const csvtojson = require("csvtojson");
 const fs = require("fs");
-const fetch = require("node-fetch");
+const { fetch } = require("fetch-h2");
 const iconv = require("iconv-lite");
 
 const SHOP_LINK = "https://448050.myshoptet.com/?c=";
