@@ -26,13 +26,13 @@
     "yaml": "^1.10.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
     "@lhci/cli": "^0.8.0",
     "@lhci/utils": "^0.8.0",
-    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=5b84d93c1f9958487e8786fac0ebabafd3de7dc9",
+    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=2fde4fbdafc865746494635efe54802b3bf5f0b0",
     "@types/chart.js": "^2.9.34",
-    "@types/yaml": "^1.9.7",
     "ava": "^3.15.0",
-    "babel-eslint": "^10.1.0",
     "chalk": "^4.1.2",
     "commander": "^8.1.0",
     "csvtojson": "^2.0.10",
@@ -135,9 +135,12 @@
     "build:postcube.cz": "BLENDID_CONFIG_PATH=./postcube.cz/config/ dotenv blendid -- build"
   },
   "resolutions": {
-    "bluebird": "npm:bluebird@3.7.2",
-    "lodash": "npm:lodash@4.17.21",
-    "marky": "npm:marky@1.2.2",
-    "sass": "npm:sass@1.37.5"
+    "bluebird": "3.7.2",
+    "chokidar": "3.5.2",
+    "debug": "4.3.1",
+    "lodash": "4.17.21",
+    "marky": "1.2.2",
+    "sass": "1.32.10",
+    "uuid": "8.3.2"
   }
 }
