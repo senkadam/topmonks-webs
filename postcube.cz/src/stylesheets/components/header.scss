@@ -10,6 +10,9 @@ header {
   nav {
     float: right;
   }
+  .menu__list a {
+    color: var(--postcube-black);
+  }
 
   ul li {
     list-style: none;
