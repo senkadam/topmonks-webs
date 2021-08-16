@@ -10,11 +10,8 @@ header {
   nav {
     float: right;
   }
-  .menu__list a {
-    color: var(--postcube-black);
-  }
 
-  ul li {
+  li {
     list-style: none;
     display: inline-flex;
     position: relative;
@@ -57,7 +54,7 @@ header {
       color: var(--postcube-grey);
 
       &:active {
-        color: var(--postcube-black);
+        color: var(--postcube-primary);
       }
     }
   }
