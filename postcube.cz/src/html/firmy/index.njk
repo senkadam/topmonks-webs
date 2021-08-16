@@ -1,6 +1,6 @@
 {% extends 'layouts/main.njk' %}
 {% set language = cs %}
-{% set firmyBG = images["firmy-bg01.png"]["public_id"] %}
+{% set firmyBG = images["firmy-bg01.jpg"]["public_id"] %}
 {% set firmyBG01 = images["hp-bg02.png"]["public_id"] %}
 {% set firmyBG02 = images["firmy-bg02.png"]["public_id"] %}
 
@@ -81,7 +81,7 @@
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <picture>
-            <source media="screen and (max-width: 839px)" srcset="{{ firmyBG | cloudinaryUrl(width=420) }} 1x,
+            <source media="screen and (max-width: 839px)" srcset="{{ firmyBG | cloudinaryUrl(width=600) }} 1x,
                 {{ box_n_woman | cloudinaryUrl(width=600) }} 1.5x,
                 {{ box_n_woman | cloudinaryUrl(width=600) }} 2x">
             <source media="screen and (min-width: 840px)" srcset="{{ firmyBG | cloudinaryUrl(width=860) }} 1x,
