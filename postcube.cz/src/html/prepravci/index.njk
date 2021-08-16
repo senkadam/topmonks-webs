@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="postcube.cz">
 
   <style>
-    img {
+    img, picture {
       width: 100%;
       height: auto;
     }
@@ -91,21 +91,16 @@
         </div>
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <picture>
-            <source
-              media="screen and (max-width: 839px)"
-              srcset="{{ deliveryman | cloudinaryUrl(dpr="1", width=420) }} 1x,
-                      {{ deliveryman | cloudinaryUrl(dpr="1.5", width=420) }} 1.5x,
-                      {{ deliveryman | cloudinaryUrl(dpr="2", width=420) }} 2x"
-            >
-            <source
-              media="screen and (min-width: 840px)"
-              srcset="{{ deliveryman | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                      {{ deliveryman | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                      {{ deliveryman | cloudinaryUrl(dpr="2", width=860) }} 2x"
-            >
-            <img
-              alt="Fotka PostCube Kurýra"
-              src="{{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }}">
+            <source media="screen and (max-width: 399px)" srcset="{{ deliveryman | cloudinaryUrl(width=400) }} 1x,
+                      {{ box_header | cloudinaryUrl(width=400) }} 1.5x,
+                      {{ box_header | cloudinaryUrl(width=400) }} 2x">
+            <source media="screen and (min-width: 400px) and (max-width: 599px)" srcset="{{ deliveryman | cloudinaryUrl(width=420) }} 1x,
+                {{ box_n_woman | cloudinaryUrl(width=600) }} 1.5x,
+                {{ box_n_woman | cloudinaryUrl(width=600) }} 2x">
+            <source media="screen and (min-width: 840px)" srcset="{{ deliveryman | cloudinaryUrl(width=860) }} 1x,
+                {{ box_n_woman | cloudinaryUrl(width=860) }} 1.5x,
+                {{ box_n_woman | cloudinaryUrl(width=860) }} 2x">
+            <img alt="Fotka PostCube" loading="lazy" src="{{ deliveryman | cloudinaryUrl }}" width="860" height="574">
           </picture>
         </div>
       </div>
@@ -149,43 +144,24 @@
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
     <picture>
-      <source
-        media="screen and (max-width: 839px)"
-        srcset="{{ prepravciBG01 | cloudinaryUrl(dpr="1", width=420) }} 1x,
-                {{ prepravciBG01 | cloudinaryUrl(dpr="1.5", width=420) }} 1.5x,
-                {{ prepravciBG01 | cloudinaryUrl(dpr="2", width=420) }} 2x">
-      <source
-        media="screen and (min-width: 840px)"
-        srcset="{{ prepravciBG01 | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                {{ prepravciBG01 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                {{ prepravciBG01 | cloudinaryUrl(dpr="2", width=860) }} 2x">
-      <img
-        alt="Fotografie dovezení PostCube až k domu"
-        loading="lazy"
-        src="{{ prepravciBG01 | cloudinaryUrl(dpr="auto", width=860) }}"
-      width="860"
-      height="">
+      <source media="screen and (min-width: 839px)" srcset="{{ prepravciBG01 | cloudinaryUrl(width=420) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=420) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=420) }} 2x">
+      <source media="screen and (min-width: 840px)" srcset="{{ prepravciBG01 | cloudinaryUrl(width=860) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=860) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=860) }} 2x">
+      <img alt="Fotografie PostCube u domu" src="{{ prepravciBG01 | cloudinaryUrl(width=860) }}" width="860" height="573">
     </picture>
     <picture>
-      <source
-        media="screen and (max-width: 839px)"
-        srcset="{{ prepravciBG02 | cloudinaryUrl(dpr="1", width=420) }} 1x,
-                {{ prepravciBG02 | cloudinaryUrl(dpr="1.5", width=420) }} 1.5x,
-                {{ prepravciBG02 | cloudinaryUrl(dpr="2", width=420) }} 2x">
-      <source
-        media="screen and (min-width: 840px)"
-        srcset="{{ prepravciBG02 | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                {{ prepravciBG02 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                {{ prepravciBG02 | cloudinaryUrl(dpr="2", width=860) }} 2x">
-      <img
-        alt="Fotografie přeprava PostCube"
-        loading="lazy"
-        src="{{ prepravciBG02 | cloudinaryUrl(dpr="auto", width=860) }}">
+      <source media="screen and (min-width: 839px)" srcset="{{ prepravciBG02 | cloudinaryUrl(width=420) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=420) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=420) }} 2x">
+      <source media="screen and (min-width: 840px)" srcset="{{ prepravciBG02 | cloudinaryUrl(width=860) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=860) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=860) }} 2x">
+      <img alt="Fotografie PostCube ve vašem domě" src="{{ prepravciBG02 | cloudinaryUrl(width=860) }}" width="860" height="573">
     </picture>
   </div>
-
-
-
 
   <section id="" class="transport icon-section mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">

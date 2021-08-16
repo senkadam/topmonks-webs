@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="postcube.cz">
 
   <style>
-    img {
+    img, picture {
       width: 100%;
       height: auto;
     }
@@ -86,7 +86,18 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka PostCube" src="{{ domacnostiPC | cloudinaryUrl(dpr=" auto", width=860) }}">
+          <picture>
+            <source media="screen and (max-width: 399px)" srcset="{{ domacnostiPC | cloudinaryUrl(width=400) }} 1x,
+                      {{ box_header | cloudinaryUrl(width=400) }} 1.5x,
+                      {{ box_header | cloudinaryUrl(width=400) }} 2x">
+            <source media="screen and (min-width: 400px) and (max-width: 599px)" srcset="{{ domacnostiPC | cloudinaryUrl(width=420) }} 1x,
+                {{ box_n_woman | cloudinaryUrl(width=600) }} 1.5x,
+                {{ box_n_woman | cloudinaryUrl(width=600) }} 2x">
+            <source media="screen and (min-width: 840px)" srcset="{{ domacnostiPC | cloudinaryUrl(width=860) }} 1x,
+                {{ box_n_woman | cloudinaryUrl(width=860) }} 1.5x,
+                {{ box_n_woman | cloudinaryUrl(width=860) }} 2x">
+            <img alt="Fotka PostCube" loading="lazy" src="{{ domacnostiPC | cloudinaryUrl }}" width="860" height="574">
+          </picture>
         </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h1>PostCube k&nbsp;rodinnému domu</h1>
@@ -137,22 +148,22 @@
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
     <picture>
-      <source media="screen and (min-width: 839px)" srcset="{{ domacnostiBG01 | cloudinaryUrl(dpr=" 1", width=420) }} 1x,
-                {{ domacnostiBG01 | cloudinaryUrl(dpr=" 1.5", width=420) }} 1.5x,
-                {{ domacnostiBG01 | cloudinaryUrl(dpr=" 2", width=420) }} 2x">
-      <source media="screen and (min-width: 840px)" srcset="{{ domacnostiBG01 | cloudinaryUrl(dpr=" 1", width=860) }} 1x,
-                {{ domacnostiBG01 | cloudinaryUrl(dpr=" 1.5", width=860) }} 1.5x,
-                {{ domacnostiBG01 | cloudinaryUrl(dpr=" 2", width=860) }} 2x">
-      <img alt="Fotografie PostCube u domu" src="{{ domacnostiBG01 | cloudinaryUrl(dpr=" auto", width=860) }}" width="860" height="573">
+      <source media="screen and (min-width: 839px)" srcset="{{ domacnostiBG01 | cloudinaryUrl(width=420) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=420) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=420) }} 2x">
+      <source media="screen and (min-width: 840px)" srcset="{{ domacnostiBG01 | cloudinaryUrl(width=860) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=860) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=860) }} 2x">
+      <img alt="Fotografie PostCube u domu" src="{{ domacnostiBG01 | cloudinaryUrl(width=860) }}" width="860" height="573">
     </picture>
     <picture>
-      <source media="screen and (min-width: 839px)" srcset="{{ domacnostiBG02 | cloudinaryUrl(dpr=" 1", width=420) }} 1x,
-                {{ domacnostiBG02 | cloudinaryUrl(dpr=" 1.5", width=420) }} 1.5x,
-                {{ domacnostiBG02 | cloudinaryUrl(dpr=" 2", width=420) }} 2x">
-      <source media="screen and (min-width: 840px)" srcset="{{ domacnostiBG02 | cloudinaryUrl(dpr=" 1", width=860) }} 1x,
-                {{ domacnostiBG02 | cloudinaryUrl(dpr=" 1.5", width=860) }} 1.5x,
-                {{ domacnostiBG02 | cloudinaryUrl(dpr=" 2", width=860) }} 2x">
-      <img alt="Fotografie PostCube ve vašem domě" src="{{ domacnostiBG02 | cloudinaryUrl(dpr=" auto", width=860) }}" width="860" height="573">
+      <source media="screen and (min-width: 839px)" srcset="{{ domacnostiBG02 | cloudinaryUrl(width=420) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=420) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=420) }} 2x">
+      <source media="screen and (min-width: 840px)" srcset="{{ domacnostiBG02 | cloudinaryUrl(width=860) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=860) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=860) }} 2x">
+      <img alt="Fotografie PostCube ve vašem domě" src="{{ domacnostiBG02 | cloudinaryUrl(width=860) }}" width="860" height="573">
     </picture>
   </div>
 
