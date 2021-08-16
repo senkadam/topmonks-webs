@@ -52,10 +52,14 @@ input:focus {
 
 // Main Introduction Text //
 .main-info {
-  color: var(--postcube-primary);
-
   .main-info__content {
     align-self: center;
+    h1 {
+      color: var(--postcube-primary);
+    }
+    a {
+      color: var(--postcube-black);
+    }
   }
   @media (max-width: 839px) {
     padding-top: 5em;
