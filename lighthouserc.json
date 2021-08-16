@@ -16,7 +16,8 @@
         "render-blocking-resources": "warn",
         "uses-rel-preconnect": "warn",
         "unused-javascript": "warn",
-        "csp-xss": "warn"
+        "csp-xss": "warn",
+        "image-size-responsive": "warn"
       }
     },
     "upload": {
