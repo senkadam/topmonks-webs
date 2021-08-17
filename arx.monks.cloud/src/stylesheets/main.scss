@@ -193,7 +193,15 @@ html, body {
     }
   }
 
-  @media (min-width: 840px) {
+  @media (min-width: 840px) and (max-width: 1439px) {
+    p {
+      font-size: 32px;
+      font-weight: normal;
+      line-height: 46px;
+      max-width: 500px;
+    }
+  }
+  @media (min-width: 1440px) {
     p {
       font-size: 40px;
       font-weight: normal;
