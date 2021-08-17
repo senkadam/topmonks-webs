@@ -178,7 +178,14 @@ html, body {
   @media (max-width: 1023px) {
     margin-top: 6em;
   }
-  @media screen and (min-width: 1024px) {
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    margin-bottom: 8em;
+    .intro__box {
+      width: 480px;
+      padding: 8em 3.5em 3.5em;
+    }
+  }
+  @media screen and (min-width: 1440px) {
     margin-bottom: 8em;
     .intro__box {
       width: 660px;

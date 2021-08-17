@@ -13,9 +13,12 @@
     }
   }
 
-  .intro__video {
-    position: relative;
+  .intro__video--phone {
+    @media (min-width: 1024px) {
+      display: none;
+    }
     @media (max-width: 1023px) {
+      position: relative;
       max-height: 440px;
       overflow: hidden;
       video {
@@ -26,11 +29,6 @@
       button.play-btn {
         background: none;
         border: none;
-      }
-    }
-    @media (min-width: 1024px) {
-      video {
-        display: none;
       }
     }
 
@@ -58,29 +56,38 @@
     }
   }
 
-  .after-intro__video {
+  .intro__video--pc {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+
     video {
       position: absolute;
       top: 0;
       right: 0;
-      opacity: 70%;
-
-      @media (max-width: 1023px) {
-        display: none;
-      }
-      @media (min-width: 1024px) and (max-width: 2039px) {
-        width: 880px;
-        height: 780px;
-      }
-      @media (min-width: 1540px) and (max-width: 2039px) {
-        width: 1140px;
+      object-fit: cover;
+      @media (min-width: 1024px) and (max-width: 1180px) {
+        width: 60%;
         height: 740px;
       }
-      @media (min-width: 2040px) {
-        width: 80%;
+      @media (min-width: 1181px) and (max-width: 1300px) {
+        width: 65%;
         height: 740px;
+      }
+      @media (min-width: 1301px) and (max-width: 1439px) {
+        width: 68%;
+        height: 740px;
+      }
+      @media (min-width: 1440px) and (max-width: 1800px) {
+        width: 55%;
+        height: 680px;
+      }
+      @media (min-width: 1801px) {
+        width: 53%;
+        height: 680px;
       }
     }
+
   }
 }
 
