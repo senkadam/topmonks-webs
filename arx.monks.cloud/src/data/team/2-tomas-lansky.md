@@ -1,7 +1,7 @@
 ---
 name: Tomáš Lánský
 title: Partner
-image: https://www.arxequity.com/wp-content/uploads/2016/05/Lansky_Tomas_mod-e1464295537212.jpg
+image: https://res.cloudinary.com/topmonks/image/upload/v1629210905/arx.monks.cloud/team/tomas-lansky.jpg
 email: lansky@arxequity.com
 education: University of Pittsburgh (MBA), Masaryk University (BA)
 previousEmployer: Atlantik Corporate Finance

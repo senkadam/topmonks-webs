@@ -1,7 +1,7 @@
 ---
 name: Jaroslav Horák
 title: Investment Committee Chairman
-image: https://www.arxequity.com/wp-content/uploads/2016/05/Horak_Jaroslav_mod-e1464296083763.jpg
+image: https://res.cloudinary.com/topmonks/image/upload/v1629211187/arx.monks.cloud/team/jaroslav-horak.jpg
 email: praha@arxequity.com
 education: Prague School of Economics (Master’s Degree), Institute of Economics, Prague (PhD)
 previousEmployer: Banexi Prague / BNP Group

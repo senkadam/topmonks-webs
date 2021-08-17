@@ -1,7 +1,7 @@
 ---
 name: Brian Wardrop
 title: Managing Partner
-image: https://www.arxequity.com/wp-content/uploads/2016/05/Wardrop_Brian_mod-e1464296711799.jpg
+image: https://res.cloudinary.com/topmonks/image/upload/v1629210817/arx.monks.cloud/team/brian-wardrop.jpg
 email: wardrop@arxequity.com
 education: Boston University (Master’s, Administration), Bishop’s University (B.A., Political Science), Harvard Business School (OPM)
 previousEmployer: Baring Communications Equity

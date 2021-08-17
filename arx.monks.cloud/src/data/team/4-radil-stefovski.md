@@ -1,7 +1,7 @@
 ---
 name: Radil Stefovski
 title: Investment Director
-image: https://www.arxequity.com/wp-content/uploads/2016/05/Stefovski_Radil_mod-1-e1464295124371.jpg
+image: https://res.cloudinary.com/topmonks/image/upload/v1629211031/arx.monks.cloud/team/radil-stefovski.jpg
 email: stefovski@arxequity.com
 education: Varna University of Economics (Bachelor in Accounting); Humboldt University and University of Potsdam (Master of Finance)
 previousEmployer: WestLB

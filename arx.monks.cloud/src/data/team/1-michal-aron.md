@@ -1,7 +1,7 @@
 ---
 name: Michal Aron
 title: Partner
-image: https://www.arxequity.com/wp-content/uploads/2016/05/Aron_Michal_mod-e1464296443435.jpg
+image: https://res.cloudinary.com/topmonks/image/upload/v1629210865/arx.monks.cloud/team/michal-aron.jpg
 email: aron@arxequity.com
 education: C.S. Institute (Corporate Management Degree)
 previousEmployer: Advent International, Dresdner Kleinwort Capital, Baring Communications Equity
