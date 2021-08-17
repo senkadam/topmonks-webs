@@ -29,6 +29,9 @@
       button.play-btn {
         background: none;
         border: none;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
