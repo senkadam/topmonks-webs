@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="intro__video--phone mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-          <video id="video" aria-hidden="true" muted loop playsinline
+          <video id="video" aria-hidden="true" muted loop
                  poster="https://res.cloudinary.com/topmonks/image/upload/v1628779515/arx.monks.cloud/header-poster.png">
             <source
               src="https://res.cloudinary.com/topmonks/video/upload/f_auto,h_744,q_auto,w_1177/v1628344441/arx.monks.cloud/arx-header.mp4"/>
@@ -221,8 +221,7 @@
         </div>
         {%- for article in news | reverse -%}
           {%- if loop.index <= 2 -%}
-            <div
-              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
               {{ image(article.image, images, alt="", width=660, tabletWidth=420, phoneWidth=380, height=262) }}
               <time class="date"
                     datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
