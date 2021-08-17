@@ -187,23 +187,23 @@ header {
 
 .app-bar--sticky {
   .hamburger .hamburger__bar {
-    background: #502CCC;
+    background: #0A2137;
   }
 
   .hamburger .hamburger__container::after {
-    color: #502CCC;
+    color: #0A2137;
   }
 }
 
 .app-bar.app-bar--open {
-  color: #502CCC;
+  color: #0A2137;
 
   .hamburger__container::after {
-    color: #502CCC;
+    color: #0A2137;
   }
 
   .hamburger__bar {
-    background-color: #502CCC;
+    background-color: #0A2137;
   }
 }
 
@@ -225,10 +225,10 @@ header {
       margin: 0 24px;
     }
     .menu__list li + li {
-      border-top: 1px solid #502CCC;
+      border-top: 1px solid #0A2137;
     }
     .menu__list a {
-      color: #502CCC;
+      color: #0A2137;
       display: block;
       padding: 12px;
       margin: 4px;
