@@ -245,6 +245,9 @@ html, body {
 
   img {
     margin-bottom: 1em;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
   }
 }
 
