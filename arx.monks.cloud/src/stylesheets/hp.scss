@@ -66,25 +66,27 @@
       top: 0;
       right: 0;
       object-fit: cover;
+      opacity: 75%;
+      margin-top: 4em;
       @media (min-width: 1024px) and (max-width: 1180px) {
         width: 60%;
-        height: 740px;
+        height: 580px;
       }
       @media (min-width: 1181px) and (max-width: 1300px) {
         width: 65%;
-        height: 740px;
+        height: 580px;
       }
       @media (min-width: 1301px) and (max-width: 1439px) {
         width: 68%;
-        height: 740px;
+        height: 580px;
       }
       @media (min-width: 1440px) and (max-width: 1800px) {
         width: 55%;
-        height: 680px;
+        height: 620px;
       }
       @media (min-width: 1801px) {
         width: 53%;
-        height: 680px;
+        height: 620px;
       }
     }
 
