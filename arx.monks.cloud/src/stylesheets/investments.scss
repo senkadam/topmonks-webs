@@ -1,35 +1,15 @@
 /* Background for Small Devices */
-@media screen and (min-width: 1440px) {
-  body {
-    background: #fff url("/assets/img/investments-bg.jpg") top right no-repeat;
-    background-size: 60% 600px;
+@media (min-width: 840px) and (max-width: 1023px) {
+  .intro__box {
+    padding: 2em 1.5em;
   }
-  .intro {
-    min-height: 500px;
+}
+@media screen and (min-width: 1024px) {
+  .intro__box {
+    padding: 10em 4em;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
-  body {
-    background: #fff url("/assets/img/investments-bg.jpg") top right no-repeat;
-    background-size: 70% 600px;
-  }
-  .intro {
-    min-height: 500px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .intro {
-    background: #fff url("/assets/img/investments-bg.jpg") bottom center no-repeat;
-    background-size: 100% 75%;
-  }
-}
-
-
-.intro__box {
-  padding: 10em 4em;
-}
 
 // Investments' Filter //
 
