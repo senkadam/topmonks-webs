@@ -1,27 +1,4 @@
 /* Background for Small Devices */
-@media screen and (min-width: 1440px) {
-  body {
-    background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
-    background-size: 60% 580px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  body {
-    background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
-    background-size: 70% 580px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .intro {
-    background: #fff url("/assets/img/case-study-bg.jpg") bottom center no-repeat;
-    background-size: 100% 75%;
-    min-height: 300px;
-    margin-bottom: 3em;
-  }
-}
-
 
 /* Section: Intro */
 .intro__box:before {
