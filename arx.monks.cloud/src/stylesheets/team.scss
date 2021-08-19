@@ -1,25 +1,4 @@
 /* Background for Small Devices */
-@media screen and (min-width: 1440px) {
-  body {
-    background: #fff url("/assets/img/team-bg.jpg") top right no-repeat;
-    background-size: 60% 700px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  body {
-    background: #fff url("/assets/img/team-bg.jpg") top right no-repeat;
-    background-size: 70% 700px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .intro {
-    background: #fff url("/assets/img/team-bg.jpg") bottom center no-repeat;
-    background-size: 100% 75%;
-  }
-}
-
 .intro__box {
   padding: 6em 4em;
 }

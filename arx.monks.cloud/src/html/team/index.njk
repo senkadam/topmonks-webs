@@ -3,16 +3,98 @@
 
 {% block links %}
   <link rel="stylesheet" href="/assets/css/team.css">
+  <style>
+    @media (min-width: 840px) and (max-width: 1023px) {
+      .intro__box {
+        padding: 2em 1.5em;
+      }
+    }
+
+    @media (max-width: 739px) {
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .intro__format {
+        display: block;
+      }
+    }
+    @media (min-width: 740px) {
+      .intro__contact-img {
+        display: none;
+      }
+    }
+
+    @media (min-width: 740px) and (max-width: 839px) {
+      .intro {
+        align-self: center;
+        background-image: url({{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=860) }});
+        background-size: 60% auto;
+        background-position: top right;
+        background-repeat: no-repeat;
+        min-height: 300px;
+      }
+    }
+
+    @media (min-width: 839px) and (max-width: 1439px) {
+      .intro {
+        align-self: center;
+        background-image: url({{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=860) }});
+        background-size: 75% auto;
+        background-position: top right;
+        background-repeat: no-repeat;
+        min-height: 500px;
+      }
+    }
+    @media (min-width: 1440px) and (max-width: 1839px) {
+      .intro {
+        align-self: center;
+        background-image: url({{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=860) }});
+        background-size: 65% auto;
+        background-position: center right;
+        background-repeat: no-repeat;
+        min-height: 680px;
+      }
+    }
+    @media (min-width: 1840px) {
+      .intro {
+        align-self: center;
+        background-image: url({{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=860) }});
+        background-size: 65% auto;
+        background-position: top right;
+        background-repeat: no-repeat;
+        min-height: 800px;
+      }
+    }
+  </style>
 {% endblock %}
 
 {% block main %}
 <section class="intro">
   <div class="mdc-layout-grid layout-arx">
-    <div class="mdc-layout-grid__inner">
-      <div class="intro__box box--white mdc-layout-grid__cell">
+    <div class="intro__format mdc-layout-grid__inner">
+      <div class="intro__box box--white mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop">
         <p>Our team members personally invest in each transaction, our interests are
           aligned with our partners in every situation.</p>
       </div>
+      <picture class="intro__contact-img mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+        <source media="screen and (max-width: 399px)"
+                srcset="{{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=400) }} 1x,
+                      {{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=400) }} 1.5x,
+                      {{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=400) }} 2x">
+        <source media="screen and (min-width: 400px) and (max-width: 599px)"
+                srcset="{{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=420) }} 1x,
+                {{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=600) }} 1.5x,
+                {{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=600) }} 2x">
+        <source media="screen and (min-width: 840px)"
+                srcset="{{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=860) }} 1x,
+                {{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=860) }} 1.5x,
+                {{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl(width=860) }} 2x">
+        <img alt="Fotografie PostCube u domu" loading="lazy"
+             src="{{ "/arx.monks.cloud/team-header.jpg" | cloudinaryUrl }}" width="860" height="574">
+      </picture>
     </div>
   </div>
 </section>
