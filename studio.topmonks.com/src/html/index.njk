@@ -617,7 +617,7 @@
   <div class="modal-overlay modal-toggle"></div>
   <div class="modal-wrapper modal-transition">
     <div class="modal-body">
-      <button class="modal-close modal-toggle">
+      <button class="modal-close">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M22.0688 7.90147L15.9706 13.9997L21.807 19.8362L19.879 21.7642L14.0426 15.9277L7.9015 22.0687L5.80783 19.9751L11.9489 13.834L6.14108 8.02621L8.06909 6.09821L13.8769 11.906L19.9751 5.8078L22.0688 7.90147Z"
@@ -664,7 +664,7 @@
         <p>Your message has been successfully sent and we appreciate you
           contacting us.<br/>
           We'll be in touch soon.</p>
-        <button class="modal-toggle button">Return to Startup studio</button>
+        <button class="button">Return to Startup studio</button>
       </div>
     </div>
   </div>
@@ -683,7 +683,8 @@
   const contactFormFields = Array.from(document.querySelectorAll(
     ".tm-form__contact .tm-form-control__field"
   ));
-  contactFormFields.forEach(toggleFieldState);
+  contactFormFields.forEach((i) => i.addEventListener("blur", function(e){ toggleFieldState(e.target) }));
+  contactFormFields.forEach((i) => toggleFieldState(i));
   const modal = document.querySelector(".modal");
 
   contactForm.addEventListener("submit", async function(e) {
@@ -697,15 +698,14 @@
       "https://uwjqzwx0d3.execute-api.eu-central-1.amazonaws.com/production/startupstudio-contact-form",
       {
         method: "POST",
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
+        mode: 'no-cors',
       }
     );
     modal.classList.toggle("is-visible");
     contactForm.reset();
+    contactFormFields.forEach((i) => toggleFieldState(i));
   });
-
-  contactForm.addEventListener("blur", e => toggleFieldState(e.target));
-
   modal.addEventListener("click", function(e) {
     e.preventDefault();
     modal.classList.toggle("is-visible");
