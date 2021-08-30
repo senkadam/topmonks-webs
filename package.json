@@ -41,7 +41,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-ava": "^12.0.0",
     "eslint-plugin-lit": "^1.5.1",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.0",
     "esm": "^3.2.25",
     "fetch-h2": "^3.0.0",
