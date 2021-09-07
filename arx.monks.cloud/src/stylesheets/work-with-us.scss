@@ -14,14 +14,14 @@
 /* Section: Managers */
 .managers {
   padding: 2em 0;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     background: cloudinaryUrl("/arx.monks.cloud/work-with-us-manager.jpg") 100% no-repeat;
     background-size: cover;
     .mdc-layout-grid__cell {
       width: 50%;
     }
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1439px) {
     color: var(--mdc-theme--primary);
     background-color: var(--mdc-theme--third);
   }
