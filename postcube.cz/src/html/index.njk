@@ -86,15 +86,21 @@
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <picture>
-            <source media="screen and (max-width: 399px)" srcset="{{ box_n_woman | cloudinaryUrl(width=400) }} 1x,
-                      {{ box_header | cloudinaryUrl(width=400) }} 1.5x,
-                      {{ box_header | cloudinaryUrl(width=400) }} 2x">
-            <source media="screen and (min-width: 400px) and (max-width: 599px)" srcset="{{ box_n_woman | cloudinaryUrl(width=420) }} 1x,
-                {{ box_n_woman | cloudinaryUrl(width=600) }} 1.5x,
-                {{ box_n_woman | cloudinaryUrl(width=600) }} 2x">
-            <source media="screen and (min-width: 840px)" srcset="{{ box_n_woman | cloudinaryUrl(width=860) }} 1x,
-                {{ box_n_woman | cloudinaryUrl(width=860) }} 1.5x,
-                {{ box_n_woman | cloudinaryUrl(width=860) }} 2x">
+            <source
+              media="screen and (max-width: 399px)"
+              srcset="{{ box_n_woman | cloudinaryUrl(width=400) }} 1x,
+                      {{ box_n_woman | cloudinaryUrl(width=400, dpr=1.5) }} 1.5x,
+                      {{ box_n_woman | cloudinaryUrl(width=400, dpr=2) }} 2x">
+            <source
+              media="screen and (min-width: 400px) and (max-width: 599px)"
+              srcset="{{ box_n_woman | cloudinaryUrl(width=420) }} 1x,
+                      {{ box_n_woman | cloudinaryUrl(width=600, dpr=1.5) }} 1.5x,
+                      {{ box_n_woman | cloudinaryUrl(width=600, dpr=2) }} 2x">
+            <source
+              media="screen and (min-width: 840px)"
+              srcset="{{ box_n_woman | cloudinaryUrl(width=860) }} 1x,
+                      {{ box_n_woman | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
+                      {{ box_n_woman | cloudinaryUrl(width=860, dpr=2) }} 2x">
             <img alt="Fotografie PostCube u domu" loading="lazy" src="{{ box_n_woman | cloudinaryUrl }}" width="860" height="574">
           </picture>
         </div>
@@ -201,29 +207,40 @@
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
     <picture>
-      <source media="screen and (max-width: 839px)" srcset="{{ box_header | cloudinaryUrl(width=400) }} 1x,
-                      {{ box_header | cloudinaryUrl(dpr="auto", width=420) }} 1.5x,
-                      {{ box_header | cloudinaryUrl(dpr="auto", width=420) }} 2x">
-      <source media="screen and (min-width: 840px)" srcset="{{ box_header | cloudinaryUrl(width=860) }} 1x,
-                      {{ box_header | cloudinaryUrl(dpr="auto", width=860) }} 1.5x,
-                      {{ box_header | cloudinaryUrl(dpr="auto", width=860) }} 2x">
+      <source
+        media="screen and (max-width: 839px)"
+        srcset="{{ box_header | cloudinaryUrl(width=400) }} 1x,
+                {{ box_header | cloudinaryUrl(dpr=1.5, width=420) }} 1.5x,
+                {{ box_header | cloudinaryUrl(dpr=2, width=420) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ box_header | cloudinaryUrl(width=860) }} 1x,
+                {{ box_header | cloudinaryUrl(dpr=1.5, width=860) }} 1.5x,
+                {{ box_header | cloudinaryUrl(dpr=2, width=860) }} 2x">
       <img alt="Fotka PostCube" src="{{ box_header | cloudinaryUrl(dpr=" auto", width=860) }}" width="860" height="581">
     </picture>
     <picture>
-      <source media="screen and (max-width: 839px)" srcset="{{ hpBg02 | cloudinaryUrl(width=420) }} 1x,
-                {{ hpBg02 | cloudinaryUrl(dpr="auto", width=420) }} 1.5x,
-                {{ hpBg02 | cloudinaryUrl(dpr="auto", width=420) }} 2x">
-      <source media="screen and (min-width: 840px)" srcset="{{ hpBg02 | cloudinaryUrl(width=860) }} 1x,
-                {{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }} 1.5x,
-                {{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }} 2x">
-      <img alt="Fotografie PostCube jako poštovní schránky" loading="lazy" src="{{ hpBg02 | cloudinaryUrl(width=860) }}" width="860" height="574">
+      <source
+        media="screen and (max-width: 839px)"
+        srcset="{{ hpBg02 | cloudinaryUrl(width=420) }} 1x,
+                {{ hpBg02 | cloudinaryUrl(dpr=1.5, width=420) }} 1.5x,
+                {{ hpBg02 | cloudinaryUrl(dpr=2, width=420) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ hpBg02 | cloudinaryUrl(width=860) }} 1x,
+                {{ hpBg02 | cloudinaryUrl(dpr=1.5, width=860) }} 1.5x,
+                {{ hpBg02 | cloudinaryUrl(dpr=2, width=860) }} 2x">
+      <img alt="Fotografie PostCube jako poštovní schránky"
+           loading="lazy"
+           src="{{ hpBg02 | cloudinaryUrl(width=860) }}"
+           width="860" height="574">
     </picture>
   </div>
 
   <section class="testimonial mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
       <div class="testimonial__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 71 46" style="enable-background:new 0 0 71 46;" xml:space="preserve">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 71 46" style="enable-background:new 0 0 71 46;" xml:space="preserve">
           <path d="M0.9,28.8v16.9h8.7c13.7,0,22.9-9.7,22.9-23.8V0h-21v19.7c0,5.4-2.9,9.1-7.5,9.1H0.9z M38.5,28.8v16.9H47
 	c13.8,0,23.1-9.7,23.1-23.8V0h-21v19.7c0,5.4-3,9.1-7.5,9.1H38.5z"/>
         </svg>
@@ -231,7 +248,7 @@
         <p>Tenhle špatný vtip už nikdy neuslyšíte.</p>
       </div>
       <div class="testimonial__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 71 46" style="enable-background:new 0 0 71 46;" xml:space="preserve">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 71 46" style="enable-background:new 0 0 71 46;" xml:space="preserve">
           <path d="M0.9,28.8v16.9h8.7c13.7,0,22.9-9.7,22.9-23.8V0h-21v19.7c0,5.4-2.9,9.1-7.5,9.1H0.9z M38.5,28.8v16.9H47
 	c13.8,0,23.1-9.7,23.1-23.8V0h-21v19.7c0,5.4-3,9.1-7.5,9.1H38.5z"/>
         </svg>

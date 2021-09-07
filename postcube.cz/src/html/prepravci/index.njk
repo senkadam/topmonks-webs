@@ -89,18 +89,18 @@
             <source
               media="screen and (max-width: 399px)"
               srcset="{{ deliveryman | cloudinaryUrl(width=400) }} 1x,
-                      {{ box_header | cloudinaryUrl(width=400, dpr=1.5) }} 1.5x,
-                      {{ box_header | cloudinaryUrl(width=400, dpr=2) }} 2x">
+                      {{ deliveryman | cloudinaryUrl(width=400, dpr=1.5) }} 1.5x,
+                      {{ deliveryman | cloudinaryUrl(width=400, dpr=2) }} 2x">
             <source
               media="screen and (min-width: 400px) and (max-width: 599px)"
               srcset="{{ deliveryman | cloudinaryUrl(width=420) }} 1x,
-                      {{ box_n_woman | cloudinaryUrl(width=600, dpr=1.5) }} 1.5x,
-                      {{ box_n_woman | cloudinaryUrl(width=600, dpr=2) }} 2x">
+                      {{ deliveryman | cloudinaryUrl(width=600, dpr=1.5) }} 1.5x,
+                      {{ deliveryman | cloudinaryUrl(width=600, dpr=2) }} 2x">
             <source
               media="screen and (min-width: 840px)"
               srcset="{{ deliveryman | cloudinaryUrl(width=860) }} 1x,
-                      {{ box_n_woman | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
-                      {{ box_n_woman | cloudinaryUrl(width=860, dpr=2) }} 2x">
+                      {{ deliveryman | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
+                      {{ deliveryman | cloudinaryUrl(width=860, dpr=2) }} 2x">
             <img alt="Fotka PostCube" loading="lazy" src="{{ deliveryman | cloudinaryUrl }}" width="860" height="574">
           </picture>
         </div>
@@ -148,26 +148,26 @@
       <source
         media="screen and (min-width: 839px)"
         srcset="{{ prepravciBG01 | cloudinaryUrl(width=420) }} 1x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=420, dpr=1.5) }} 1.5x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=420, dpr=2) }} 2x">
+                {{ prepravciBG01 | cloudinaryUrl(width=420, dpr=1.5) }} 1.5x,
+                {{ prepravciBG01 | cloudinaryUrl(width=420, dpr=2) }} 2x">
       <source
         media="screen and (min-width: 840px)"
         srcset="{{ prepravciBG01 | cloudinaryUrl(width=860) }} 1x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=860, dpr=2) }} 2x">
+                {{ prepravciBG01 | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
+                {{ prepravciBG01 | cloudinaryUrl(width=860, dpr=2) }} 2x">
       <img alt="Fotografie PostCube u domu" src="{{ prepravciBG01 | cloudinaryUrl(width=860) }}" width="860" height="573">
     </picture>
     <picture>
       <source
         media="screen and (min-width: 839px)"
         srcset="{{ prepravciBG02 | cloudinaryUrl(width=420) }} 1x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=420, dpr=1.5) }} 1.5x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=420, dpr=2) }} 2x">
+                {{ prepravciBG02 | cloudinaryUrl(width=420, dpr=1.5) }} 1.5x,
+                {{ prepravciBG02 | cloudinaryUrl(width=420, dpr=2) }} 2x">
       <source
         media="screen and (min-width: 840px)"
         srcset="{{ prepravciBG02 | cloudinaryUrl(width=860) }} 1x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=860, dpr=2) }} 2x">
+                {{ prepravciBG02 | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
+                {{ prepravciBG02 | cloudinaryUrl(width=860, dpr=2) }} 2x">
       <img alt="Fotografie PostCube ve vašem domě" src="{{ prepravciBG02 | cloudinaryUrl(width=860) }}" width="860" height="573">
     </picture>
   </div>
@@ -254,8 +254,6 @@
     </div>
   </section>
 
-
   {% include 'components/get-app.njk' %}
-
 {% endblock %}
 
