@@ -81,12 +81,16 @@
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <picture>
-            <source media="screen and (max-width: 839px)" srcset="{{ firmyBG | cloudinaryUrl(width=600) }} 1x,
-                {{ box_n_woman | cloudinaryUrl(width=600) }} 1.5x,
-                {{ box_n_woman | cloudinaryUrl(width=600) }} 2x">
-            <source media="screen and (min-width: 840px)" srcset="{{ firmyBG | cloudinaryUrl(width=860) }} 1x,
-                {{ box_n_woman | cloudinaryUrl(width=860) }} 1.5x,
-                {{ box_n_woman | cloudinaryUrl(width=860) }} 2x">
+            <source 
+              media="screen and (max-width: 839px)"
+              srcset="{{ firmyBG | cloudinaryUrl(width=600) }} 1x,
+                      {{ box_n_woman | cloudinaryUrl(width=600, dpr=1.5) }} 1.5x,
+                      {{ box_n_woman | cloudinaryUrl(width=600, dpr=2) }} 2x">
+            <source
+              media="screen and (min-width: 840px)"
+              srcset="{{ firmyBG | cloudinaryUrl(width=860) }} 1x,
+                      {{ box_n_woman | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
+                      {{ box_n_woman | cloudinaryUrl(width=860, dpr=2) }} 2x">
             <img alt="Fotka PostCube" loading="lazy" src="{{ firmyBG | cloudinaryUrl }}" width="860" height="574">
           </picture>
         </div>
@@ -151,21 +155,29 @@
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
     <picture>
-      <source media="screen and (min-width: 839px)" srcset="{{ firmyBG01 | cloudinaryUrl(width=420) }} 1x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=420) }} 1.5x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=420) }} 2x">
-      <source media="screen and (min-width: 840px)" srcset="{{ firmyBG01 | cloudinaryUrl(width=860) }} 1x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=860) }} 1.5x,
-                {{ domacnostiBG01 | cloudinaryUrl(width=860) }} 2x">
+      <source
+        media="screen and (min-width: 839px)"
+        srcset="{{ firmyBG01 | cloudinaryUrl(width=420) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=420, dpr=1.5) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=420, dpr=2) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ firmyBG01 | cloudinaryUrl(width=860) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(width=860, dpr=2) }} 2x">
       <img alt="Fotografie PostCube u domu" src="{{ firmyBG01 | cloudinaryUrl(width=860) }}" width="860" height="573">
     </picture>
     <picture>
-      <source media="screen and (min-width: 839px)" srcset="{{ firmyBG02 | cloudinaryUrl( width=420) }} 1x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=420) }} 1.5x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=420) }} 2x">
-      <source media="screen and (min-width: 840px)" srcset="{{ firmyBG02 | cloudinaryUrl(width=860) }} 1x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=860) }} 1.5x,
-                {{ domacnostiBG02 | cloudinaryUrl(width=860) }} 2x">
+      <source
+        media="screen and (min-width: 839px)"
+        srcset="{{ firmyBG02 | cloudinaryUrl( width=420) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=420, dpr=1.5) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=420, dpr=2) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ firmyBG02 | cloudinaryUrl(width=860) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=860, dpr=1.5) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(width=860, dpr=2) }} 2x">
       <img alt="Fotografie PostCube ve vašem domě" src="{{ firmyBG02 | cloudinaryUrl(width=860) }}" width="860"
            height="573">
     </picture>
