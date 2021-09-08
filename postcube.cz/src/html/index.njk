@@ -214,10 +214,10 @@
                 {{ box_header | cloudinaryUrl(dpr=2, width=420) }} 2x">
       <source
         media="screen and (min-width: 840px)"
-        srcset="{{ box_header | cloudinaryUrl(width=860) }} 1x,
-                {{ box_header | cloudinaryUrl(dpr=1.5, width=860) }} 1.5x,
-                {{ box_header | cloudinaryUrl(dpr=2, width=860) }} 2x">
-      <img alt="Fotka PostCube" src="{{ box_header | cloudinaryUrl(dpr=" auto", width=860) }}" width="860" height="581">
+        srcset="{{ box_header | cloudinaryUrl(width=860, height=581) }} 1x,
+                {{ box_header | cloudinaryUrl(dpr=1.5, width=860, height=581) }} 1.5x,
+                {{ box_header | cloudinaryUrl(dpr=2, width=860, height=581) }} 2x">
+      <img alt="Fotka PostCube" src="{{ box_header | cloudinaryUrl(dpr=" auto", width=860, height=581) }}" width="860" height="581">
     </picture>
     <picture>
       <source
@@ -227,13 +227,12 @@
                 {{ hpBg02 | cloudinaryUrl(dpr=2, width=420) }} 2x">
       <source
         media="screen and (min-width: 840px)"
-        srcset="{{ hpBg02 | cloudinaryUrl(width=860) }} 1x,
-                {{ hpBg02 | cloudinaryUrl(dpr=1.5, width=860) }} 1.5x,
-                {{ hpBg02 | cloudinaryUrl(dpr=2, width=860) }} 2x">
+        srcset="{{ hpBg02 | cloudinaryUrl(width=860, height=581) }} 1x,
+                {{ hpBg02 | cloudinaryUrl(dpr=1.5, width=860, height=581) }} 1.5x,
+                {{ hpBg02 | cloudinaryUrl(dpr=2, width=860, height=581) }} 2x">
       <img alt="Fotografie PostCube jako poštovní schránky"
            loading="lazy"
-           src="{{ hpBg02 | cloudinaryUrl(width=860) }}"
-           width="860" height="574">
+           src="{{ hpBg02 | cloudinaryUrl(width=860, height=581) }}" width="860" height="581">
     </picture>
   </div>
 
