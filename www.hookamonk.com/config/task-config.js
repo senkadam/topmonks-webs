@@ -3,7 +3,7 @@ const createSharedTaskConfig = require("../../shared/config/createSharedTaskConf
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
-  cloudinary: false,
+  cloudinary: true,
   javascripts: false,
   fonts: false,
   static: true,
