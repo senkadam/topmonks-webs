@@ -31,6 +31,11 @@
     "dest": "assets/img"
   },
 
+  "cloudinary": {
+    "src": "cloudinary",
+    "dest": "hookamonk.com"
+  },
+
   "fonts": {
     "src": "fonts",
     "dest": "fonts"
