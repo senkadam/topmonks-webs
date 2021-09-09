@@ -10,6 +10,7 @@
   --hm-orange: #FF9201;
   --hm-orange--light: #FFE6C5;
 
+  --hm-green: #35B289;
   --hm-green--light: #D1EDE4;
 
   --hm-bg--light: #F8FAFC;
@@ -53,6 +54,7 @@ body {
     font-weight: 700;
     line-height: 30px;
     color: var(--hm-grey--dark);
+    margin-bottom: 0;
   }
   p {
     font-size: 18px;
@@ -64,6 +66,10 @@ body {
 
 // Typography: Phones and Tablets //
 @media (max-width: 839px) {
+}
+
+a {
+  text-decoration: none;
 }
 
 .title__prefix {
@@ -83,6 +89,7 @@ body {
 
 .button {
   border-radius: 4px;
+
   a {
     font-size: 18px;
     font-weight: 700;
@@ -96,6 +103,7 @@ body {
     width: 100%;
     height: 54px;
   }
+
   &:hover {
     cursor: pointer;
   }
@@ -107,25 +115,39 @@ body {
 
 .button__contained--dark {
   background-color: var(--hm-grey--dark);
+
   a {
     color: var(--hm-white);
   }
+
   &:hover {
-    opacity: 44%;
+    opacity: 60%;
     transition: all 0.8s;
   }
 }
 
 .button__contained--green {
-  background-color: var(--hm-green--light);
+  background-color: var(--hm-green);
+
   a {
     color: var(--hm-grey--dark);
+  }
+
+  &:hover {
+    background-color: var(--hm-green--light);
+    transition: all 0.8s;
   }
 }
 
 .button__contained--orange {
-  background-color: var(--hm-orange--light);
+  background-color: var(--hm-orange);
+
   a {
     color: var(--hm-grey--dark);
+  }
+
+  &:hover {
+    background-color: var(--hm-orange--light);
+    transition: all 0.8s;
   }
 }
