@@ -36,14 +36,14 @@
           <h1>Game changer in hookah world</h1>
           <p class="title__suffix">First fully electronic hookah set for tobacco</p>
           <button class="button button__contained button__contained--dark">
-            <a href="#" class="button__label">Next</a>
+            <a href="#about" class="button__label">Next</a>
           </button>
         </div>
       </div>
     </div>
   </section>
   {{ css("v2/catering") }}
-  <section class="hm-partners">
+  <section id="partners" class="hm-partners">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -53,7 +53,7 @@
       </div>
     </div>
   </section>
-  <section class="hm-about">
+  <section id="about" class="hm-about">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
@@ -77,7 +77,7 @@
       </div>
     </div>
   </section>
-  <section class="hm-features">
+  <section id="features" class="hm-features">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -157,7 +157,7 @@
       </div>
     </div>
   </section>
-  <section class="hm-testimonials">
+  <section id="testimonials" class="hm-testimonials">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -181,14 +181,14 @@
       </div>
     </div>
   </section>
-  <section class="hm-warp">
+  <section id="warp" class="hm-warp">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <p class="title__prefix">Design anything, build everything</p>
           <h2>I want Warp</h2>
         </div>
-        <div class="hm-warp__type mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+        <div class="hm-warp__type hm-warp__type--b2b mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <h3>B2B</h3>
           <h4>Fringilla ipsum tincidunt</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus vestibulum
@@ -197,7 +197,7 @@
             <a href="#" class="button__label">Next</a>
           </button>
         </div>
-        <div class="hm-warp__type mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+        <div class="hm-warp__type hm-warp__type--b2c mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <h3>B2C</h3>
           <h4>Fringilla ipsum tincidunt</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus vestibulum
@@ -284,12 +284,10 @@
       </div>
     </div>
   </section>
-
-
-
 {% endblock %}
 
 {% block footer %}
+  {{ css("v2/footer") }}
   {% include "./v2/footer.njk" %}
 {% endblock %}
 
