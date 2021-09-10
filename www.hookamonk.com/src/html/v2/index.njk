@@ -1,3 +1,4 @@
+{% extends 'layouts/main2.njk' %}
 {% from 'macros/helpers.njk' import css, sprite %}
 
 {% set page = 'hookamonk-catering' %}
@@ -656,18 +657,8 @@
   <section class="hm-catering">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
-        <picture class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-          <source media="(max-width: 839px)"
-                  srcset="{{ "/hookamonk.com/img_catering.svg" | cloudinaryUrl(width=420) }} 1x,
-                {{ "/hookamonk.com/img_catering.svg" | cloudinaryUrl(width=420) }} 1.5x,
-                {{ "/hookamonk.com/img_catering.svg" | cloudinaryUrl(width=420) }} 2x">
-          <source media="screen and (min-width: 840px)"
-                  srcset="{{ "/hookamonk.com/img_catering.svg" | cloudinaryUrl(width=630) }} 1x,
-                {{ "/hookamonk.com/img_catering.svg" | cloudinaryUrl(width=630) }} 1.5x,
-                {{ "/hookamonk.com/img_catering.svg" | cloudinaryUrl(width=630) }} 2x">
-          <img alt="Hookamonk catering" loading="lazy"
-               src="{{ "/hookamonk.com/img_catering.svg" | cloudinaryUrl }}" width="630" height="567">
-        </picture>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+        </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <p class="title__prefix">Design anything, build everything</p>
           <h2>Hookah catering</h2>
