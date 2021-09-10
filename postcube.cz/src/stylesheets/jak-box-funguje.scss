@@ -24,6 +24,7 @@ header {
         font-size: 24px;
         color: var(--postcube-secondary);
       }
+
       a {
         font-size: 20px;
         text-decoration: none;
@@ -40,6 +41,7 @@ header {
       margin-top: 1em;
       ul {
         margin: 0;
+
         li {
           margin: 1em 0;
         }
@@ -89,6 +91,7 @@ header {
       }
     }
 
+
     .steps__content {
       h3 {
         font-size: 18px;
@@ -104,6 +107,7 @@ header {
       }
     }
   }
+
   @media (max-width: 839px) {
     button {
       width: 100%;
@@ -121,5 +125,23 @@ header {
       width: 280px;
     }
   }
+}
+
+.box--stretch, .box--stretch__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.box--stretch__inner {
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.box--stretch__img {
+  background-image: cloudinaryUrl("/postcube.cz/steps_bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 60px 0;
 }
 

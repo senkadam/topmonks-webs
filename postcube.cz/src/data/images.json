@@ -1330,5 +1330,27 @@
     "existing": true,
     "api_key": "389916164315219",
     "original_filename": "rodinnedomy2"
+  },
+  "pc-box09.png": {
+    "asset_id": "cc0ed0c7a37c602960fa9b474163ab54",
+    "public_id": "postcube.cz/pc-box09",
+    "version": 1631242068,
+    "version_id": "5a022b2d15843f2f6dd51e64fb5132a0",
+    "signature": "2e0e1b4ce3d4504bb5e0d63851cccb642e8857a0",
+    "width": 1380,
+    "height": 868,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-09-10T02:47:48Z",
+    "tags": [],
+    "bytes": 1495067,
+    "type": "upload",
+    "etag": "31686b1c0db73a287f3cc93bfa407448",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1631242068/postcube.cz/pc-box09.jpg",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1631242068/postcube.cz/pc-box09.jpg",
+    "existing": false,
+    "original_filename": "pc-box09",
+    "api_key": "389916164315219"
   }
 }
