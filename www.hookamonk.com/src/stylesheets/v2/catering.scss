@@ -1,7 +1,16 @@
 // Catering Page //
-img {
-  width: 100%;
-  height: auto;
+@media (max-width: 839px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  img.optimalization {
+    width: 100%;
+    height: auto;
+  }
 }
 
 // Section 1: Introduction AKA Header Info //
@@ -52,6 +61,11 @@ img {
 //
 // Section 4: Features
 .hm-features {
+  .hm-features__content {
+    @media (max-width: 439px) {
+      margin-bottom: 2em;
+    }
+  }
 }
 
 //
@@ -99,8 +113,13 @@ img {
 
   .hm-warp__type {
     text-align: left;
-    padding: 4em 5em 6em;
     border-radius: 10px;
+    @media (max-width: 839px){
+      padding: 0 18px 38px;
+    }
+    @media (min-width: 840px){
+      padding: 4em 5em 6em;
+    }
 
     h3, h4, p {
       color: var(--hm-white);
@@ -118,18 +137,40 @@ img {
     }
   }
 
-  .hm-warp__type--b2b {
-    background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b.jpg");
-    background-size: 100% auto;
-    background-position: 100% 0;
-    background-repeat: no-repeat;
+  @media (max-width: 839px){
+    .hm-warp__type {
+      background-color: var(--hm-grey--dark);
+    }
   }
+  @media (min-width: 840px) and (max-width: 1439px){
+    .hm-warp__type--b2b {
+      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b.jpg");
+      background-size: auto 100%;
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+    }
 
-  .hm-warp__type--b2c {
-    background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c.jpg");
-    background-size: 100% auto;
-    background-position: 100% 0;
-    background-repeat: no-repeat;
+    .hm-warp__type--b2c {
+      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c.jpg");
+      background-size: auto 100%;
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+    }
+  }
+  @media screen and (min-width: 1440px){
+    .hm-warp__type--b2b {
+      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b.jpg");
+      background-size: 100% auto;
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+    }
+
+    .hm-warp__type--b2c {
+      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c.jpg");
+      background-size: 100% auto;
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+    }
   }
 }
 

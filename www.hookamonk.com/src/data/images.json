@@ -349,5 +349,27 @@
     "existing": true,
     "api_key": "389916164315219",
     "original_filename": "bg_story-smoke"
+  },
+  "img_catering.jpg": {
+    "asset_id": "f84a96a30a30cb4652f731b3d22c335d",
+    "public_id": "hookamonk.com/img_catering",
+    "version": 1631306662,
+    "version_id": "ff37bfa48c77e70a66429b310e1040c5",
+    "signature": "1592ae11d06d27ed5c5c7dad2e3d81947724c67b",
+    "width": 2948,
+    "height": 2584,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-09-10T20:44:22Z",
+    "tags": [],
+    "bytes": 3875888,
+    "type": "upload",
+    "etag": "167ec4698f4516399ab79bb3eafe4af6",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1631306662/hookamonk.com/img_catering.jpg",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1631306662/hookamonk.com/img_catering.jpg",
+    "existing": false,
+    "original_filename": "img_catering",
+    "api_key": "389916164315219"
   }
 }
