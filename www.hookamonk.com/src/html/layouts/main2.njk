@@ -12,6 +12,8 @@
   <link rel="dns-prefetch" href="https://stats.g.doubleclick.net">
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="preconnect" href="https://res.cloudinary.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
   {% block preconnect %}{% endblock %}
   <link rel="preload" as="script" href="https://www.googletagmanager.com/gtag/js?id=GTM-N3RNTWG">
   {% block preload %}{% endblock %}
@@ -36,6 +38,7 @@
   {% block head %}{% endblock %}
 </head>
 <body id="page-{{page}}">
+{% include "../components/header2.njk" %}
 <main>
   {% block content %}{% endblock %}
 </main>

@@ -14,14 +14,38 @@ body {
   scroll-behavior: smooth;
 }
 
+main {
+  margin-top: 10em;
+}
+
 section {
   padding: 2em 0 3em;
 }
 
-.tm-layout-wrapper {
+.hm-layout-wrapper {
   max-width: 1280px;
   margin: 0 auto;
   --mdc-layout-grid-margin-desktop: 0;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
 }
+
+// Material Icons
+.material-icons {
+  padding: 20px;
+  border-radius: 6px;
+  svg {
+    width: 24px;
+    height: 24px;
+    path {
+      fill: var(--hm-grey--light);
+    }
+  }
+}
+.material-icons--green {
+  background-color: var(--hm-green--light);
+}
+.material-icons--orange {
+  background-color: var(--hm-orange--light);
+}
+//
