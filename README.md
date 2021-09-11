@@ -86,6 +86,34 @@ If this step is skipped you will get following error:
 cloudinaryUrl Unknown cloud_name
 ```
 
+You can enable Cloudinary aut-upload by setting `cloudinary: true` in `task-config.json` file. You can also configure
+source and destination paths in `path-config.json` file. By default, will be uploaded everything in `cloudinary` directory.
+Auto-uploader will generate `images.json` data file, that will be loaded into Nunjucks context via `collections: ["images"]`
+setting in `task-config.json` file.
+
+We have implementation of helpers to generate Cloudinary URLs. One `cloudinaryUrl` filter for Nunjucks templates
+that should work in conjunction with generated `images.json`. Usage should be as follows:
+
+```twig
+<img src="{{ images["picture.png"]["public_id"] | cloudinaryUrl(width=300, height=240) }}" alt="">
+```
+
+You can use following transformations (listed with default values and SDK names in comment): 
+
+```js
+width = "auto",
+height,
+format = "auto", // fetch_format
+quality = "auto",
+dpr = 1,
+crop,
+gravity,
+flags = "progressive",
+ar // aspect_ratio
+```
+
+For more details see [Cloudinary JS SDK](https://cloudinary.com/documentation/image_transformations).
+
 ### Sites available
 
 The following sites can be build and ran using the `yarn start:[SITE]` command.
