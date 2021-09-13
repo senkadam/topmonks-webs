@@ -30,6 +30,10 @@ section {
   --mdc-layout-grid-margin-phone: 0;
 }
 
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
+
 // Material Icons
 main .material-icons {
   padding: 20px;
