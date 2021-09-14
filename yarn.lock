@@ -13709,14 +13709,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.38.0":
-  version: 1.38.0
-  resolution: "sass@npm:1.38.0"
+"sass@npm:1.40.0":
+  version: 1.40.0
+  resolution: "sass@npm:1.40.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: ce6da83497f56daab29bc9ed316cbfd18111c1c0afa466912e8c7815c8f006620595b8d3c5db632e9f09366691c2d8fc5f8faa8eb9532ae3bd0364c2ae7c6a93
+  checksum: 66eb46495aeeab01178f175cf1265fa75e26b58656798e625be02cfd85161bb8e36960eb6bafa3a295c123fcb37796ccd72f56c6cc29d5dc63fc76a53ecf5817
   languageName: node
   linkType: hard
 
