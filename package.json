@@ -7,9 +7,9 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/button": "^12.0.0",
-    "@material/layout-grid": "^12.0.0",
-    "@material/top-app-bar": "^12.0.0",
+    "@material/button": "^13.0.0",
+    "@material/layout-grid": "^13.0.0",
+    "@material/top-app-bar": "^13.0.0",
     "@pulumi/aws": "^4.21.2",
     "@pulumi/awsx": "^0.31.0",
     "@pulumi/pulumi": "^3.13.0",
@@ -75,6 +75,7 @@
     "prettier": "^2.4.1",
     "puppeteer": "^10.4.0",
     "rimraf": "^3.0.2",
+    "sass": "^1.42.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "tap-xunit": "^2.4.1"
