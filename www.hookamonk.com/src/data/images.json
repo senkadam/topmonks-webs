@@ -415,5 +415,27 @@
     "existing": false,
     "original_filename": "img_story1",
     "api_key": "389916164315219"
+  },
+  "bg_header-dark.jpg": {
+    "asset_id": "05d658ca6296acac556be8ce1810dcfe",
+    "public_id": "hookamonk.com/bg_header-dark",
+    "version": 1633005093,
+    "version_id": "82f2de6256265de95c7213eceb799ee4",
+    "signature": "ae80b0059ae8a8e236c12a7be086aefd154cc052",
+    "width": 1920,
+    "height": 1191,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2021-09-30T12:31:33Z",
+    "tags": [],
+    "bytes": 63207,
+    "type": "upload",
+    "etag": "222bde1c32e09312d0d063c997763fb3",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1633005093/hookamonk.com/bg_header-dark.jpg",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1633005093/hookamonk.com/bg_header-dark.jpg",
+    "existing": false,
+    "original_filename": "bg_header-dark",
+    "api_key": "389916164315219"
   }
 }

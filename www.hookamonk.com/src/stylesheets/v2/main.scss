@@ -36,7 +36,7 @@ img {
 
 // Material Icons
 main .material-icons {
-  padding: 20px;
+  padding: 10px;
   border-radius: 6px;
   svg {
     width: 24px;
@@ -48,6 +48,9 @@ main .material-icons {
 }
 .material-icons--green {
   background-color: var(--hm-green--light);
+}
+.material-icons--neutral {
+  border: 1px solid var(--hm-grey--lighter);
 }
 .material-icons--orange {
   background-color: var(--hm-orange--light);

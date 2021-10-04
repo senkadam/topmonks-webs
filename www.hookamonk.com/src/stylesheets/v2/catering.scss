@@ -49,6 +49,7 @@
 // Section 3: About AKA HM Story
 .hm-about {
   background-image: cloudinaryUrl("hookamonk.com/bg_story-smoke.jpg");
+  background-color: var(--hm-bg--light);
   background-size: 50% auto;
   background-position: 100% 0;
   background-repeat: no-repeat;
@@ -118,7 +119,7 @@
       padding: 0 18px 38px;
     }
     @media (min-width: 840px){
-      padding: 4em 5em 6em;
+      padding: 1em 5em 6em;
     }
 
     h3, h4, p {
