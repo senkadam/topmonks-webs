@@ -24,8 +24,8 @@
   .tm-hamburger__container {
     display: inline-block;
     position: relative;
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
   }
 
@@ -87,22 +87,30 @@
   }
 
   .tm-menu {
-    transform: translate(-16px, -90px);
+    transform: translate(0px, 0px);
     z-index: 1;
   }
 }
 
 .tm-menu {
-  width: 100vw;
-  height: 100vh;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   padding-top: 64px;
-  transform: translate(calc(-140vw - 12px), 0);
+  transform: translate(0), -100vh);
   position: fixed;
   z-index: 3;
-  transition: transform 0.3s;
+  transition: transform 0.5s ease-in-out;
   overflow: hidden;
-  background-color: var(--hm-grey--dark);
+  background-color: var(--hm-grey--dark) 0.3;
   color: var(--hm-white);
+  text-align: center;
+
+  .tm-menu__list {
+    list-style-type: none;
+    font-size: 2em;
+  }
 
   .tm-menu__list li {
     margin: 0 24px;
@@ -114,9 +122,14 @@
     margin: 4px;
     color: #fff;
     text-decoration: none;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
 
     &:hover {
-      text-decoration: underline;
+      color: #000;
+      text-decoration: none;
+      display: block; /* Display block instead of inline */
+      transition: 0.3s; /* Transition effects on hover (color) */
     }
   }
 }
