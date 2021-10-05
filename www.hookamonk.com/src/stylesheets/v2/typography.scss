@@ -108,7 +108,7 @@ a {
     font-size: 18px;
   }
   @media (min-width: 480px) {
-    padding: 12px 64px;
+    padding: 16px 80px;
   }
 }
 
@@ -130,6 +130,19 @@ a {
 
   a {
     color: var(--hm-white);
+  }
+
+  &:hover {
+    opacity: 60%;
+    transition: all 0.8s;
+  }
+}
+
+.button__contained--white {
+  background-color: var(--hm-white);
+
+  a {
+    color: var(--hm-grey--dark);
   }
 
   &:hover {
