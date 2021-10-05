@@ -98,12 +98,12 @@
   right: 0;
   bottom: 0;
   padding-top: 64px;
-  transform: translate(0), -100vh);
+  transform: translate(0, -100vh);
   position: fixed;
   z-index: 3;
   transition: transform 0.5s ease-in-out;
   overflow: hidden;
-  background-color: var(--hm-grey--dark) 0.3;
+  background-color: var(--hm-grey--dark);
   color: var(--hm-white);
   text-align: center;
 
@@ -126,7 +126,7 @@
     transition: 0.3s; /* Transition effects on hover (color) */
 
     &:hover {
-      color: #000;
+      color: #818181;
       text-decoration: none;
       display: block; /* Display block instead of inline */
       transition: 0.3s; /* Transition effects on hover (color) */
