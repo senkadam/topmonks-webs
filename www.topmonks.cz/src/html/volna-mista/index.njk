@@ -20,32 +20,11 @@
     <div class="box jobs_positions mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h3>Otevřené pozice</h3>
       <div class="hire-jobs">
-        <a href="https://hire.withgoogle.com/public/jobs/topmonkscom">Prohlédněte si otevřené pozice na Google Hire</a>
-      </div>
-      <script type="module">
-        import { html, render } from "https://unpkg.com/lit-html@1.1.2/lit-html.js?module";
-        const list = document.querySelector(".hire-jobs");
-        const jobsList = jobs => html`
-          <ul>
-            ${jobs.map(({ title, url, jobLocation }) => html`
-              <li>
-                <a href="${url}">${title}</a>
-                <span class="location">${address(jobLocation)}</span>
-              </li>`
-            )}
-          </ul>`;
-
-        fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
-          .then(r => r.json())
-          .then(jobs => render(jobsList(jobs), list));
-
-        function address({ address }) {
-          if (address.addressLocality) {
-            return address.addressLocality + ", " + address.addressCountry;
-          }
-          return address.addressCountry;
-        }
-      </script>
+        <p>Stále hledáme nadšené lidi s výtečnými (nejen) technickými dovednostmi.
+          Nemůžeme vám slíbit konkrétní aktuální technologie, protože ty přicházejí
+          a odcházejí, ale zajímavé a náročné projekty, se zákazníky, kteří nás 
+          respektují a nás to s nimi baví.</p>
+        </div>
     </div>
   </div>
   <div class="contact-info mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -53,7 +32,7 @@
   </div>
 </section>
 <div
-  class="tm-layout-wrapper line-between line-between_white line-padding mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop">
+  class="tm-layout-wrapper line-between line-between_white line-padding mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
 </div>
 <section class="tm-values mdc-layout-grid">
   <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -63,51 +42,51 @@
         Která z&nbsp;nich nejvíce?</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-purple">Vzdělávání</h3>
       <p>Neustále vzdělávej sebe i&nbsp;ostatní. Předávaní znalostí je u&nbsp;nás
         povinnost.</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-orange">Podnikání</h3>
       <p>Buď podnikavý. Vlastní projekty Monků jsou velmi vítany.</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-orange">Statečnost</h3>
       <p>Buď statečný. Poskytuj upřímnou a konstruktivní zpětnou vazbu bez
         ohledu na okolnosti.</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-purple">Svoboda</h3>
       <p>Tvoje svoboda končí tam, kde začíná svoboda ostatních.</p>
     </div>
 
     <div
-      class="tm-values_box  mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box  mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-purple">Nezávilost</h3>
       <p>Umění je odvést kvalitní práci, ne strávit nad ní spoustu&nbsp;hodin.</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-orange">Spolupráce</h3>
       <p>Naše firma je živý organismus propojený s&nbsp;našimi partnery, zákazníky
         i&nbsp;komunitou. Neexistují žádné hranice.</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-orange">Chaos</h3>
       <p>Život je plný změn. Přijmi to.</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-purple">Štědrost</h3>
       <p>Dávej a bude ti dáno.</p>
     </div>
     <div
-      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-purple">Zvláštnost</h3>
       <p>Zvláštnost, nekonvenčnost je vítána.</p>
     </div>
@@ -125,7 +104,7 @@
         nebo blockchain, vybíráme si technologicky zajímavé projekty, které nám
         dávají&nbsp;smysl.</p>
     </div>
-    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+    <div class="box mdc-layout-grid__cell">
       <svg width="135" height="117" viewBox="0 0 135 117" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>[icon] What are we working on? Bigger companies.</title>
         <path
@@ -177,7 +156,7 @@
         vymazlenější aplikace než měli doteď. A&nbsp;to samozřejmě remotně, pokud
         budeš&nbsp;chtít.</p>
     </div>
-    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+    <div class="box mdc-layout-grid__cell">
       <svg width="135" height="117" viewBox="0 0 135 88" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>[icon] What are we working on? Startups.</title>
         <path
@@ -255,7 +234,7 @@
         právě ty, kdo může proměnit myšlenky v&nbsp;opravdové a fungující
         produkty.</p>
     </div>
-    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+    <div class="box mdc-layout-grid__cell">
       <svg width="110" height="117" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>[icon] What are we working on? Blockchain projects.</title>
 
@@ -451,25 +430,25 @@
         společně seděli u&nbsp;jednoho stolu. Přestaň počítat hodiny a dělej svoji
         práci tak, jak nejlépe dovedeš.</p>
     </div>
-    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3>Slack</h3>
       <p>Efektivní komunikace je podstatou spolupráce nejen v&nbsp;rámci firmy, ale
         také s&nbsp;našimi zákazníky. Můžeš sedět, kde chceš, ale když pracuješ,
         měl bys být ostatním k&nbsp;dispozici.</p>
     </div>
-    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3>Github</h3>
       <p>Všechny naše projekty běží na GitHubu. U&nbsp;mnoha z&nbsp;nich používáme
         GitHub Issues pro sledování jejich samotného progresu. Spolu se Slackem je
         GitHub alfa a omega naší kooperace.</p>
     </div>
-    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3>Quip</h3>
       <p>Zde sdílíme veškerou projektovou dokumentaci, faktury, naši firemní
         knihovnu&nbsp;&ndash; v&nbsp;podstatě veškeré naše znalosti. Popros Rarouše ať ti
         nasdílí svoji super kuchařku!</p>
     </div>
-    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       <h3>Swarmpit</h3>
       <p>Většina našich projektů je kontejnerizovaná a provozovaná
         v&nbsp;prostředí Docker Swarm. Pro jejich správu jsme vyvinuli vlastní
@@ -574,7 +553,7 @@
                width="112" height="112">
         </div>
         <div
-          class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
+          class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
           <p><span itemprop="name">Aleš Roubíček</span><br>
             <a itemprop="email" href="mailto:happy@topmonks.com">happy@topmonks.com</a>
           </p>
