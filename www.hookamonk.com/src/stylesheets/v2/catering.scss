@@ -146,14 +146,14 @@
   @media (min-width: 840px) and (max-width: 1439px){
     .hm-warp__type--b2b {
       background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b.jpg");
-      background-size: auto 100%;
+      /*background-size: auto 100%;*/
       background-position: 100% 0;
       background-repeat: no-repeat;
     }
 
     .hm-warp__type--b2c {
       background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c.jpg");
-      background-size: auto 100%;
+      /*background-size: auto 100%;*/
       background-position: 100% 0;
       background-repeat: no-repeat;
     }
@@ -161,14 +161,14 @@
   @media screen and (min-width: 1440px){
     .hm-warp__type--b2b {
       background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b.jpg");
-      background-size: 100% auto;
+      /*background-size: auto 100%;*/
       background-position: 100% 0;
       background-repeat: no-repeat;
     }
 
     .hm-warp__type--b2c {
       background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c.jpg");
-      background-size: 100% auto;
+      /*background-size: auto 100%;*/
       background-position: 100% 0;
       background-repeat: no-repeat;
     }
