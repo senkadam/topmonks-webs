@@ -106,6 +106,7 @@
   background-color: var(--hm-grey--dark);
   color: var(--hm-white);
   text-align: center;
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
 
   .tm-menu__list {
     list-style-type: none;
@@ -129,7 +130,6 @@
       color: #818181;
       text-decoration: none;
       display: block; /* Display block instead of inline */
-      transition: 0.3s; /* Transition effects on hover (color) */
     }
   }
 }
