@@ -45,6 +45,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "esm": "^3.2.25",
     "fetch-h2": "^3.0.0",
+    "gulp-cloudinary-upload": "^3.0.0",
     "gulp-esbuild": "^0.9.0",
     "gulp-markdown-to-json": "^1.1.0",
     "gulp-merge-json": "^2.1.1",
