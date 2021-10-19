@@ -113,11 +113,16 @@ a {
 .button__outlined {
     background-color: var(--hm-white);
     border-radius: 4px;
-    border: 2px solid var(--hm-orange);
+    border: 2px solid var(--hm-black);
     a {
         font-size: 16px;
-        color: var(--hm-orange);
         text-transform: uppercase;
+    }
+    &:hover {
+        background-color: var(--hm-orange);
+        color: var(--hm-white) !important;
+        border: 2px solid var(--hm-orange);
+        transition: all 0.8s;
     }
     @media screen and (min-width: 840px) {
         padding: 18px 48px;
@@ -284,8 +289,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         transform: scale(1);
     }
     50% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
     100% {
         -webkit-transform: scale(1);
@@ -300,13 +305,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         transform: scale(1);
     }
     50% {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
     }
     100% {
         -webkit-transform: scale(1);
-        -ms-transform: scale(1);
+        -ms-transform: scale(1.05);
         transform: scale(1);
     }
 }
