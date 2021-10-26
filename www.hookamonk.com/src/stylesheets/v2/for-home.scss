@@ -1,0 +1,24 @@
+h2 {
+  font-weight: 600;
+}
+.for-home-intro {
+  ul {
+    list-style: none;
+    li {
+      color: var(--hm-grey);
+      line-height: 36px;
+    }
+  }
+  button a {
+    color: var(--hm-white);
+  }
+}
+.hm-warp {
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.hm-examples {
+}
