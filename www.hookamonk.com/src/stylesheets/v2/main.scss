@@ -91,34 +91,82 @@ main .material-icons {
 //
 // Submit Form
 .hm-submit-form {
-  position: relative;
-  min-height: 700px;
-  background-repeat: no-repeat;
-  background-image: cloudinaryUrl("hookamonk.com/bg_form.png", ("width": 1200px));
-  background-size: 100% auto;
-  background-position: center;
+  h2 {
+    color: var(--hm-white);
+    margin-bottom: 0.3em;
+  }
 
-  .hm-submit-form__content {
-    padding: 4em 0;
-    height: 440px;
-    width: 800px;
-    background-color: rgba(255, 355, 255, 0.3);
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 20px;
-    backdrop-filter: blur(12px);
-    color: #202020;
-    text-align: center;
-    h2 {
-      margin-bottom: 0;
+  p {
+    color: var(--hm-white);
+    max-width: 600px;
+    margin: 0 auto 2em;
+  }
+  form {
+    input, textarea {
+      font-family: "Poppins", -apple-system;
+      font-size: 18px;
+      color: var(--hm-black);
+      background-color: var(hm-white);
+      border: 1px solid #828282;
+      box-sizing: border-box;
+      border-radius: 8px;
     }
-    p {
-      max-width: 600px;
-      margin: 0 auto 2em;
+    textarea {
+      margin: 1em 0;
     }
   }
+  @media screen and (min-width: 840px) {
+    position: relative;
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-image: cloudinaryUrl("hookamonk.com/bg_form.png", ("width": 1200px));
+    background-size: 100% auto;
+    background-position: center;
+      .hm-submit-form__content {
+        padding: 2.5em;
+        height: 660px;
+        width: 1000px;
+        background-color: rgba(60, 60, 60, 0.35);
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+        backdrop-filter: blur(12px);
+        color: #202020;
+        text-align: center;
+
+        form {
+          input, textarea {
+            height: 44px;
+            width: 300px;
+            padding: 14px;
+          }
+          textarea {
+            margin: 1em 0;
+            width: 100%;
+            height: 200px;
+          }
+        }
+    }
+
+  }
+  @media (max-width: 839px) {
+    background-color: #0a2137;
+    form {
+      input, textarea {
+        margin: 0.2em 0;
+        height: 44px;
+        width: 100%;
+      }
+      textarea {
+        width: 100%;
+        height: 140px;
+      }
+    }
+  }
+
+
 }
