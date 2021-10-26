@@ -154,7 +154,7 @@ main .material-icons {
 
   }
   @media (max-width: 839px) {
-    background-color: #0a2137;
+    background-color: var(--hm-grey--dark);
     form {
       input, textarea {
         padding: 10px;
