@@ -1,6 +1,6 @@
 {%- from 'macros/helpers.njk' import css, sprite -%}
 {{ css('case-studies') }}
-{% set gridSpan = 6 if caseStudiesData.activeCase else 4 %}
+{% set gridSpan = 9 if caseStudiesData.activeCase else 4 %}
 
 <section class="tm-case-studies">
   <div class="mdc-layout-grid">
@@ -88,6 +88,39 @@
           <p>Our TopMonks Blockchain team was approached at the same time Xixoio’s&nbsp;IPCO
             was being prepared. It only took us three days to draft the complete token
             issuance architecture.</p>
+        </div>
+      {% endif %}
+
+       {% if caseStudiesData.activeCase != 'debnk' %}
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+            <div class="tm-case-studies__logo tm-case-studies__logo--debnk">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_debnk') }}</div>
+            </div>
+            <h3>DEBNK</h3></a>
+          <p>Exceptionally fast audit of smart contracts architecture. Lumir has proven to be an incredibly valuable team player that matched very well with our senior product/dev team and proved exceptionally fast and innovative thinker in designing and auditing our smart contracts architecture.</p>
+        </div>
+      {% endif %}
+
+       {% if caseStudiesData.activeCase != 'balehu' %}
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+            <div class="tm-case-studies__logo tm-case-studies__logo--balehu">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_balehu') }}</div>
+            </div>
+            <h3>Balehu Wallet</h3></a>
+          <p>Development support for startup incubator. The awesome people at TopMonks were so helpful and generous with their time while our startup incubator was growing. We had needs for front-end, back-end, and blockchain, and they always delivered. They were recommended to me by another startup founder and I'm happy to recommend them again!</p>
+        </div>
+      {% endif %}
+
+       {% if caseStudiesData.activeCase != 'defi' %}
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+            <div class="tm-case-studies__logo tm-case-studies__logo--defi">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_defi') }}</div>
+            </div>
+            <h3>DeFi Puzzle</h3></a>
+          <p>Second layer DeFi solution Leveraged trading reinvented. Construct any custom financial product on top of Compound money market positions. Hold the products for yourself or sell them on an exchange.</p>
         </div>
       {% endif %}
     </div>

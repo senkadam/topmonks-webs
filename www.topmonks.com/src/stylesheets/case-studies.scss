@@ -1,187 +1,135 @@
 .tm-case-studies {
-  h3 {
-    font-weight: 700;
-    text-align: left;
-    margin-top: 14px;
-    margin-bottom: 0;
-
-    &:after {
-      content: "";
-      width: 59px;
-      height: 2px;
-      background-color: var(--tm-primary);
-      display: block;
-      margin: 8px 0;
+    h3 {
+        font-weight: 700;
+        text-align: left;
+        margin-top: 14px;
+        margin-bottom: 0;
+        &:after {
+            content: "";
+            width: 59px;
+            height: 2px;
+            background-color: var(--tm-primary);
+            display: block;
+            margin: 8px 0;
+        }
     }
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
+    a:hover {
+        text-decoration: none;
+    }
 }
 
-.tm-case-studies__clients + .tm-case-studies__clients {
-  margin-top: 24px;
-  @media (min-width: 480px) {
-    margin-top: 0;
-  }
+.tm-case-studies__clients+.tm-case-studies__clients {
+    margin-top: 24px;
+    @media (min-width: 480px) {
+        margin-top: 0;
+    }
 }
 
 .tm-case-studies__logo {
-  height: 255px;
-  border-radius: 20px;
-  overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-
-  .tm-bgnd-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--tm-secondary) 50% center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .sprite {
-    width: 33%;
-    color: white;
-    transition: width 0.2s ease-in-out;
-  }
-
-  svg {
-    fill: currentColor;
-  }
-
-  .sprite--img_logo_pricefx {
-    --color-2: #cfcfcf;
-  }
+    height: 255px;
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    .tm-bgnd-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--tm-secondary) 50% center no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.2s ease-in-out;
+    }
+    .sprite {
+        width: 33%;
+        color: white;
+        transition: width 0.2s ease-in-out;
+    }
+    svg {
+        fill: currentColor;
+    }
+    .sprite--img_logo_pricefx {
+        --color-2: #cfcfcf;
+    }
 }
 
 .tm-case-studies__logo:hover {
-  .tm-bgnd-wrapper {
-    transform: scale(1.1);
-  }
-
-  .sprite {
-    width: 45%;
-  }
+    .tm-bgnd-wrapper {
+        transform: scale(1.1);
+    }
+    .sprite {
+        width: 45%;
+    }
 }
 
 .tm-case-studies__title {
-  text-align: center;
+    text-align: center;
 }
 
 .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl(
-    "topmonks.com/bgnd_cs_gorealeurope.png",
-    (
-      "width": 322
-    )
-  );
+    background-image: cloudinaryUrl("topmonks.com/bgnd_cs_gorealeurope.png", ( "width": 322));
 }
 
 .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl(
-    "topmonks.com/bgnd_cs_pricefx.jpg",
-    (
-      "width": 322
-    )
-  );
+    background-image: cloudinaryUrl("topmonks.com/bgnd_cs_pricefx.jpg", ( "width": 322));
 }
 
 .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl(
-    "topmonks.com/bgnd_cs_cs.jpg",
-    (
-      "width": 322
-    )
-  );
+    background-image: cloudinaryUrl("topmonks.com/bgnd_cs_cs.jpg", ( "width": 322));
 }
 
 .tm-case-studies__logo--adler .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl(
-    "topmonks.com/bgnd_cs_adler.jpg",
-    (
-      "width": 322
-    )
-  );
+    background-image: cloudinaryUrl("topmonks.com/bgnd_cs_adler.jpg", ( "width": 322));
 }
 
 .tm-case-studies__logo--profi-option .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl(
-    "topmonks.com/bgnd_profi-option.png",
-    (
-      "width": 322
-    )
-  );
+    background-image: cloudinaryUrl("topmonks.com/bgnd_profi-option.png", ( "width": 322));
 }
 
 .tm-case-studies__logo--xixoio .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl(
-    "topmonks.com/bgnd_xixoio.png",
-    (
-      "width": 322
-    )
-  );
+    background-image: cloudinaryUrl("topmonks.com/bgnd_xixoio.png", ( "width": 322));
+}
+
+.tm-case-studies__logo--debnk .tm-bgnd-wrapper {
+    background-image: cloudinaryUrl("topmonks.com/bgnd_debnk.png", ( "width": 322));
+}
+
+.tm-case-studies__logo--balehu .tm-bgnd-wrapper {
+    background-image: cloudinaryUrl("topmonks.com/bgnd_balehu.png", ( "width": 322));
+}
+
+.tm-case-studies__logo--defi .tm-bgnd-wrapper {
+    background-image: cloudinaryUrl("topmonks.com/bgnd_defi.png", ( "width": 322));
 }
 
 @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
-    background-image: cloudinaryUrl(
-      "topmonks.com/bgnd_cs_gorealeurope.png",
-      (
-        "width": 322,
-        "dpr": 2
-      )
-    );
-  }
-  .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
-    background-image: cloudinaryUrl(
-      "topmonks.com/bgnd_cs_pricefx.jpg",
-      (
-        "width": 322,
-        "dpr": 2
-      )
-    );
-  }
-  .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
-    background-image: cloudinaryUrl(
-      "topmonks.com/bgnd_cs_cs.jpg",
-      (
-        "width": 322,
-        "dpr": 2
-      )
-    );
-  }
-  .tm-case-studies__logo--adler .tm-bgnd-wrapper {
-    background-image: cloudinaryUrl(
-      "topmonks.com/bgnd_cs_adler.jpg",
-      (
-        "width": 322,
-        "dpr": 2
-      )
-    );
-  }
-  .tm-case-studies__logo--profi-option .tm-bgnd-wrapper {
-    background-image: cloudinaryUrl(
-      "topmonks.com/bgnd_profi-option.png",
-      (
-        "width": 322,
-        "dpr": 2
-      )
-    );
-  }
-  .tm-case-studies__logo--xixoio .tm-bgnd-wrapper {
-    background-image: cloudinaryUrl(
-      "topmonks.com/bgnd_xixoio.png",
-      (
-        "width": 322,
-        "dpr": 2
-      )
-    );
-  }
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_cs_gorealeurope.png", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_cs_pricefx.jpg", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_cs_cs.jpg", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--adler .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_cs_adler.jpg", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--profi-option .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_profi-option.png", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--xixoio .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_xixoio.png", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--debnk .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_debnk.png", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--balehu .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_balehu.png", ( "width": 322, "dpr": 2));
+    }
+    .tm-case-studies__logo--defi .tm-bgnd-wrapper {
+        background-image: cloudinaryUrl("topmonks.com/bgnd_defi.png", ( "width": 322, "dpr": 2));
+    }
 }
