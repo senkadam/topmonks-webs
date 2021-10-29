@@ -51,8 +51,8 @@
 .hm-about {
     background-image: cloudinaryUrl("hookamonk.com/bg_story-smoke.jpg");
     background-color: var(--hm-bg--light);
-    background-size: 50% auto;
-    background-position: 100% 0;
+    background-size: cover;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     .hm-about__text {
         align-self: center;
@@ -62,12 +62,77 @@
 //
 // Section 4: Features
 .hm-features {
+    text-align: center;
     .hm-features__content {
         @media (max-width: 439px) {
             margin-bottom: 2em;
         }
     }
 }
+
+.card {
+    text-align: left;
+    border: 1px solid var(--hm-grey--lighter);
+    border-radius: 1em;
+    padding: 20px;
+}
+
+.wrap-collabsible {
+    margin-bottom: 1.2rem 0;
+    padding-bottom: 0;
+    @media screen and (max-width: 840px) {
+        padding-bottom: 0;
+    }
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.lbl-toggle {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+    color: var(--hm-orange);
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+
+.toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked+.lbl-toggle+.collapsible-content {
+    max-height: 100vh;
+    transition: max-height 1s ease-in-out;
+}
+
+.toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {}
 
 //
 // Section 5: Testimonials
