@@ -141,7 +141,7 @@ input[type='checkbox'] {
     text-align: center;
     background-color: var(--hm-grey--dark);
     .hm-testimonials__content {
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 400;
         line-height: 40px;
         color: var(--hm-white);
@@ -177,7 +177,7 @@ input[type='checkbox'] {
             padding: 0 18px 38px;
         }
         @media (min-width: 840px) {
-            padding: 1em 3em 4em;
+            padding: 3em 3em 4em;
         }
         h3,
         h4,
@@ -266,7 +266,7 @@ input[type='checkbox'] {
     .hm-product-type__inner {
         flex-grow: 1;
         justify-content: space-between;
-        padding: 0.5em 2em 2em;
+        padding: 1.5em 2em 2em;
     }
     .hm-product-type,
     .hm-product-type__inner {

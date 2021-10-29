@@ -1119,5 +1119,27 @@
     "existing": false,
     "original_filename": "img_header-7",
     "api_key": "389916164315219"
+  },
+  "avatar.png": {
+    "asset_id": "392a9e80343a5c4342e7177215a6ef64",
+    "public_id": "hookamonk.com/avatar",
+    "version": 1635516944,
+    "version_id": "2582420a94c9823b51cfeca2dbac1418",
+    "signature": "ae8dde10e737c24f0fc2a7229ec029e5c1318809",
+    "width": 112,
+    "height": 125,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2021-10-29T14:15:44Z",
+    "tags": [],
+    "bytes": 21951,
+    "type": "upload",
+    "etag": "4274c78502efa50f24f4457169236373",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1635516944/hookamonk.com/avatar.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1635516944/hookamonk.com/avatar.png",
+    "existing": false,
+    "original_filename": "avatar",
+    "api_key": "389916164315219"
   }
 }

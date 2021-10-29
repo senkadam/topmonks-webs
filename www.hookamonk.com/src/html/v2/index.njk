@@ -30,7 +30,7 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner hm-layout-wrapper">
         <div class="hm-intro__header-bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop wow bounceInLeft zoom">
-          <img title="Hookamonk box product photo"
+        <img title="Hookamonk box product photo"
                alt="[photo] Hookamonk box product photo"
                width="600px"
                src="{{ "/hookamonk.com/img_header-7.png" | cloudinaryUrl(width=600) }}"
@@ -509,6 +509,13 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <p class="title__prefix">What they think</p>
           <h2>Testimonials</h2>
+           <img title="Hookamonk box product photo"
+               alt="[photo] Hookamonk box product photo"
+               width="128px"
+               src="{{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128) }}"
+               srcset="{{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128) }} 1x,
+                     {{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128,dpr=1.5) }} 1.5x,
+                     {{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128,dpr=2) }} 2x" />
           <p class="hm-testimonials__content">“Warp is great. No problems, no charcoals, no bad smell. I’ve been trying different tobacco loadings, I am really getting used to it. There is absolutely nothing to complain about.”</p>
         </div>
         <div class="hm-testimonials__logo mdc-layout-grid__cell mdc-layout-grid__cell--span-12">

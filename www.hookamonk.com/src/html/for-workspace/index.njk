@@ -1,0 +1,148 @@
+{% extends 'layouts/main2.njk' %}
+{% from 'macros/helpers.njk' import css, sprite %}
+
+{% set language = en %}
+
+{% block title %}
+  Hookamonk for Workspace
+{% endblock %}
+
+{% block head %}
+  <meta name="description"
+        content="First fully electronic hookah for tobacco.">
+  <meta name="twitter:description" property="og:description"
+        content="First fully electronic hookah for tobacco.">
+  <link rel="canonical" href="https://www.hookamonk.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@topmonks">
+  <meta name="twitter:title" property="og:title" content="Game changer in hookah.">
+  <meta name="twitter:image" property="og:image" content="https://www.hookamonk.com/og-image.jpg">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="https://www.hookamonk.com/">
+  <meta property="og:site_name" content="hookamonk.com">
+{% endblock %}
+
+{% block content %}
+  {{ css("v2/typography") }}
+  {{ css("v2/main") }}
+  {{ css("v2/for-workspace") }}
+  <section class="hm-intro for-home-intro">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner hm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h1>For <span class="text--orange"><strong>Home</strong></span></h1>
+          <ul>
+            <li>✔︎ No initial down payment</li>
+            <li>✔︎ Monthly rental charge</li>
+            <li>✔︎ Transparent pricing</li>
+            <li>✔︎ Additional services</li>
+          </ul>
+          <button class="button button__contained button__contained--orange">
+            <a href="#hm-warp" class="button__label">Next</a>
+          </button>
+        </div>
+        <div
+          class="hm-intro__header-bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop wow bounceInLeft zoom">
+          <img title="Hookamonk product photo"
+               alt="[photo] Hookamonk product photo"
+               width="600px"
+               src="{{ "/hookamonk.com/img_for-workspace.png" | cloudinaryUrl(width=600) }}"
+               srcset="{{ "/hookamonk.com/img_for-workspace.png" | cloudinaryUrl(width=600) }} 1x,
+                     {{ "/hookamonk.com/img_for-workspace.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,
+                     {{ "/hookamonk.com/img_for-workspace.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ css("v2/catering") }}
+  <section id="hm-warp" class="hm-warp">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner hm-layout-wrapper">
+        <div class="hm-about__text mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Looking for a <span class="text--orange">new</span></h2>
+          <p>Unique element for your office, agency, hub or a business event?</p>
+          <p>Whether you like to enjoy smoking hookah by yourself, with your colleagues & friends or business partners,
+            it can help you concentrate on your tasks, improve your productivity, set a rather informal atmosphere for
+            your meetings and establish closer relationships.</p>
+        </div>
+        <div class="hm-about__img mdc-layout-grid__cell mdc-layout-grid__cell--span-12 wow flipInX">
+          <img title="Hookamonk while using photo"
+               alt="[photo] Hookamonk while using photo"
+               width="800px"
+               src="{{ "/hookamonk.com/img_product-space.png" | cloudinaryUrl(width=800) }}"
+               srcset="{{ "/hookamonk.com/img_product-space.png" | cloudinaryUrl(width=800) }} 1x,
+                     {{ "/hookamonk.com/img_product-space.png" | cloudinaryUrl(width=400,dpr=1.5) }} 1.5x,
+                     {{ "/hookamonk.com/img_product-space.png" | cloudinaryUrl(width=400,dpr=2) }} 2x"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="" class=" qt  wow pulse">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner hm-layout-wrapper">
+        <div class="order-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h2>Lorem <span class="text--orange">Warp</span></h2>
+          <h3>Fringilla ipsum tincidunt</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus
+            vestibulum
+            scelerisque eu.</p>
+        </div>
+        <div class="order-2 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <img title="Hookamonk while using photo"
+               alt="[photo] Hookamonk while using photo"
+               width="600px"
+               src="{{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600) }}"
+               srcset="{{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600) }} 1x,
+                     {{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,
+                     {{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>
+
+        </div>
+        <div class="order-4 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <img title="Hookamonk while using photo"
+               alt="[photo] Hookamonk while using photo"
+               width="600px"
+               src="{{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600) }}"
+               srcset="{{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600) }} 1x,
+                     {{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,
+                     {{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>
+
+        </div>
+        <div class="order-3 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h2>Lorem <span class="text--orange">Warp</span></h2>
+          <h3>Fringilla ipsum tincidunt</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus
+            vestibulum
+            scelerisque eu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="" class="hm-submit-form">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner hm-layout-wrapper">
+        <div class="hm-submit-form__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
+          <h2>Lorem <span class="text--orange">Ipsum</span></h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus vestibulum
+            scelerisque eu.</p>
+          <form>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="number" name="phone" placeholder="Telephone" required>
+            <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Enter text here..."></textarea><br>
+            <button class="button button__contained button__contained--orange">
+              <a type="submit" href="#about" class="button__label">Submit</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}
+
+  {% block footer %}
+    {{ css("v2/footer") }}
+    {% include "./v2/footer.njk" %}
+  {% endblock %}
+
