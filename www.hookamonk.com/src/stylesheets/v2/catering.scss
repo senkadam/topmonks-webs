@@ -70,10 +70,12 @@
 
   .hm-features__content {
     background-color: var(--hm-orange);
+
     h3 {
       font-size: 20px;
       font-weight: normal;
     }
+
     @media (max-width: 439px) {
       margin-bottom: 2em;
     }
@@ -83,6 +85,7 @@
     align-self: center;
     border-radius: 0;
     margin-bottom: 0;
+
     svg {
       padding: 0 10px 0;
     }
@@ -118,23 +121,10 @@ input[type='checkbox'] {
   text-align: left;
   cursor: pointer;
   transition: all 0.25s ease-out;
-}
 
-.lbl-toggle:hover {
-  color: var(--hm-orange);
-}
-
-.lbl-toggle::after {
-  content: url("assets/img/icon_expand.svg");
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  text-align: center;
-}
-
-.toggle:checked + .lbl-toggle::before {
-  transform: rotate(90deg) translateX(-3px);
+  svg {
+    margin-top: 10px;
+  }
 }
 
 .collapsible-content {
@@ -219,6 +209,7 @@ input[type='checkbox'] {
       margin-top: 2em;
     }
   }
+
   h3 {
     font-size: 48px;
     font-weight: 700;
