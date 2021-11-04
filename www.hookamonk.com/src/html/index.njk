@@ -29,14 +29,15 @@
   <section class="hm-intro">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner hm-layout-wrapper">
-        <div class="hm-intro__header-bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop wow bounceInLeft zoom">
-        <img title="Hookamonk box product photo"
+        <div
+          class="hm-intro__header-bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop wow bounceInLeft zoom">
+          <img title="Hookamonk box product photo"
                alt="[photo] Hookamonk box product photo"
                width="600px"
                src="{{ "/hookamonk.com/img_header-7.png" | cloudinaryUrl(width=600) }}"
                srcset="{{ "/hookamonk.com/img_header-.png" | cloudinaryUrl(width=600) }} 1x,
                      {{ "/hookamonk.com/img_header-7.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,
-                     {{ "/hookamonk.com/img_header-7.png" | cloudinaryUrl(width=600,dpr=2) }} 2x" />
+                     {{ "/hookamonk.com/img_header-7.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <p class="title__prefix">We present warp</p>
@@ -58,55 +59,63 @@
           <h2>Key features</h2>
         </div>
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
-          <div class="material-icons material-icons--neutral">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                    d="M16.56,5.44L15.11,6.89C16.84,7.94 18,9.83 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12C6,9.83 7.16,7.94 8.88,6.88L7.44,5.44C5.36,6.88 4,9.28 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12C20,9.28 18.64,6.88 16.56,5.44M13,3H11V13H13"/>
-            </svg>
+            <div class="material-icons material-icons--neutral">
+              <svg viewBox="0 0 24 24">
+                <path fill="currentColor"
+                      d="M16.56,5.44L15.11,6.89C16.84,7.94 18,9.83 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12C6,9.83 7.16,7.94 8.88,6.88L7.44,5.44C5.36,6.88 4,9.28 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12C20,9.28 18.64,6.88 16.56,5.44M13,3H11V13H13"/>
+              </svg>
           </div>
           <div class="wrap-collabsible">
-                <input id="collapsible1" class="toggle" type="checkbox"> 
-                <label for="collapsible1" class="lbl-toggle" tabindex="0">
-                <h3>Say goodbye to charcoals</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>Warp is completely charcoal-less hookah. Tobacco is heated by spirals controlled by a smart electronic device. No more dirty jobs and bad smells at your place.</p>
-             </div>
-           </div>
+            <input id="collapsible1" class="toggle" type="checkbox">
+            <label for="collapsible1" class="lbl-toggle" tabindex="0">
+              <h3>Say goodbye to charcoals</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>Warp is completely charcoal-less hookah. Tobacco is heated by spirals
+                  controlled by a smart electronic device. No more dirty jobs and bad smells at your place.</p>
+              </div>
+            </div>
           </div>
-          
+
         </div>
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
-           <div class="material-icons material-icons--neutral">
+          <div class="material-icons material-icons--neutral">
             <svg viewBox="0 0 24 24">
               <path fill="currentColor"
                     d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z"/>
             </svg>
           </div>
           <div class="wrap-collabsible">
-                <input id="collapsible2" class="toggle" type="checkbox"> 
-                <label for="collapsible2" class="lbl-toggle" tabindex="0">
-                <h3>Less staff needed</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>You only need a shishaman to fill the bowl with tobacco. Warp does the rest and takes care of a pleasant smoking experience throughout the session, no other assistance needed.</p>
-             </div>
-           </div>
+            <input id="collapsible2" class="toggle" type="checkbox">
+            <label for="collapsible2" class="lbl-toggle" tabindex="0">
+              <h3>Less staff needed</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>You only need a shishaman to fill the bowl with tobacco. Warp does the rest
+                  and takes care of a pleasant smoking experience throughout the session, no other assistance
+                  needed.</p>
+              </div>
+            </div>
           </div>
 
         </div>
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
-           <div class="material-icons material-icons--neutral">
+          <div class="material-icons material-icons--neutral">
             <svg viewBox="0 0 24 24">
               <path fill="currentColor"
                     d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
             </svg>
           </div>
           <div class="wrap-collabsible">
-                <input id="collapsible3" class="toggle" type="checkbox"> 
-                <label for="collapsible3" class="lbl-toggle" tabindex="0">
-                <h3>Pay per use</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>You will pay us at the end of each month based on the number of sessions served. We earn when you earn. You earn, when your customers enjoy Warp sessions at your place. A truly win-win-win situation.</p>
-             </div>
-           </div>
+            <input id="collapsible3" class="toggle" type="checkbox">
+            <label for="collapsible3" class="lbl-toggle" tabindex="0">
+              <h3>Pay per use</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>You will pay us at the end of each month based on the number of sessions
+                  served. We earn when you earn. You earn, when your customers enjoy Warp sessions at your place. A
+                  truly win-win-win situation.</p>
+              </div>
+            </div>
           </div>
-          
+
         </div>
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
           <div class="material-icons material-icons--neutral">
@@ -115,15 +124,17 @@
                     d="M20.84 22.73L16.29 18.18C15.2 19.3 13.69 20 12 20C8.69 20 6 17.31 6 14C6 12.67 6.67 11.03 7.55 9.44L1.11 3L2.39 1.73L22.11 21.46L20.84 22.73M18 14C18 10 12 3.25 12 3.25S10.84 4.55 9.55 6.35L17.95 14.75C18 14.5 18 14.25 18 14Z"/>
             </svg>
           </div>
-        <div class="wrap-collabsible">
-                <input id="collapsible4" class="toggle" type="checkbox"> 
-                <label for="collapsible4" class="lbl-toggle" tabindex="0">
-                <h3>First electronic hookah</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>There is no e-liquid in Warp. You can use any tobacco you love and enjoy its clear taste.</p>
-             </div>
-           </div>
+          <div class="wrap-collabsible">
+            <input id="collapsible4" class="toggle" type="checkbox">
+            <label for="collapsible4" class="lbl-toggle" tabindex="0">
+              <h3>First electronic hookah</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>There is no e-liquid in Warp. You can use any tobacco you love and enjoy its
+                  clear taste.</p>
+              </div>
+            </div>
           </div>
-          
+
         </div>
 
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
@@ -133,33 +144,39 @@
                     d="M11 6H14L17.29 2.7A1 1 0 0 1 18.71 2.7L21.29 5.29A1 1 0 0 1 21.29 6.7L19 9H11V11A1 1 0 0 1 10 12A1 1 0 0 1 9 11V8A2 2 0 0 1 11 6M5 11V15L2.71 17.29A1 1 0 0 0 2.71 18.7L5.29 21.29A1 1 0 0 0 6.71 21.29L11 17H15A1 1 0 0 0 16 16V15H17A1 1 0 0 0 18 14V13H19A1 1 0 0 0 20 12V11H13V12A2 2 0 0 1 11 14H9A2 2 0 0 1 7 12V9Z"/>
             </svg>
           </div>
-        <div class="wrap-collabsible">
-                <input id="collapsible5" class="toggle" type="checkbox"> 
-                <label for="collapsible5" class="lbl-toggle" tabindex="0">
-                <h3>Complete set provided</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>Hookamonk consists of hooka box, computer and the electronic head with our patented shisha funnel and heat management system. No other stuff needed, you can enjoy your smoking session just 12 minutes after unpacking the device.</p>
-             </div>
-           </div>
+          <div class="wrap-collabsible">
+            <input id="collapsible5" class="toggle" type="checkbox">
+            <label for="collapsible5" class="lbl-toggle" tabindex="0">
+              <h3>Complete set provided</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>Hookamonk consists of hooka box, computer and the electronic head with our
+                  patented shisha funnel and heat management system. No other stuff needed, you can enjoy your smoking
+                  session just 12 minutes after unpacking the device.</p>
+              </div>
+            </div>
           </div>
-          
+
         </div>
-        
+
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
-           <div class="material-icons material-icons--neutral">
+          <div class="material-icons material-icons--neutral">
             <svg viewBox="0 0 24 24">
               <path fill="currentColor"
                     d="M19,19H4V3H19M11.5,23A1.5,1.5 0 0,1 10,21.5A1.5,1.5 0 0,1 11.5,20A1.5,1.5 0 0,1 13,21.5A1.5,1.5 0 0,1 11.5,23M18.5,0H4.5A2.5,2.5 0 0,0 2,2.5V21.5A2.5,2.5 0 0,0 4.5,24H18.5A2.5,2.5 0 0,0 21,21.5V2.5A2.5,2.5 0 0,0 18.5,0Z"/>
             </svg>
           </div>
-         <div class="wrap-collabsible">
-                <input id="collapsible6" class="toggle" type="checkbox"> 
-                <label for="collapsible6" class="lbl-toggle" tabindex="0">
-                <h3>Lounge app</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>The Lounge App helps the lounge staff to manage Warp devices. It features an overview of running table sessions, monitors sessions run time, maintenance status and allows remote control of all devices.</p>
-             </div>
-           </div>
+          <div class="wrap-collabsible">
+            <input id="collapsible6" class="toggle" type="checkbox">
+            <label for="collapsible6" class="lbl-toggle" tabindex="0">
+              <h3>Lounge app</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>The Lounge App helps the lounge staff to manage Warp devices. It features an
+                  overview of running table sessions, monitors sessions run time, maintenance status and allows remote
+                  control of all devices.</p>
+              </div>
+            </div>
           </div>
-          
+
         </div>
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
           <div class="material-icons material-icons--neutral">
@@ -169,47 +186,54 @@
             </svg>
           </div>
           <div class="wrap-collabsible">
-                <input id="collapsible7" class="toggle" type="checkbox"> 
-                <label for="collapsible7" class="lbl-toggle" tabindex="0">
-                <h3>Consistent and full taste</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>With Warp, the taste of tobacco remains full and constant during the entire session. No extra tweaking needed and even hookah beginners can shine with a delicious hookah.</p>
-             </div>
-           </div>
+            <input id="collapsible7" class="toggle" type="checkbox">
+            <label for="collapsible7" class="lbl-toggle" tabindex="0">
+              <h3>Consistent and full taste</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>With Warp, the taste of tobacco remains full and constant during the entire
+                  session. No extra tweaking needed and even hookah beginners can shine with a delicious hookah.</p>
+              </div>
+            </div>
           </div>
 
         </div>
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
-           <div class="material-icons material-icons--neutral">
+          <div class="material-icons material-icons--neutral">
             <svg viewBox="0 0 24 24">
               <path fill="currentColor"
                     d="M12.5 7C12.5 5.89 13.39 5 14.5 5H18C19.1 5 20 5.9 20 7V9.16C18.84 9.57 18 10.67 18 11.97V14H12.5V7M6 11.96V14H11.5V7C11.5 5.89 10.61 5 9.5 5H6C4.9 5 4 5.9 4 7V9.15C5.16 9.56 6 10.67 6 11.96M20.66 10.03C19.68 10.19 19 11.12 19 12.12V15H5V12C5 10.9 4.11 10 3 10S1 10.9 1 12V17C1 18.1 1.9 19 3 19V21H5V19H19V21H21V19C22.1 19 23 18.1 23 17V12C23 10.79 21.91 9.82 20.66 10.03Z"/>
             </svg>
           </div>
           <div class="wrap-collabsible">
-                <input id="collapsible8" class="toggle" type="checkbox"> 
-                <label for="collapsible8" class="lbl-toggle" tabindex="0">
-                <h3>No burnt furniture</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>Charcoals can easily burn your precious club furniture. No more burn marks with Warp.</p>
-             </div>
-           </div>
+            <input id="collapsible8" class="toggle" type="checkbox">
+            <label for="collapsible8" class="lbl-toggle" tabindex="0">
+              <h3>No burnt furniture</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>Charcoals can easily burn your precious club furniture. No more burn marks
+                  with Warp.</p>
+              </div>
+            </div>
           </div>
 
         </div>
 
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
-           <div class="material-icons material-icons--neutral">
+          <div class="material-icons material-icons--neutral">
             <svg viewBox="0 0 24 24">
               <path fill="currentColor"
                     d="M7.95,3L6.53,5.19L7.95,7.4H7.94L5.95,10.5L4.22,9.6L5.64,7.39L4.22,5.19L6.22,2.09L7.95,3M13.95,2.89L12.53,5.1L13.95,7.3L13.94,7.31L11.95,10.4L10.22,9.5L11.64,7.3L10.22,5.1L12.22,2L13.95,2.89M20,2.89L18.56,5.1L20,7.3V7.31L18,10.4L16.25,9.5L17.67,7.3L16.25,5.1L18.25,2L20,2.89M2,22V14A2,2 0 0,1 4,12H20A2,2 0 0,1 22,14V22H20V20H4V22H2M6,14A1,1 0 0,0 5,15V17A1,1 0 0,0 6,18A1,1 0 0,0 7,17V15A1,1 0 0,0 6,14M10,14A1,1 0 0,0 9,15V17A1,1 0 0,0 10,18A1,1 0 0,0 11,17V15A1,1 0 0,0 10,14M14,14A1,1 0 0,0 13,15V17A1,1 0 0,0 14,18A1,1 0 0,0 15,17V15A1,1 0 0,0 14,14M18,14A1,1 0 0,0 17,15V17A1,1 0 0,0 18,18A1,1 0 0,0 19,17V15A1,1 0 0,0 18,14Z"/>
             </svg>
           </div>
-        <div class="wrap-collabsible">
-                <input id="collapsible9" class="toggle" type="checkbox"> 
-                <label for="collapsible9" class="lbl-toggle" tabindex="0">
-                <h3>Smart inhale detection</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>Warp electronic head reacts to inhales. The tobacco heats up only when you breathe in, constantly maintaining the ideal temperature. No more unpleasant sessions caused by poor charcoal management.</p>
-             </div>
-           </div>
+          <div class="wrap-collabsible">
+            <input id="collapsible9" class="toggle" type="checkbox">
+            <label for="collapsible9" class="lbl-toggle" tabindex="0">
+              <h3>Smart inhale detection</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>Warp electronic head reacts to inhales. The tobacco heats up only when you
+                  breathe in, constantly maintaining the ideal temperature. No more unpleasant sessions caused by poor
+                  charcoal management.</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -220,13 +244,15 @@
                     d="M12 2C17.5 2 22 6.5 22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2M12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4M12 5C15.87 5 19 8.13 19 12C19 15.87 15.87 19 12 19C10.07 19 8.32 18.22 7.05 16.95L12 12V5Z"/>
             </svg>
           </div>
-        <div class="wrap-collabsible">
-                <input id="collapsible10" class="toggle" type="checkbox"> 
-                <label for="collapsible10" class="lbl-toggle" tabindex="0">
-                <h3>Intensity regulation</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>Whether you like your hookah stronger or smoother, you can change its intensity on display or in your mobile app.</p>
-             </div>
-           </div>
+          <div class="wrap-collabsible">
+            <input id="collapsible10" class="toggle" type="checkbox">
+            <label for="collapsible10" class="lbl-toggle" tabindex="0">
+              <h3>Intensity regulation</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>Whether you like your hookah stronger or smoother, you can change its
+                  intensity on display or in your mobile app.</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -237,37 +263,41 @@
                     d="M17,13L12,18L7,13H10V9H14V13M19.35,10.03C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.03C2.34,8.36 0,10.9 0,14A6,6 0 0,0 6,20H19A5,5 0 0,0 24,15C24,12.36 21.95,10.22 19.35,10.03Z"/>
             </svg>
           </div>
-        <div class="wrap-collabsible">
-                <input id="collapsible11" class="toggle" type="checkbox"> 
-                <label for="collapsible11" class="lbl-toggle" tabindex="0">
-                <h3>Features updated automatically</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>Warp is kept up to date thanks to its wi-fi connection. All our devices are updated automatically on a regular basis.</p>
-             </div>
-           </div>
+          <div class="wrap-collabsible">
+            <input id="collapsible11" class="toggle" type="checkbox">
+            <label for="collapsible11" class="lbl-toggle" tabindex="0">
+              <h3>Features updated automatically</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>Warp is kept up to date thanks to its wi-fi connection. All our devices are
+                  updated automatically on a regular basis.</p>
+              </div>
+            </div>
           </div>
 
         </div>
         <div class="hm-features__content mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop card">
-           <div class="material-icons material-icons--neutral">
+          <div class="material-icons material-icons--neutral">
             <svg viewBox="0 0 24 24">
               <path fill="currentColor"
                     d="M16,18H7V4H16M11.5,22A1.5,1.5 0 0,1 10,20.5A1.5,1.5 0 0,1 11.5,19A1.5,1.5 0 0,1 13,20.5A1.5,1.5 0 0,1 11.5,22M15.5,1H7.5A2.5,2.5 0 0,0 5,3.5V20.5A2.5,2.5 0 0,0 7.5,23H15.5A2.5,2.5 0 0,0 18,20.5V3.5A2.5,2.5 0 0,0 15.5,1Z"/>
             </svg>
           </div>
-           <div class="wrap-collabsible">
-                <input id="collapsible12" class="toggle" type="checkbox"> 
-                <label for="collapsible12" class="lbl-toggle" tabindex="0">
-                <h3>Mobile app</h3></label>
-                <div class="collapsible-content"><div class="content-inner"><p>Mobile app for Android and iOS. You can use it to change the intensity of your hookah or create a diary with your sessions.</p>
-             </div>
-           </div>
+          <div class="wrap-collabsible">
+            <input id="collapsible12" class="toggle" type="checkbox">
+            <label for="collapsible12" class="lbl-toggle" tabindex="0">
+              <h3>Mobile app</h3></label>
+            <div class="collapsible-content">
+              <div class="content-inner"><p>Mobile app for Android and iOS. You can use it to change the intensity of
+                  your hookah or create a diary with your sessions.</p>
+              </div>
+            </div>
           </div>
 
         </div>
       </div>
     </div>
-    </section>
-    <section id="partners" class="hm-partners wow pulse">
+  </section>
+  <section id="partners" class="hm-partners wow pulse">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner hm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -467,34 +497,34 @@
       <div class="mdc-layout-grid__inner hm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <p class="title__prefix">We are flexible, <br>
-          get in touch with us for your individual plan</p>
+            get in touch with us for your individual plan</p>
           <h2>I want Warp</h2>
         </div>
         <div class="hm-warp__type hm-warp__type--b2b mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop zoom">
           <h3>For <br>home</h3>
           <p>✓ Fixed monthly fee<br>
-             ✓ Transparent pricing<br>
-             ✓ No hidden charges<br>
-             ✓ For personal use only
-             </p>
+            ✓ Transparent pricing<br>
+            ✓ No hidden charges<br>
+            ✓ For personal use only
+          </p>
           <button class="button button__contained button__contained--white">
             <a href="mailto:sales@hookamonk.com?subject=I want Warp for home" class="button__label">Next</a>
           </button>
         </div>
         <div class="hm-warp__type hm-warp__type--b2c mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop zoom">
           <h3>For workspace</h3>
-            <p>✓ No initial down payment<br>
+          <p>✓ No initial down payment<br>
             ✓ Monthly rental charge<br>
             ✓ Transparent pricing<br>
             ✓ Additional services
-            </p>
+          </p>
           <button class="button button__contained button__contained--white">
             <a href="mailto:sales@hookamonk.com?subject=I want Warp for workspace" class="button__label">Next</a>
           </button>
         </div>
-         <div class="hm-warp__type hm-warp__type--b2d mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop zoom">
+        <div class="hm-warp__type hm-warp__type--b2d mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop zoom">
           <h3>For hookah lounge</h3>
-           <p>✓ No initial down payment<br>
+          <p>✓ No initial down payment<br>
             ✓ Monthly payments based on the number of Warp sessions served</p>
           <button class="button button__contained button__contained--white">
             <a href="mailto:sales@hookamonk.com?subject=I want Warp for hookah lounge" class="button__label">Next</a>
@@ -509,14 +539,16 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <p class="title__prefix">What they think</p>
           <h2>Testimonials</h2>
-           <img title="Hookamonk box product photo"
+          <img title="Hookamonk box product photo"
                alt="[photo] Hookamonk box product photo"
                width="128px"
                src="{{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128) }}"
                srcset="{{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128) }} 1x,
                      {{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128,dpr=1.5) }} 1.5x,
-                     {{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128,dpr=2) }} 2x" />
-          <p class="hm-testimonials__content">“Warp is great. No problems, no charcoals, no bad smell. I’ve been trying different tobacco loadings, I am really getting used to it. There is absolutely nothing to complain about.”</p>
+                     {{ "/hookamonk.com/avatar.png" | cloudinaryUrl(width=128,dpr=2) }} 2x"/>
+          <p class="hm-testimonials__content">“Warp is great. No problems, no charcoals, no bad smell. I’ve been trying
+            different tobacco loadings, I am really getting used to it. There is absolutely nothing to complain
+            about.”</p>
         </div>
         <div class="hm-testimonials__logo mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="http://www.loftn8.com/" title="Loft N8 Homepage" target="_blank" rel="noopener">
@@ -715,7 +747,7 @@
       </div>
     </div>
   </section>
-   <section id="about" class="hm-about">
+  <section id="about" class="hm-about">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner hm-layout-wrapper">
         <div class="hm-about__text mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
@@ -731,7 +763,8 @@
               </div>-->
               <h3>Always on the go</h3>
               <p>Looking for new challenges, our team of curious and passionate hookarians did it again!</p>
-              <p>Our goal was to bring the first working electronic hookah to the market. And finally we have done it! We are happy to announce our proud creation: WARP!</p>
+              <p>Our goal was to bring the first working electronic hookah to the market. And finally we have done it!
+                We are happy to announce our proud creation: WARP!</p>
             </div>
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
               <!--<div class="material-icons material-icons--orange">
@@ -741,9 +774,11 @@
             </svg>
               </div>-->
               <h3>The original motivation</h3>
-              <p>Behind this was our own frustration over the messy-complication of using traditional charcoal as a source of heat.</p>
+              <p>Behind this was our own frustration over the messy-complication of using traditional charcoal as a
+                source of heat.</p>
               <p>We wanted to revolutionise the hookah-smoking world, and bring it in line with modern technology.</p>
-              <p>We are not the first to try this, many have and failed, but we are the first to succeed and bring our innovation to the global markets.</p>
+              <p>We are not the first to try this, many have and failed, but we are the first to succeed and bring our
+                innovation to the global markets.</p>
             </div>
           </div>
         </div>
@@ -754,7 +789,7 @@
                src="{{ "/hookamonk.com/img_story5.png" | cloudinaryUrl(width=600) }}"
                srcset="{{ "/hookamonk.com/img_story5.png" | cloudinaryUrl(width=600) }} 1x,
                      {{ "/hookamonk.com/img_story5.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,
-                     {{ "/hookamonk.com/img_story5.png" | cloudinaryUrl(width=600,dpr=2) }} 2x" />
+                     {{ "/hookamonk.com/img_story5.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>
         </div>
       </div>
     </div>
@@ -768,7 +803,8 @@
         </div>
         <div class="hm-product-type mdc-layout-grid__cell zoom">
           <div class="hm-product-type__img">
-            <img class="optimalization" alt="Warp Amina" loading="lazy" src="{{ "/hookamonk.com/img_products-amina-2.jpg" | cloudinaryUrl }}"
+            <img class="optimalization" alt="Warp Amina" loading="lazy"
+                 src="{{ "/hookamonk.com/img_products-amina-2.jpg" | cloudinaryUrl }}"
                  width="480"
                  height="300">
           </div>
@@ -784,7 +820,8 @@
         </div>
         <div class="hm-product-type mdc-layout-grid__cell zoom">
           <div class="hm-product-type__img">
-            <img class="optimalization" alt="Warp Nebulla" loading="lazy" src="{{ "/hookamonk.com/img_products-nebulla2.jpg" | cloudinaryUrl }}"
+            <img class="optimalization" alt="Warp Nebulla" loading="lazy"
+                 src="{{ "/hookamonk.com/img_products-nebulla2.jpg" | cloudinaryUrl }}"
                  width="480"
                  height="300">
           </div>
@@ -827,7 +864,7 @@
                src="{{ "/hookamonk.com/img_catering-3.jpg" | cloudinaryUrl(width=530) }}"
                srcset="{{ "/hookamonk.com/img_catering-3.jpg" | cloudinaryUrl(width=530) }} 1x,
                      {{ "/hookamonk.com/img_catering-3.jpg" | cloudinaryUrl(width=530,dpr=1.5) }} 1.5x,
-                     {{ "/hookamonk.com/img_catering-3.jpg" | cloudinaryUrl(width=530,dpr=2) }} 2x" />
+                     {{ "/hookamonk.com/img_catering-3.jpg" | cloudinaryUrl(width=530,dpr=2) }} 2x"/>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <p class="title__prefix">Game changer in hookah world</p>
@@ -836,13 +873,14 @@
           <div class="mdc-layout-grid__inner">
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
               <h3>Premium hookah catering</h3>
-              <p>For various occasions: celebrations, garden parties, weddings, corporate or business events, festivals.</p>
+              <p>For various occasions: celebrations, garden parties, weddings, corporate or business events,
+                festivals.</p>
             </div>
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
               <h3>Our professional team</h3>
               <p>Will provide you with premium service and an extraordinary experience throughout your events.</p>
             </div>
-             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
               <h3>Hookahs create unique opportunities</h3>
               <p>For relaxation, socialization, networking, meditating or brainstorming.</p>
             </div>
