@@ -90,11 +90,12 @@
 
   .material-icons--neutral {
     box-shadow: none;
+    background-color: transparent;
   }
 }
 
 .card {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   display: inline-flex;
   text-align: left;
@@ -128,6 +129,7 @@ input[type='checkbox'] {
   display: block;
   width: 30px;
   height: 30px;
+  margin-left: 20px;
   text-align: center;
 }
 
@@ -200,7 +202,7 @@ input[type='checkbox'] {
     text-align: left;
     border-radius: 10px;
     @media (max-width: 839px) {
-      padding: 0 18px 38px;
+      padding: 38px 18px;
     }
     @media (min-width: 840px) {
       padding: 3em 3em 4em;
@@ -213,30 +215,32 @@ input[type='checkbox'] {
       margin-bottom: 0;
     }
 
-    h3 {
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 58px;
-    }
-
     button {
       margin-top: 2em;
     }
   }
+  h3 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+  }
 
-  @media (max-width: 1000px) {
-    .hm-warp__type {
-      background-color: var(--hm-grey--dark);
+
+  @media (max-width: 839px) {
+    h3 {
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 44px;
     }
   }
-  @media (min-width: 1001px) and (max-width: 1139px) {
+  @media (max-width: 1139px) {
     .hm-warp__type--b2b {
       background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b-3.jpg");
       background-size: cover;
       background-repeat: no-repeat;
     }
     .hm-warp__type--b2c {
-      background-image: cloudinaryUrl("hookamonk.com/bbg_warp-b2c-3.jpg");
+      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c-3.jpg");
       background-size: cover;
       background-repeat: no-repeat;
     }
