@@ -13,6 +13,7 @@ import {
 import * as arx from "./arx.monks.cloud/infra";
 import * as monksroom from "./room.monks.cloud/infra";
 import * as postcube from "./postcube.cz/infra";
+import * as hookamonk from "./www.hookamonk.com/infra";
 
 // Automatically inject tags.
 registerAutoTags({
@@ -106,3 +107,4 @@ export const arxDocumentsTable = arx.documentsTable;
 export const arxDocumentsApi = arx.documentsApi;
 export const monksroomApiHost = monksroom.apiDistribution.url;
 export const postcubeContactFormArn = postcube.contactFormArn;
+export const hookamonkContactFormArn = hookamonk.contactFormArn;

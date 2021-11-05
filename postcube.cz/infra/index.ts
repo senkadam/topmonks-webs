@@ -55,4 +55,5 @@ const contactFormLambda = new aws.lambda.CallbackFunction(
   }
 );
 
+// @ts-ignore
 export const contactFormArn = contactFormLambda.arn;
