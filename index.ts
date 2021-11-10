@@ -107,4 +107,4 @@ export const arxDocumentsTable = arx.documentsTable;
 export const arxDocumentsApi = arx.documentsApi;
 export const monksroomApiHost = monksroom.apiDistribution.url;
 export const postcubeContactFormArn = postcube.contactFormArn;
-export const hookamonkContactFormArn = hookamonk.contactFormArn;
+export const hookamonkApiHost = hookamonk.apiDistribution.url;

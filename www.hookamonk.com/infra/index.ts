@@ -1,59 +1,33 @@
 import * as aws from "@pulumi/aws";
-import { URLSearchParams } from "url";
-
-const contactFormLambda = new aws.lambda.CallbackFunction(
-  "hookamonk-contact-form",
-  {
-    runtime: aws.lambda.Runtime.NodeJS14dX,
-    async callback(event, context) {
-      // @ts-ignore
-      const data = new URLSearchParams(event.body);
-      const message = `Ahoj,
-
-      Máme tu zájemce z webu. ${data.get("name")} ${data.get("email")}.
-      Měli bychom se mu ozvat. Slíbili jsme to.
-      `;
-
-      const ses = new aws.sdk.SES({ region: "eu-central-1" });
-
-      const receivers = ["sales@hookamonk.com"];
-      const sender = "no-reply@topmonks.com";
-      // @ts-ignore
-      ses
-        .sendEmail({
-          Destination: {
-            ToAddresses: receivers
-          },
-          ReplyToAddresses: [data.get("email")],
-          Message: {
-            Body: {
-              Text: {
-                Data: message,
-                Charset: "UTF-8"
-              }
-            },
-            Subject: {
-              Data: `Hookamonk.com Contact Form: "${data.get("name")}"`,
-              Charset: "UTF-8"
-            }
-          },
-          Source: sender
-        })
-        .promise();
-
-      return {
-        statusCode: 202,
-        body: "Accepted",
-        headers: {
-          "Access-Control-Allow-Headers":
-            "Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token",
-          "Access-Control-Allow-Methods": "OPTIONS,POST",
-          "Access-Control-Allow-Origin": "*"
-        }
-      };
-    }
-  }
-);
+import * as awsx from "@pulumi/awsx";
+import { CustomDomainDistribution } from "@topmonks/pulumi-aws/apigateway";
+import { hookamonkContactFormLambda } from "../lambdas/contact-form";
 
 // @ts-ignore
-export const contactFormArn = contactFormLambda.arn;
+export const defaultLambdaRole = aws.iam.getRoleOutput({
+  name: "lambda_ses",
+});
+
+export const api = new awsx.apigateway.API("hookamonk-api", {
+  stageName: "v1",
+  restApiArgs: {
+    description: "Hookamonk API"
+  },
+  routes: [
+    {
+      path: "/contact-form",
+      method: "POST",
+      eventHandler: hookamonkContactFormLambda,
+    },
+  ]
+});
+
+export const apiDistribution = new CustomDomainDistribution(
+  "hookamonk-api",
+  {
+    gateway: api,
+    domainName: "hookamonk-api.monks.cloud",
+    basePath: "v1"
+  },
+  { dependsOn: [api] }
+);
