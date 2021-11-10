@@ -121,15 +121,32 @@
       <div class="hm-submit-form__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
         <h2>Lorem <span class="text--orange">Ipsum</span></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus vestibulum scelerisque eu.</p>
-        <form>
+        <form id="contact-form" action="https://hookamonk-api.monks.cloud/v1/contact-form" method="POST">
+          <input type="hidden" name="product" value="For home" required>
           <input type="text" name="name" placeholder="Name" required>
-          <input type="text" name="email" placeholder="Email"  required>
-          <input type="number" name="phone" placeholder="Telephone"  required>
-          <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Enter text here..."></textarea><br>
-          <button class="button button__contained button__contained--orange">
-            <a type="submit" href="#about" class="button__label">Submit</a>
+          <input type="text" name="email" placeholder="Email" required>
+          <input type="number" name="phone" placeholder="Telephone">
+          <textarea rows="4" cols="50" name="message" form="contact-form" placeholder="Enter text here..."></textarea><br>
+          <button class="button button__contained button__contained--orange" type="submit">
+            <a class="button__label">Submit</a>
           </button>
         </form>
+        <script type="module">
+          const contactForm = document.getElementById("contact-form");
+          contactForm.addEventListener("submit", async e => {
+            e.preventDefault();
+            const button = e.target.querySelector("button");
+            button.disabled = true;
+            alert("Thank you. We will get in touch soon!");
+            console.log(e.target);
+            await fetch(e.target.action, {
+              method: e.target.method.toUpperCase(),
+              body: new FormData(e.target)
+            });
+            contactForm.reset();
+            button.disabled = false;
+          })
+        </script>
       </div>
     </div>
   </div>

@@ -41,8 +41,13 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
       const data = new URLSearchParams(event.body);
       const message = `Ahoj,
 
-      Máme tu zájemce z webu. ${data.get("name")} ${data.get("email")}.
-      Měli bychom se mu ozvat. Slíbili jsme to.`;
+      Máme tu zájemce z webu. Do formuláře zadal následující informace:
+
+      Má zájem o produkt: ${data.get("product")}
+      Jméno: ${data.get("name")}
+      Email: ${data.get("email")}
+      Telefon: ${data.get("telephone")}
+      Zpráva od příjemce: ${data.get("message")}`;
 
       const ses = new aws.sdk.SES({ region: "eu-west-1" });
 
