@@ -31,13 +31,13 @@ const hookamonkLambdaRole = new aws.iam.Role("hookamonk-lambda-role", {
   ],
 });
 
-
 export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
   "hookamonk-contact-form",
   {
     runtime: aws.lambda.Runtime.NodeJS14dX,
     role: hookamonkLambdaRole,
     async callback(event: any, context) {
+      console.log(event.body);
       const data = new URLSearchParams(event.body);
       const message = `Ahoj,
 
