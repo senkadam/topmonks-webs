@@ -5,26 +5,32 @@ const contactFormLambda = new aws.lambda.CallbackFunction(
   "postcube-contact-form",
   {
     runtime: aws.lambda.Runtime.NodeJS14dX,
-    async callback(event, context) {
-      // @ts-ignore
-      const data = new URLSearchParams(event.body);
+    async callback(event: any) {
+      let body;
+      if (event.body !== null && event.body !== undefined) {
+        if (event.isBase64Encoded) {
+          body = JSON.parse(Buffer.from(event.body, 'base64').toString('utf8'));
+        }
+      } else {
+        body = JSON.parse(event.body);
+      }
       const message = `Ahoj,
 
-      Máme tu zájemce z webu. ${data.get("name")} ${data.get("email")}.
+      Máme tu zájemce z webu. ${body.name} ${body.email}}.
       Měli bychom se mu ozvat. Slíbili jsme to.
       `;
 
-      const ses = new aws.sdk.SES({ region: "eu-central-1" });
+      const ses = new aws.sdk.SES({ region: "eu-west-1" });
 
-      const receivers = ["info@postcube.cz", "vaclav.slavik@topmonks.com"];
+      const receivers = ["vaclav.slavik@topmonks.com"];
       const sender = "no-reply@topmonks.com";
       // @ts-ignore
-      ses
+      await ses
         .sendEmail({
           Destination: {
             ToAddresses: receivers
           },
-          ReplyToAddresses: [data.get("email")],
+          ReplyToAddresses: [body.email],
           Message: {
             Body: {
               Text: {
@@ -33,7 +39,7 @@ const contactFormLambda = new aws.lambda.CallbackFunction(
               }
             },
             Subject: {
-              Data: `Postcube.cz Contact Form: "${data.get("name")}"`,
+              Data: `Postcube.cz Contact Form: "${body.name}"`,
               Charset: "UTF-8"
             }
           },
