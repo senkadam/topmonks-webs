@@ -16,7 +16,7 @@ const contactFormLambda = new aws.lambda.CallbackFunction(
 
       const ses = new aws.sdk.SES({ region: "eu-central-1" });
 
-      const receivers = ["info@postcube.cz"];
+      const receivers = ["info@postcube.cz", "vaclav.slavik@topmonks.com"];
       const sender = "no-reply@topmonks.com";
       // @ts-ignore
       ses
