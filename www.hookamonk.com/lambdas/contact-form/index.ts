@@ -1,5 +1,4 @@
 import * as aws from "@pulumi/aws";
-import { URLSearchParams } from "url";
 
 const sesPolicy = new aws.iam.Policy("ses-policy", {policy: JSON.stringify({
     Version: "2012-10-17",
@@ -36,22 +35,29 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
   {
     runtime: aws.lambda.Runtime.NodeJS14dX,
     role: hookamonkLambdaRole,
-    async callback(event: any, context) {
-      console.log(event.body);
-      const data = new URLSearchParams(event.body);
+    async callback(event: any) {
+      let body;
+      if (event.body !== null && event.body !== undefined) {
+        if (event.isBase64Encoded) {
+          body = JSON.parse(Buffer.from(event.body, 'base64').toString('utf8'));
+        }
+      } else {
+        body = JSON.parse(event.body);
+      }
+
       const message = `Ahoj,
 
       Máme tu zájemce z webu. Do formuláře zadal následující informace:
 
-      Má zájem o produkt: ${data.get("product")}
-      Jméno: ${data.get("name")}
-      Email: ${data.get("email")}
-      Telefon: ${data.get("telephone")}
-      Zpráva od příjemce: ${data.get("message")}`;
+      Má zájem o produkt: ${body.product}
+      Jméno: ${body.name}
+      Email: ${body.email}
+      Telefon: ${body.telephone}
+      Zpráva od příjemce: ${body.message}`;
 
       const ses = new aws.sdk.SES({ region: "eu-west-1" });
 
-      const receivers = ["vaclav.slavik@topmonks.com"];
+      const receivers = ["sales@hookamonk.com", "vaclav.slavik@topmonks.com"];
       const sender = "no-reply@topmonks.com";
       // @ts-ignore
       await ses
@@ -59,7 +65,7 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
           Destination: {
             ToAddresses: receivers
           },
-          ReplyToAddresses: [data.get("email")],
+          ReplyToAddresses: [body.email],
           Message: {
             Body: {
               Text: {
@@ -68,7 +74,7 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
               }
             },
             Subject: {
-              Data: `Hookamonk.com Contact Form: "${data.get("name")}"`,
+              Data: `Hookamonk.com Contact Form: "${body.name}"`,
               Charset: "UTF-8"
             }
           },

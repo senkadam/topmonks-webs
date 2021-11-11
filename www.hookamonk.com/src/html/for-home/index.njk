@@ -122,10 +122,10 @@
         <h2>Lorem <span class="text--orange">Ipsum</span></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus vestibulum scelerisque eu.</p>
         <form id="contact-form" action="https://hookamonk-api.monks.cloud/v1/contact-form" method="POST">
-          <input type="hidden" name="product" value="For home" required>
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="text" name="email" placeholder="Email" required>
-          <input type="number" name="phone" placeholder="Telephone">
+          <input type="hidden" name="product" value="For home" value="" required>
+          <input type="text" name="name" placeholder="Name" value="" required>
+          <input type="text" name="email" placeholder="Email" value="" required>
+          <input type="number" name="telephone" value="" placeholder="Telephone">
           <textarea rows="4" cols="50" name="message" form="contact-form" placeholder="Enter text here..."></textarea><br>
           <button class="button button__contained button__contained--orange" type="submit">
             <a class="button__label">Submit</a>
@@ -137,12 +137,17 @@
             e.preventDefault();
             const button = e.target.querySelector("button");
             button.disabled = true;
-            alert("Thank you. We will get in touch soon!");
-            console.log(e.target);
+            const formData = new FormData(e.target);
+
+            let data = {};
+            formData.forEach((value, key) => data[key] = value);
+
             await fetch(e.target.action, {
               method: e.target.method.toUpperCase(),
-              body: new FormData(e.target)
+              body: JSON.stringify(data),
             });
+
+            alert("Thank you. We will get in touch soon!");
             contactForm.reset();
             button.disabled = false;
           })
