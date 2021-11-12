@@ -31,7 +31,6 @@
             button.disabled = true;
             alert("Děkujeme. Brzy se Vám ozveme.");
             const formData = new FormData(e.target);
-            console.log(formData);
             let data = {};
             formData.forEach((value, key) => data[key] = value);
             await fetch(e.target.action, {
