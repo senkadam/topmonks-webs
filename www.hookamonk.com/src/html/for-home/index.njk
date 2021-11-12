@@ -75,62 +75,64 @@
       </div>
     </div>
   </section>
-  <section id="" class=" qt  wow pulse">
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner hm-layout-wrapper">
-        <div class="order-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-          <h2>Lorem <span class="text--orange">Warp</span></h2>
-          <h3>Fringilla ipsum tincidunt</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus
-            vestibulum
-            scelerisque eu.</p>
-        </div>
-        <div class="order-2 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-          <img title="Hookamonk while using photo"
-               alt="[photo] Hookamonk while using photo"
-               width="600px"
-               src="{{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600) }}"
-               srcset="{{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600) }} 1x,
-                     {{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,
-                     {{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>
+{#  <section id="" class=" qt  wow pulse">#}
+{#    <div class="mdc-layout-grid">#}
+{#      <div class="mdc-layout-grid__inner hm-layout-wrapper">#}
+{#        <div class="order-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">#}
+{#          <h2>Lorem <span class="text--orange">Warp</span></h2>#}
+{#          <h3>Fringilla ipsum tincidunt</h3>#}
+{#          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus#}
+{#            vestibulum#}
+{#            scelerisque eu.</p>#}
+{#        </div>#}
+{#        <div class="order-2 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">#}
+{#          <img title="Hookamonk while using photo"#}
+{#               alt="[photo] Hookamonk while using photo"#}
+{#               width="600px"#}
+{#               src="{{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600) }}"#}
+{#               srcset="{{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600) }} 1x,#}
+{#                     {{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,#}
+{#                     {{ "/hookamonk.com/img_for-home-2.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>#}
 
-        </div>
-        <div class="order-4 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-          <img title="Hookamonk while using photo"
-               alt="[photo] Hookamonk while using photo"
-               width="600px"
-               src="{{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600) }}"
-               srcset="{{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600) }} 1x,
-                     {{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,
-                     {{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>
+{#        </div>#}
+{#        <div class="order-4 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">#}
+{#          <img title="Hookamonk while using photo"#}
+{#               alt="[photo] Hookamonk while using photo"#}
+{#               width="600px"#}
+{#               src="{{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600) }}"#}
+{#               srcset="{{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600) }} 1x,#}
+{#                     {{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600,dpr=1.5) }} 1.5x,#}
+{#                     {{ "/hookamonk.com/img_for-home-3.png" | cloudinaryUrl(width=600,dpr=2) }} 2x"/>#}
 
-        </div>
-        <div class="order-3 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-          <h2>Lorem <span class="text--orange">Warp</span></h2>
-          <h3>Fringilla ipsum tincidunt</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus
-            vestibulum
-            scelerisque eu.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-<section id="" class="hm-submit-form">
+{#        </div>#}
+{#        <div class="order-3 mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">#}
+{#          <h2>Lorem <span class="text--orange">Warp</span></h2>#}
+{#          <h3>Fringilla ipsum tincidunt</h3>#}
+{#          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus#}
+{#            vestibulum#}
+{#            scelerisque eu.</p>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </section>#}
+<section class="hm-submit-form">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner hm-layout-wrapper">
       <div class="hm-submit-form__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
-        <h2>Lorem <span class="text--orange">Ipsum</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla ipsum tincidunt proin tellus vestibulum scelerisque eu.</p>
-        <form id="contact-form" action="https://hookamonk-api.monks.cloud/v1/contact-form" method="POST">
-          <input type="hidden" name="product" value="For home" value="" required>
-          <input type="text" name="name" placeholder="Name" value="" required>
-          <input type="text" name="email" placeholder="Email" value="" required>
-          <input type="number" name="telephone" value="" placeholder="Telephone">
-          <textarea rows="4" cols="50" name="message" form="contact-form" placeholder="Enter text here..."></textarea><br>
-          <button class="button button__contained button__contained--orange" type="submit">
-            <a class="button__label">Submit</a>
-          </button>
-        </form>
+        <h2>Get in <span class="text--orange">Touch</span></h2>
+        <div id="contact-container">
+          <form id="contact-form" action="https://hookamonk-api.monks.cloud/v1/contact-form" method="POST">
+            <input type="hidden" name="productName" value="Warp for home"/>
+            <input type="hidden" name="productUrl" value="for-home"/>
+            <input type="text" name="name" placeholder="Name" required/>
+            <input type="text" name="email" placeholder="Email" required/>
+            <input type="number" name="telephone" placeholder="Telephone"/>
+            <textarea rows="4" cols="50" name="message" form="contact-form" placeholder="Enter text here..."></textarea><br>
+            <button class="button button__contained button__contained--orange" type="submit">
+              <a class="button__label">Submit</a>
+            </button>
+          </form>
+        </div>
         <script type="module">
           const contactForm = document.getElementById("contact-form");
           contactForm.addEventListener("submit", async e => {
@@ -145,11 +147,11 @@
             await fetch(e.target.action, {
               method: e.target.method.toUpperCase(),
               body: JSON.stringify(data),
+              mode: "no-cors"
             });
 
-            alert("Thank you. We will get in touch soon!");
-            contactForm.reset();
-            button.disabled = false;
+            const contactContainer = document.getElementById("contact-container");
+            contactContainer.innerHTML = `<div class="hm-check-icon">✔︎</div><p>Thank you, your request has been sent and we will get back to you as soon as possible.</p> <h4>Hookamonk team</h4>`
           })
         </script>
       </div>

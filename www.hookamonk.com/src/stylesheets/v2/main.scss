@@ -19,12 +19,6 @@ main {
     }
 }
 
-.header__content--social-phone {
-    margin-left: 4em;
-    @media (max-width: 380px) {
-        margin-left: 0em;
-    }
-}
 
 section {
     padding: 4em 0 4em;
@@ -99,6 +93,9 @@ main .material-icons {
         max-width: 600px;
         margin: 0 auto 2em;
     }
+    h4 {
+      color: var(--hm-white);
+    }
     form {
         input,
         textarea {
@@ -168,4 +165,16 @@ main .material-icons {
             }
         }
     }
+}
+
+.hm-check-icon {
+  color: var(--hm-white);
+  background-color: #00b686;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
