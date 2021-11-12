@@ -7,7 +7,8 @@ export const sesPolicy = new aws.iam.Policy("ses-policy", {policy: JSON.stringif
         "logs:CreateLogStream",
         "logs:PutLogEvents",
         "ses:SendEmail",
-        "ses:SendRawEmail"],
+        "ses:SendRawEmail",
+        "ses:SendTemplatedEmail"],
       Effect: "Allow",
       Resource: "*",
     }],
@@ -49,7 +50,7 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
 
       Máme tu zájemce z webu. Do formuláře zadal následující informace:
 
-      Má zájem o produkt: ${body.product}
+      Má zájem o produkt: ${body.productName}
       Jméno: ${body.name}
       Email: ${body.email}
       Telefon: ${body.telephone}
@@ -57,9 +58,8 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
 
       const ses = new aws.sdk.SES({ region: "eu-west-1" });
 
-      const receivers = ["sales@hookamonk.com", "vaclav.slavik@topmonks.com"];
-      const sender = "no-reply@topmonks.com";
-      // @ts-ignore
+      const receivers = ["sales@hookamonk.com"];
+      const sender = "sales@hookamonk.com";
       await ses
         .sendEmail({
           Destination: {
@@ -79,6 +79,17 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
             }
           },
           Source: sender
+        })
+        .promise();
+
+      await ses
+        .sendTemplatedEmail({
+          Template: "Hookamonk-contact-form-user-notification",
+          Destination: {
+            ToAddresses: [body.email]
+          },
+          Source: sender,
+          TemplateData: `{\"productName\": \"${body.productName}\", \"productUrl\": \"${body.productUrl}\"}`
         })
         .promise();
 
