@@ -1,19 +1,8 @@
 import * as aws from "@pulumi/aws";
+import { sesPolicy } from "../../../www.hookamonk.com/lambdas/contact-form";
 
-export const sesPolicy = new aws.iam.Policy("ses-policy", {policy: JSON.stringify({
-    Version: "2012-10-17",
-    Statement: [{
-      Action: ["logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "ses:SendEmail",
-        "ses:SendRawEmail"],
-      Effect: "Allow",
-      Resource: "*",
-    }],
-  })});
 
-const hookamonkLambdaRole = new aws.iam.Role("hookamonk-lambda-role", {
+const postcubeLambdaRole = new aws.iam.Role("postcubeLambdaRole-lambda-role", {
   assumeRolePolicy: JSON.stringify({
     Version: "2012-10-17",
     Statement: [{
@@ -30,11 +19,11 @@ const hookamonkLambdaRole = new aws.iam.Role("hookamonk-lambda-role", {
   ],
 });
 
-export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
-  "hookamonk-contact-form",
+export const postcubeContactFormLambda = new aws.lambda.CallbackFunction(
+  "postcube-contact-form",
   {
     runtime: aws.lambda.Runtime.NodeJS14dX,
-    role: hookamonkLambdaRole,
+    role: postcubeLambdaRole,
     async callback(event: any) {
       let body;
       if (event.body !== null && event.body !== undefined) {
@@ -47,17 +36,13 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
 
       const message = `Ahoj,
 
-      Máme tu zájemce z webu. Do formuláře zadal následující informace:
-
-      Má zájem o produkt: ${body.product}
-      Jméno: ${body.name}
-      Email: ${body.email}
-      Telefon: ${body.telephone}
-      Zpráva od příjemce: ${body.message}`;
+      Máme tu zájemce z webu. ${body.name} ${body.email}.
+      Měli bychom se mu ozvat. Slíbili jsme to.
+      `;
 
       const ses = new aws.sdk.SES({ region: "eu-west-1" });
 
-      const receivers = ["sales@hookamonk.com", "vaclav.slavik@topmonks.com"];
+      const receivers = ["info@postcube.cz", "vac.slavik@gmail.com"];
       const sender = "no-reply@topmonks.com";
       // @ts-ignore
       await ses
@@ -74,7 +59,7 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
               }
             },
             Subject: {
-              Data: `Hookamonk.com Contact Form: "${body.name}"`,
+              Data: `Postcube.cz Contact Form: "${body.name}"`,
               Charset: "UTF-8"
             }
           },

@@ -9,7 +9,7 @@
 
       <div class="contact__form mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
         <h3>Pošlete nám na sebe kontakt</h3>
-        <form id="contact-form" action="https://uwjqzwx0d3.execute-api.eu-central-1.amazonaws.com/production/postcube-contact-form" method="POST">
+        <form id="contact-form" action="https://l5sfxjz6p8.execute-api.eu-central-1.amazonaws.com/v1/contact-form" method="POST">
           <label><input name="name" placeholder="Jméno nebo název firmy" id="company-name" type="text"></label>
           <label><input name="email" id="phone-name" placeholder="Email" type="text"></label>
           <div class="mdc-layout-grid__inner">
@@ -30,9 +30,13 @@
             const button = e.target.querySelector("button");
             button.disabled = true;
             alert("Děkujeme. Brzy se Vám ozveme.");
+            const formData = new FormData(e.target);
+            console.log(formData);
+            let data = {};
+            formData.forEach((value, key) => data[key] = value);
             await fetch(e.target.action, {
               method: e.target.method.toUpperCase(),
-              body: new FormData(e.target)
+              body: JSON.stringify(data),
             });
             contactForm.reset();
             button.disabled = false;
