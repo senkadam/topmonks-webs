@@ -1,20 +1,7 @@
 import * as aws from "@pulumi/aws";
+import { sesPolicy } from "../../../www.hookamonk.com/lambdas/contact-form";
 
-export const sesPolicy = new aws.iam.Policy("ses-policy", {policy: JSON.stringify({
-    Version: "2012-10-17",
-    Statement: [{
-      Action: ["logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "ses:SendEmail",
-        "ses:SendRawEmail",
-        "ses:SendTemplatedEmail"],
-      Effect: "Allow",
-      Resource: "*",
-    }],
-  })});
-
-const hookamonkLambdaRole = new aws.iam.Role("hookamonk-contact-form-lambda-role", {
+const ssLambdaRole = new aws.iam.Role("topmonks-webs-contact-form-lambda-role", {
   assumeRolePolicy: JSON.stringify({
     Version: "2012-10-17",
     Statement: [{
@@ -31,11 +18,11 @@ const hookamonkLambdaRole = new aws.iam.Role("hookamonk-contact-form-lambda-role
   ],
 });
 
-export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
-  "hookamonk-contact-form",
+export const startupStudioContactFormLambda = new aws.lambda.CallbackFunction(
+  "startup-studio-contact-form",
   {
     runtime: aws.lambda.Runtime.NodeJS14dX,
-    role: hookamonkLambdaRole,
+    role: ssLambdaRole,
     async callback(event: any) {
       let body;
       if (event.body !== null && event.body !== undefined) {
@@ -46,20 +33,18 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
         body = JSON.parse(event.body);
       }
 
-      const message = `Ahoj,
+      let message = `Projekt ${body.projectName} má zájem o pitch!
 
-      Máme tu zájemce z webu. Do formuláře zadal následující informace:
-
-      Má zájem o produkt: ${body.productName}
-      Jméno: ${body.name}
-      Email: ${body.email}
-      Telefon: ${body.telephone}
-      Zpráva od příjemce: ${body.message}`;
+      Popis projektu: ${body.projectDescription}.
+      Email: ${body.email}.
+      Tel: ${body.Tel}.
+      `;
 
       const ses = new aws.sdk.SES({ region: "eu-west-1" });
 
-      const receivers = ["sales@hookamonk.com", "vaclav.slavik@topmonks.com"];
-      const sender = "sales@hookamonk.com";
+      const receivers = ["studio@topmonks.com", "vaclav.slavik@topmonks.com"];
+      const sender = "no-reply@topmonks.com";
+      // @ts-ignore
       await ses
         .sendEmail({
           Destination: {
@@ -74,22 +59,11 @@ export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
               }
             },
             Subject: {
-              Data: `Hookamonk.com Contact Form: "${body.name}"`,
+              Data: `Startup Studio Contact Form: Projekt ${body.projectName} má zájem o pitch!`,
               Charset: "UTF-8"
             }
           },
           Source: sender
-        })
-        .promise();
-
-      await ses
-        .sendTemplatedEmail({
-          Template: "Hookamonk-contact-form-user-notification",
-          Destination: {
-            ToAddresses: [body.email]
-          },
-          Source: sender,
-          TemplateData: `{\"productName\": \"${body.productName}\", \"productUrl\": \"${body.productUrl}\"}`
         })
         .promise();
 

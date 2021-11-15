@@ -1,11 +1,29 @@
 import * as aws from "@pulumi/aws";
-import { contactFormLambdaRole } from "../../../index";
+import { sesPolicy } from "../../../www.hookamonk.com/lambdas/contact-form";
+
+
+const postcubeLambdaRole = new aws.iam.Role("postcube-contact-form-lambda-role", {
+  assumeRolePolicy: JSON.stringify({
+    Version: "2012-10-17",
+    Statement: [{
+      Action: "sts:AssumeRole",
+      Effect: "Allow",
+      Sid: "",
+      Principal: {
+        Service: "lambda.amazonaws.com",
+      },
+    }],
+  }),
+  managedPolicyArns: [
+    sesPolicy.arn,
+  ],
+});
 
 export const postcubeContactFormLambda = new aws.lambda.CallbackFunction(
   "postcube-contact-form",
   {
     runtime: aws.lambda.Runtime.NodeJS14dX,
-    role: contactFormLambdaRole,
+    role: postcubeLambdaRole,
     async callback(event: any) {
       let body;
       if (event.body !== null && event.body !== undefined) {

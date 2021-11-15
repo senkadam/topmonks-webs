@@ -14,6 +14,7 @@ import * as arx from "./arx.monks.cloud/infra";
 import * as monksroom from "./room.monks.cloud/infra";
 import * as postcube from "./postcube.cz/infra";
 import * as hookamonk from "./www.hookamonk.com/infra";
+import * as startupStudio from "./studio.topmonks.com/infra";
 
 // Automatically inject tags.
 registerAutoTags({
@@ -101,41 +102,11 @@ for (const domain of Object.keys(redirects)) {
   };
 }
 
-const sesPolicy = new aws.iam.Policy("ses-policy", {policy: JSON.stringify({
-    Version: "2012-10-17",
-    Statement: [{
-      Action: ["logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "ses:SendEmail",
-        "ses:SendRawEmail",
-        "ses:SendTemplatedEmail"],
-      Effect: "Allow",
-      Resource: "*",
-    }],
-  })});
-
-export const contactFormLambdaRole = new aws.iam.Role("contact-form-lambda-role", {
-  assumeRolePolicy: JSON.stringify({
-    Version: "2012-10-17",
-    Statement: [{
-      Action: "sts:AssumeRole",
-      Effect: "Allow",
-      Sid: "",
-      Principal: {
-        Service: "lambda.amazonaws.com",
-      },
-    }],
-  }),
-  managedPolicyArns: [
-    sesPolicy.arn,
-  ],
-});
-
 export const arxDocumentsBucketUri = arx.documentsBucketUri;
 export const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
 export const arxDocumentsTable = arx.documentsTable;
 export const arxDocumentsApi = arx.documentsApi;
 export const monksroomApiHost = monksroom.apiDistribution.url;
 export const postCubeApi = postcube.api.url;
+export const topmonksWebsApi = startupStudio.api.url;
 export const hookamonkApiHost = hookamonk.apiDistribution.url;
