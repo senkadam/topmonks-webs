@@ -15,297 +15,353 @@
 
 // Section 1: Introduction AKA Header Info //
 .hm-intro {
-  background-image: cloudinaryUrl("hookamonk.com/bg_header-smoke-2.jpg");
-  background-position: 0 100px;
-  background-repeat: no-repeat;
-  height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  .hm-intro__header-bg {
-    picture {
-      z-index: 100;
-    }
+  position: relative;
+  @media (max-width: 1439px) {
+    background-image: cloudinaryUrl("hookamonk.com/bg_header-smoke-2.jpg");
+    background-position: 0 100px;
+    background-repeat: no-repeat;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
-}
-
-//
-// Section 2: Partners //
-.hm-partners {
-  text-align: center;
-  background-color: var(--hm-bg--light);
-
-  h2 {
-    font-size: 28px;
-    line-height: 30px;
+  @media screen and (min-width: 2521px) {
+    background-image: cloudinaryUrl("hookamonk.com/bg_header-smoke-2.jpg");
+    background-position: 0 100px;
+    background-repeat: no-repeat;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
-  .hm-partners__logo {
-    svg {
-      padding: 0 1em;
-    }
-  }
-}
-
-//
-// Section 3: About AKA HM Story
-.hm-about {
-  background-image: cloudinaryUrl("hookamonk.com/bg_story-smoke.jpg");
-  background-color: var(--hm-bg--light);
-  background-size: cover;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-
-  .hm-about__text {
-    align-self: center;
-  }
-}
-
-//
-// Section 4: Features
-.hm-features {
-  text-align: center;
-
-  .hm-features__content {
-    background-color: var(--hm-orange);
-
-    h3 {
-      font-size: 20px;
-      font-weight: normal;
-    }
-
-    @media (max-width: 439px) {
-      margin-bottom: 2em;
-    }
-  }
-
-  .material-icons {
-    align-self: center;
-    border-radius: 0;
-    margin-bottom: 0;
-
-    svg {
-      padding: 0 10px 0;
-    }
-  }
-
-  .material-icons--neutral {
-    box-shadow: none;
-    background-color: transparent;
-  }
-}
-
-.card {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
-  border-radius: 20px;
-  display: inline-flex;
-  text-align: left;
-}
-
-.wrap-collabsible {
-  background-color: #FFF;
-  padding: 14px 10px 14px;
-  @media screen and (max-width: 840px) {
-    padding-bottom: 0;
-  }
-}
-
-input[type='checkbox'] {
-  display: none;
-}
-
-.lbl-toggle {
-  display: block;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.25s ease-out;
-
-  svg {
-    margin-top: 10px;
-  }
-}
-
-.collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .25s ease-in-out;
-}
-
-.toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 100vh;
-  transition: max-height 1s ease-in-out;
-}
-
-.toggle:checked + .lbl-toggle {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.collapsible-content .content-inner {
-}
-
-//
-// Section 5: Testimonials
-.hm-testimonials {
-  color: var(--hm-white);
-  text-align: center;
-  background-color: var(--hm-grey--dark);
-
-  .hm-testimonials__content {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 40px;
-    color: var(--hm-white);
-    max-width: 740px;
-    margin: 1em auto;
-  }
-
-  .hm-testimonials__logo {
-    margin-bottom: 3em;
-
-    svg {
-      padding: 0 1em;
-    }
-  }
-
-  .facts {
-    .facts__number {
-      font-size: 68px;
-      font-weight: 700;
-      line-height: 80px;
+    video {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: auto;
+      z-index: -100;
+      @media (max-width: 1439px) {
+        display: none;
+      }
+      @media (min-width: 1440px) and (max-width: 1500px) {
+        top: -11%;
+        left: 0;
+      }
+      @media (min-width: 1501px) and (max-width: 1680px) {
+        top: -28%;
+        left: 0;
+      }
+      @media (min-width: 1681px) and (max-width: 1880px) {
+        top: -38%;
+        left: 0;
+      }
+      @media (min-width: 1881px) and (max-width: 2000px) {
+        top: -48%;
+        left: 0;
+      }
+      @media (min-width: 2001px) and (max-width: 2300px) {
+        top: -68%;
+        left: 0;
+      }
+      @media (min-width: 2301px) and (max-width: 2520px) {
+        top: -88%;
+        left: 0;
+      }
+      @media (min-width: 2521px) {
+        display: none;
+      }
     }
 
-    .facts__text {
-      color: var(--hm-grey--lighter);
-    }
-  }
-}
-
-//
-// Section 6: Warp
-.hm-warp {
-  text-align: center;
-
-  .hm-warp__type {
-    text-align: left;
-    border-radius: 10px;
-    @media (max-width: 839px) {
-      padding: 38px 18px;
-    }
-    @media (min-width: 840px) {
-      padding: 3em 3em 4em;
-    }
-
-    h3,
-    h4,
-    p {
-      color: var(--hm-white);
-      margin-bottom: 0;
-    }
-
-    button {
-      margin-top: 2em;
-    }
-  }
-
-  h3 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 58px;
-  }
-
-
-  @media (max-width: 839px) {
-    h3 {
-      font-size: 34px;
-      font-weight: 700;
-      line-height: 44px;
-    }
-  }
-  @media (max-width: 1139px) {
-    .hm-warp__type--b2b {
-      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b-3.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .hm-warp__type--b2c {
-      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c-3.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .hm-warp__type--b2d {
-      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2d-3.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-  @media screen and (min-width: 1140px) {
-    .hm-warp__type--b2b {
-      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b-3.jpg");
-      /*background-size: auto 100%;*/
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .hm-warp__type--b2c {
-      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c-3.jpg");
-      /*background-size: auto 100%;*/
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .hm-warp__type--b2d {
-      background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2d-3.jpg");
-      /*background-size: auto 100%;*/
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-}
-
-//
-// Section 7: Other Products
-.hm-products {
-  background-color: var(--hm-bg--light);
-
-  .title {
-    text-align: center;
-  }
-
-  .hm-product-type {
-    box-shadow: 0 100px 100px rgba(0, 0, 0, 0.12);
-    border-radius: 10px;
-
-    .hm-product-type__link {
-      padding-top: 1em;
-
-      a {
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--hm-grey--dark);
-        text-decoration: none;
-
-        &:hover {
-          cursor: pointer;
-          color: var(--hm-orange);
-          transition: all 0.3s;
-        }
+    .hm-intro__header-bg {
+      picture {
+        z-index: 100;
       }
     }
   }
 
-  .hm-product-type__inner {
-    flex-grow: 1;
-    justify-content: space-between;
-    padding: 1.5em 2em 2em;
+  //
+  // Section 2: Partners //
+  .hm-partners {
+    text-align: center;
+    background-color: var(--hm-bg--light);
+
+    h2 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    .hm-partners__logo {
+      svg {
+        padding: 0 1em;
+      }
+    }
   }
 
-  .hm-product-type,
-  .hm-product-type__inner {
-    display: flex;
-    flex-direction: column;
+  //
+  // Section 3: About AKA HM Story
+  .hm-about {
+    background-image: cloudinaryUrl("hookamonk.com/bg_story-smoke.jpg");
+    background-color: var(--hm-bg--light);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+
+    .hm-about__text {
+      align-self: center;
+    }
   }
-}
+
+  //
+  // Section 4: Features
+  .hm-features {
+    text-align: center;
+
+    .hm-features__content {
+      background-color: var(--hm-orange);
+
+      h3 {
+        font-size: 20px;
+        font-weight: normal;
+      }
+
+      @media (max-width: 439px) {
+        margin-bottom: 2em;
+      }
+    }
+
+    .material-icons {
+      align-self: center;
+      border-radius: 0;
+      margin-bottom: 0;
+
+      svg {
+        padding: 0 10px 0;
+      }
+    }
+
+    .material-icons--neutral {
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+
+  .card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    display: inline-flex;
+    text-align: left;
+  }
+
+  .wrap-collabsible {
+    background-color: #FFF;
+    padding: 14px 10px 14px;
+    @media screen and (max-width: 840px) {
+      padding-bottom: 0;
+    }
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  .lbl-toggle {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+
+    svg {
+      margin-top: 10px;
+    }
+  }
+
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+  }
+
+  .toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+    transition: max-height 1s ease-in-out;
+  }
+
+  .toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .collapsible-content .content-inner {
+  }
+
+  //
+  // Section 5: Testimonials
+  .hm-testimonials {
+    color: var(--hm-white);
+    text-align: center;
+    background-color: var(--hm-grey--dark);
+    @media (max-width: 1024px) {
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .hm-testimonials__content {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 40px;
+      color: var(--hm-white);
+      max-width: 740px;
+      margin: 1em auto;
+    }
+
+    .hm-testimonials__logo {
+      margin-bottom: 3em;
+
+      svg {
+        padding: 0 1em;
+      }
+    }
+
+    .facts {
+      .facts__number {
+        font-size: 68px;
+        font-weight: 700;
+        line-height: 80px;
+      }
+
+      .facts__text {
+        color: var(--hm-grey--lighter);
+      }
+    }
+  }
+
+  //
+  // Section 6: Warp
+  .hm-warp {
+    text-align: center;
+
+    .hm-warp__type {
+      text-align: left;
+      border-radius: 10px;
+      @media (max-width: 839px) {
+        padding: 38px 18px;
+      }
+      @media (min-width: 840px) {
+        padding: 3em 3em 4em;
+      }
+
+      h3,
+      h4,
+      p {
+        color: var(--hm-white);
+        margin-bottom: 0;
+      }
+
+      button {
+        margin-top: 2em;
+      }
+    }
+
+    h3 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 58px;
+    }
+
+
+    @media (max-width: 839px) {
+      h3 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 44px;
+      }
+    }
+    @media (max-width: 1139px) {
+      .hm-warp__type--b2b {
+        background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b-3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .hm-warp__type--b2c {
+        background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c-3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .hm-warp__type--b2d {
+        background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2d-3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    @media screen and (min-width: 1140px) {
+      .hm-warp__type--b2b {
+        background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2b-3.jpg");
+        /*background-size: auto 100%;*/
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .hm-warp__type--b2c {
+        background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2c-3.jpg");
+        /*background-size: auto 100%;*/
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .hm-warp__type--b2d {
+        background-image: cloudinaryUrl("hookamonk.com/bg_warp-b2d-3.jpg");
+        /*background-size: auto 100%;*/
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  //
+  // Section 7: Other Products
+  .hm-products {
+    background-color: var(--hm-bg--light);
+
+    .title {
+      text-align: center;
+    }
+
+    .hm-product-type {
+      box-shadow: 0 100px 100px rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+
+      .hm-product-type__link {
+        padding-top: 1em;
+
+        a {
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--hm-grey--dark);
+          text-decoration: none;
+
+          &:hover {
+            cursor: pointer;
+            color: var(--hm-orange);
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+
+    .hm-product-type__inner {
+      flex-grow: 1;
+      justify-content: space-between;
+      padding: 1.5em 2em 2em;
+    }
+
+    .hm-product-type,
+    .hm-product-type__inner {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
 //
 // Section 8: Hookah Catering
