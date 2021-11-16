@@ -288,6 +288,10 @@ yarn pulumi:pre
 * [Hlídač shopů](https://www.figma.com/file/hKLyCOXXN6LtS0NtVAbJzk/Hlidacshopu.cz)
 * [Hookamonk](https://www.figma.com/file/GWHnW8hVDbMjGglu2s0noG/Hookamonk-web)
 
+## Site Contact form service
+
+Proceed to [dedicated README](/studio.topmonks.com/README.md) for step-by-step guide.
+
 ## Issues
 
 If you find any [issues](https://github.com/topmonks/topmonks-webs/issues), please,
