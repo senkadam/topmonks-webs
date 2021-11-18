@@ -338,21 +338,26 @@
       text-align: center;
       margin-top: 2em;
     }
+
     [typeof="Question"]:target {
       scroll-margin-top: 7em;
     }
+
     [typeof="Question"] [property="name"] {
       padding-right: 48px;
       margin: 0;
     }
-    [typeof="Question"]:target [property="name"]{
+
+    [typeof="Question"]:target [property="name"] {
       border-bottom: 1px solid #f2f2f2;
       padding-bottom: 32px;
       margin-bottom: 32px;
     }
+
     [typeof="Question"] [typeof="Answer"] {
-      display:none;
+      display: none;
     }
+
     [typeof="Question"]:target [typeof="Answer"] {
       display: block;
     }
@@ -464,9 +469,9 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          style="aspect-ratio: 16/9; width: 100%; height: auto;"
+          style="aspect-ratio: 16/9; width: 100%; height: auto; max-width: 1280px; margin: 0 auto;"
         ></iframe>
-        <h1>Hacker camp FAQs</h1>
+        <h1 style="margin-top: 1em">Hacker camp FAQs</h1>
       </div>
     </div>
   </header>
@@ -648,7 +653,8 @@
               řešit napřímo s <a
                 href="mailto:pavla.verflova&#64;czechitas.cz">pavla.verflova&#64;<!-- -->czechitas.cz</a>.
               Kapacita chatek je omezená, proto neváhej se zaplacením vstupenek, ať
-              můžeš tento formát ubytování rezervovat&nbsp;:)</li>
+              můžeš tento formát ubytování rezervovat&nbsp;:)
+            </li>
 
             <li>Využiji možnost ubytování v&nbsp;okolí (penzion, hotel)&nbsp;&ndash; tuto variantu
               pak budeš řešit napřímo s&nbsp;<a
@@ -668,18 +674,22 @@
             .accommodation__image {
               height: auto;
             }
+
             @media screen and (min-width: 480px) and (max-width: 839px) {
               .accommodation__image {
                 width: 300px;
               }
+
               .accommodation__image--portrait {
-	                width: 150px;
+                width: 150px;
               }
             }
+
             @media screen and (min-width: 840px) {
               .accommodation__image {
                 width: 340px;
               }
+
               .accommodation__image--portrait {
                 width: 170px;
               }
@@ -687,29 +697,29 @@
           </style>
           <div style="display: flex; flex-wrap: wrap; justify-content: space-between">
             {{ image("faq-ubytko-1.jpg", images,
-                phoneWidth=200,
-                phoneHeight=132,
-                tabletWidth=300,
-                width=340,
-                alt="šestilůžkový pokoj",
-                title="pokoj pro šest",
-                class="accommodation__image") }}
+              phoneWidth=200,
+              phoneHeight=132,
+              tabletWidth=300,
+              width=340,
+              alt="šestilůžkový pokoj",
+              title="pokoj pro šest",
+              class="accommodation__image") }}
             {{ image("faq-ubytko-2.jpg", images,
-                phoneWidth=200,
-                phoneHeight=132,
-                tabletWidth=300,
-                width=340,
-                alt="čtyřlůžková chatka",
-                title="chatka pro čtyři",
-                class="accommodation__image") }}
+              phoneWidth=200,
+              phoneHeight=132,
+              tabletWidth=300,
+              width=340,
+              alt="čtyřlůžková chatka",
+              title="chatka pro čtyři",
+              class="accommodation__image") }}
             {{ image("faq-ubytko-3.jpg", images,
-                phoneWidth=100,
-                phoneHeight=132,
-                tabletWidth=150,
-                width=170,
-                alt="dvojlůžková chatka",
-                title="chatka pro dva",
-                class="accommodation__image accommodation__image--portrait") }}
+              phoneWidth=100,
+              phoneHeight=132,
+              tabletWidth=150,
+              width=170,
+              alt="dvojlůžková chatka",
+              title="chatka pro dva",
+              class="accommodation__image accommodation__image--portrait") }}
           </div>
         </div>
       </div>
@@ -750,7 +760,7 @@
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Budeme mít na místě dobrovolníky. Většina chatek i&nbsp;pokojů se dají
-            zamykat.  Pro ty, co budou mít stany, řešíme místo, kde si budeš
+            zamykat. Pro ty, co budou mít stany, řešíme místo, kde si budeš
             moct zamknout či uschovat svoje cennosti, nebo nabít telefon
             pod dohledem. :) Blízko bude info stánek i&nbsp;místo, kde si můžeš pořídit
             drobnosti, které by ti mohly v&nbsp;batohu omylem chybět&nbsp;&ndash; kartáček,
@@ -884,14 +894,16 @@
             i&nbsp;na náš Hacker Camp :) Níže pár typů a doporučení:</p>
           <ul>
             <li>Hygienické potřeby, oblečení do slunce (přibal opalovací krém a
-              plavky) i&nbsp;deště (přibal pláštěnku a holínky)</li>
+              plavky) i&nbsp;deště (přibal pláštěnku a holínky)
+            </li>
 
             <li>Sportovní oblečení, čelovku, repelent, špunty do uší</li>
 
             <li>Hudební nástroj (pokud máš a chceš), těšíme se na táboráky</li>
 
             <li>Power banku, případně prodlužku do chatky: určitě se ti bude
-              hodit i&nbsp;tvoje vlastní, pokud nebudeš mít, budeme mít k&nbsp;dispozici</li>
+              hodit i&nbsp;tvoje vlastní, pokud nebudeš mít, budeme mít k&nbsp;dispozici
+            </li>
 
             <li>Cokoliv dalšího, bez čeho se neobejdeš na našem festivalu&nbsp;:)</li>
           </ul>
@@ -916,7 +928,8 @@
       </div>
     </div>
     <div id="faq-20" class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
-      <a href="#faq-20"><h2 property="name">Je konference jen v češtině? Můžu mít přednášku anglicky, vzít česky nemluvícího kolegu?</h2></a>
+      <a href="#faq-20"><h2 property="name">Je konference jen v češtině? Můžu mít přednášku anglicky, vzít česky
+          nemluvícího kolegu?</h2></a>
       <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
         <div property="text">
           <p>Letošnímu Hacker campu říkáme nultý ročník, protože je to pro nás takový experiment,
