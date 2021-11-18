@@ -53,7 +53,7 @@ jobs:
   build:
     executor:
       name: node/default
-      tag: '16'
+      tag: 'current'
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -75,7 +75,7 @@ jobs:
   provision:
     executor:
       name: node/default
-      tag: '16'
+      tag: 'current'
     steps:
       - checkout
       - pulumi/login:
@@ -91,7 +91,7 @@ jobs:
   preview-provision:
     executor:
       name: node/default
-      tag: '16'
+      tag: 'current'
     steps:
       - checkout
       - pulumi/login:
@@ -109,7 +109,7 @@ jobs:
         type: string
     executor:
       name: node/default
-      tag: '16'
+      tag: 'current'
     working_directory: ~/topmonks-webs
     steps:
       - browser-tools/install-chrome
