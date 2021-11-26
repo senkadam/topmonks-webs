@@ -32,7 +32,7 @@
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=2fde4fbdafc865746494635efe54802b3bf5f0b0",
     "@types/chart.js": "^2.9.34",
     "ava": "^3.15.0",
-    "chalk": "^4.1.2",
+    "chalk": "^5.0.0",
     "commander": "^8.3.0",
     "csvtojson": "^2.0.10",
     "dotenv": "^10.0.0",
