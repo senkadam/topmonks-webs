@@ -1,41 +1,11 @@
 import * as aws from "@pulumi/aws";
-
-export const sesPolicy = new aws.iam.Policy("ses-policy", {policy: JSON.stringify({
-    Version: "2012-10-17",
-    Statement: [{
-      Action: ["logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "ses:SendEmail",
-        "ses:SendRawEmail",
-        "ses:SendTemplatedEmail"],
-      Effect: "Allow",
-      Resource: "*",
-    }],
-  })});
-
-const hookamonkLambdaRole = new aws.iam.Role("hookamonk-contact-form-lambda-role", {
-  assumeRolePolicy: JSON.stringify({
-    Version: "2012-10-17",
-    Statement: [{
-      Action: "sts:AssumeRole",
-      Effect: "Allow",
-      Sid: "",
-      Principal: {
-        Service: "lambda.amazonaws.com",
-      },
-    }],
-  }),
-  managedPolicyArns: [
-    sesPolicy.arn,
-  ],
-});
+import { contactFormLambdaRole } from "../../../lambda-resources";
 
 export const hookamonkContactFormLambda = new aws.lambda.CallbackFunction(
   "hookamonk-contact-form",
   {
     runtime: aws.lambda.Runtime.NodeJS14dX,
-    role: hookamonkLambdaRole,
+    role: contactFormLambdaRole,
     async callback(event: any) {
       let body;
       if (event.body !== null && event.body !== undefined) {
