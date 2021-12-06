@@ -2319,7 +2319,7 @@ __metadata:
     lws-rewrite: ^3.1.1
     lws-spa: ^4.1.0
     lws-static: ^3.1.0
-    marked: ^4.0.3
+    marked: ^4.0.6
     npm-run-all: ^4.1.5
     parse-duration: ^1.0.2
     prettier: ^2.4.1
@@ -10674,12 +10674,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "marked@npm:4.0.3"
+"marked@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "marked@npm:4.0.6"
   bin:
     marked: bin/marked.js
-  checksum: 94b899327fc5a669ca4c82fcd5cbae35b7a1e4c1d0de819551e033b12f9dad14cc8b7f2beb59da808abdb184f7132da0da428e7db524939a54cc9900df0b57cf
+  checksum: 5b060305f5d9b9b349537a899abfb6cb8c589c9758bbb81725718c2ef97a0035a8d455d69dce9670b16522b894c42bfea38b5b90af790660658a490943d7a34b
   languageName: node
   linkType: hard
 

@@ -1,4 +1,4 @@
-const marked = require("marked");
+const { marked } = require('marked')
 const path = require("path");
 const stream = require("stream");
 const utils = require("util");
