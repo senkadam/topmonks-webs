@@ -1,4 +1,4 @@
-const { marked } = require("marked")
+const { marked } = require("marked");
 const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
 const path = require("path");
