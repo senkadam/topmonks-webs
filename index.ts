@@ -33,8 +33,6 @@ createCertificate("www.cbx.cz");
 createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("monks.cloud");
-createCertificate("www.postcube.cz");
-createCertificate("www.postcube.com");
 createCertificate("www.zive.tv");
 
 createCertificate("www.hackercamp.cz");
