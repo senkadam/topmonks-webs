@@ -43,15 +43,7 @@ createTxtRecord(
   "google-site-verification=eIaBVqhznPV-0AAEEbFJN82j3w063w_tW0-DUZWX5C0"
 );
 
-createCertificate("www.chytrybox.cz");
-createGoogleMxRecords("chytrybox.cz");
-createTxtRecord(
-  "google-site-verification",
-  "chytrybox.cz",
-  "google-site-verification=KlEgvM1Rx9iOnZm53YPCzRsHkmltTuIEMV63L50gfus"
-);
 const assetsCachingLambda = AssetsCachingLambda.create("topmonks-webs-caching");
-
 const securityHeadersLambda = SecurityHeadersLambda.create(
   "topmonks-webs-security"
 );
