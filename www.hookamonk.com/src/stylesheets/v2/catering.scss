@@ -17,7 +17,7 @@
 .hm-intro {
   position: relative;
   background-image: cloudinaryUrl("hookamonk.com/bg_header-smoke-2.jpg");
-  background-position: center;
+  background-position: -25%;
   background-repeat: no-repeat;
   height: 100%;
   -webkit-background-size: cover;
@@ -107,7 +107,9 @@
 
 .wrap-collabsible {
   background-color: #FFF;
-  padding: 14px 10px 14px;
+  padding: 10px 10px 0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
   @media screen and (max-width: 840px) {
     padding-bottom: 0;
   }
