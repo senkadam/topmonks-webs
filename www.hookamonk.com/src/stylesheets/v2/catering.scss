@@ -71,14 +71,9 @@
 
   .hm-features__content {
     background-color: var(--hm-orange);
-
     h3 {
       font-size: 20px;
       font-weight: normal;
-    }
-
-    @media (max-width: 439px) {
-      margin-bottom: 2em;
     }
   }
 
@@ -107,11 +102,28 @@
 
 .wrap-collabsible {
   background-color: #FFF;
-  padding: 10px 10px 0;
+  padding: 14px 10px 24px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
+  position: relative;
+  .lbl-toggle {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+    svg {
+      position: absolute;
+      bottom: 1%;
+      left: 40%;
+    }
+  }
   @media screen and (max-width: 840px) {
-    padding-bottom: 0;
+    padding: 28px 12px 48px;
+    .lbl-toggle svg {
+      position: absolute;
+      bottom: 5%;
+      left: 40%;
+    }
   }
 }
 
@@ -119,16 +131,6 @@ input[type='checkbox'] {
   display: none;
 }
 
-.lbl-toggle {
-  display: block;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.25s ease-out;
-
-  svg {
-    margin-top: 10px;
-  }
-}
 
 .collapsible-content {
   max-height: 0;
@@ -144,6 +146,10 @@ input[type='checkbox'] {
 .toggle:checked + .lbl-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  svg {
+    transform: rotate(180deg);
+    transition: all 0.45s;
+  }
 }
 
 .collapsible-content .content-inner {
