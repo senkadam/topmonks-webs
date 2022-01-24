@@ -3,6 +3,7 @@
  */
 
 const path = require("path");
+const { pathToFileURL } = require("url");
 
 /**
  *
@@ -13,13 +14,6 @@ const path = require("path");
 const withShared = function (dirname, config) {
   return {
     ...config,
-    stylesheets: {
-      ...config.stylesheets,
-      sass: {
-        ...config.stylesheets.sass,
-        includePaths: [path.resolve(dirname, "../../shared/src")]
-      }
-    },
 
     html: {
       ...config.html,

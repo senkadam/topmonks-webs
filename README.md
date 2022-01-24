@@ -209,8 +209,10 @@ Currently there is only support for HTTL and CSS.
 
 #### SCSS
 
+Sass components are imported like node modules via Workspace package `@topmonks/shared`.
+
 ```
-@import 'common/example'
+@import '@topmonks/shared/common/example'
 ```
 
 ### Creating Shared Assets
