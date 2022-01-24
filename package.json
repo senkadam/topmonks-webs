@@ -19,6 +19,7 @@
     "@types/node": "^16.11.21",
     "cheerio": "^1.0.0-rc.10",
     "esbuild": "^0.14.13",
+    "esm": "^3.2.25",
     "lit-html": "2.1.1",
     "lodash": "^4.17.21",
     "parse-duration": "^1.0.2",

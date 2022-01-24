@@ -2288,6 +2288,7 @@ __metadata:
     eslint-plugin-lit: ^1.6.1
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-promise: ^6.0.0
+    esm: ^3.2.25
     gulp-cloudinary-upload: ^3.0.0
     gulp-esbuild: ^0.10.0
     gulp-markdown-to-json: ^1.1.0
@@ -6290,6 +6291,13 @@ __metadata:
   bin:
     eslint: bin/eslint.js
   checksum: 84cdfde8127dce30e6059d0312aae716560b349e15f973a6658d9b554718fd5a61965690f2ce181a0098fc658f8c010b3e4452d8fc48af9d34621cffde2dcc95
+  languageName: node
+  linkType: hard
+
+"esm@npm:^3.2.25":
+  version: 3.2.25
+  resolution: "esm@npm:3.2.25"
+  checksum: 12a0272aaa15ce4bc07e52cbb66d471cf56ad81ad1a3c1d9f6fa1e29e8c2712716333825e2572f9dbdfdc787e5717a75cb00ce2846e2a50e2bba6971c24402f3
   languageName: node
   linkType: hard
 
