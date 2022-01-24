@@ -4066,9 +4066,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:3.5.2":
-  version: 3.5.2
-  resolution: "chokidar@npm:3.5.2"
+"chokidar@npm:3.5.3":
+  version: 3.5.3
+  resolution: "chokidar@npm:3.5.3"
   dependencies:
     anymatch: ~3.1.2
     braces: ~3.0.2
@@ -4081,7 +4081,7 @@ __metadata:
   dependenciesMeta:
     fsevents:
       optional: true
-  checksum: 52fbff3acebf06ec0125872110f6c8403e66cd3d613264c83405496e199554d99380342d9b3a7ffd7910c53c5865e242ed7dd72fcb2e883d8e3ad3f3883aee6c
+  checksum: ea6636f22ddc08555794d72435876dea95ff90d8f00e5d3755022d6c7613dc8947056c36f4d76be8e246e539994f71772d8c6cec339db3767f2d5523cd51a9c0
   languageName: node
   linkType: hard
 
