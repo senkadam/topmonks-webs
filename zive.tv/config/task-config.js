@@ -68,7 +68,7 @@ const config = createSharedTaskConfig(__dirname, {
   },
 
   production: {
-    rev: true
+    rev: false
   }
 });
 
