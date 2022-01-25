@@ -31,7 +31,7 @@
     "@babel/eslint-parser": "^7.16.5",
     "@lhci/cli": "^0.8.2",
     "@lhci/utils": "^0.8.2",
-    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=b85aa04979b7e4866e2c9b3062fafb096e3845d0",
+    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=2fc65fbec54d393da05445694a5a10e4f25af80d",
     "ava": "^3.15.0",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
