@@ -2278,7 +2278,7 @@ __metadata:
     ava: ^3.15.0
     chalk: ^4.1.2
     cheerio: ^1.0.0-rc.10
-    commander: ^8.3.0
+    commander: ^9.0.0
     dotenv: ^10.0.0
     dotenv-cli: ^4.1.1
     esbuild: ^0.14.13
@@ -4513,10 +4513,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^8.3.0":
-  version: 8.3.0
-  resolution: "commander@npm:8.3.0"
-  checksum: 0b818d97ca9c8ad461ff05f873082af0c1895e49984a2abf1090e4a85c3537c3c0f9921e38314a9de7e71941f00f710c204d3560e3a7bc0b1023eef92d6bbfc0
+"commander@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "commander@npm:9.0.0"
+  checksum: fcfb41c501af3182b9a198c0978f29601243830561d007f3d21b100e929099cf1673042d9bea695d0e67519937fa3078175cb7658fc673b6451f350215dcceeb
   languageName: node
   linkType: hard
 
