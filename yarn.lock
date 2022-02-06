@@ -1655,18 +1655,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lhci/cli@npm:^0.8.2":
-  version: 0.8.2
-  resolution: "@lhci/cli@npm:0.8.2"
+"@lhci/cli@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "@lhci/cli@npm:0.9.0"
   dependencies:
-    "@lhci/utils": 0.8.2
+    "@lhci/utils": 0.9.0
     chrome-launcher: ^0.13.4
     compression: ^1.7.4
     debug: ^4.3.1
     express: ^4.17.1
     inquirer: ^6.3.1
     isomorphic-fetch: ^3.0.0
-    lighthouse: 8.0.0
+    lighthouse: 9.3.0
     lighthouse-logger: 1.2.0
     open: ^7.1.0
     tmp: ^0.1.0
@@ -1676,11 +1676,24 @@ __metadata:
     yargs-parser: ^13.1.2
   bin:
     lhci: ./src/cli.js
-  checksum: 7cb097b311bca6c88cad574e66b9ff4a20bb55bba1f6fd377d3821c05116896c2e6fdb83fcdf2b2cc91e31149dea084aec55cca97312527e86b4dd53caeb9705
+  checksum: 7aae99fbce0dd4ca3ae39cfec6fbd28dfcb4ae1fbd3219d88b5e8691dc8c05e014b453a9449b48b5823052307605ce8956c28a992874f979b72e0518e43524ac
   languageName: node
   linkType: hard
 
-"@lhci/utils@npm:0.8.2, @lhci/utils@npm:^0.8.2":
+"@lhci/utils@npm:0.9.0":
+  version: 0.9.0
+  resolution: "@lhci/utils@npm:0.9.0"
+  dependencies:
+    debug: ^4.3.1
+    isomorphic-fetch: ^3.0.0
+    js-yaml: ^3.13.1
+    lighthouse: 9.3.0
+    tree-kill: ^1.2.1
+  checksum: e38c7b96575c4d76722ead42310ed8e8a465f6edaf6bd11f909de7fa7fd13cd712ce1245a46906873f5ca63e765607fa1f6256af2bcce70e882b8663a5a4abda
+  languageName: node
+  linkType: hard
+
+"@lhci/utils@npm:^0.8.2":
   version: 0.8.2
   resolution: "@lhci/utils@npm:0.8.2"
   dependencies:
@@ -2344,7 +2357,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.17.0
     "@babel/eslint-parser": ^7.17.0
-    "@lhci/cli": ^0.8.2
+    "@lhci/cli": ^0.9.0
     "@lhci/utils": ^0.8.2
     "@material/button": ^13.0.0
     "@material/layout-grid": ^13.0.0
@@ -10164,6 +10177,47 @@ __metadata:
     lighthouse: ./lighthouse-cli/index.js
     smokehouse: ./lighthouse-cli/test/smokehouse/frontends/smokehouse-bin.js
   checksum: f896b099f0f8b587f97eeec2ff8413f4d8bb401cc6fe3b0473c3d668cd0383aac958bcfa2ababd889dcd962849bad27c9d012c40acd909fa179f3a9fa76bc5fe
+  languageName: node
+  linkType: hard
+
+"lighthouse@npm:9.3.0":
+  version: 9.3.0
+  resolution: "lighthouse@npm:9.3.0"
+  dependencies:
+    axe-core: 4.3.5
+    chrome-launcher: ^0.15.0
+    configstore: ^5.0.1
+    csp_evaluator: 1.1.0
+    cssstyle: 1.2.1
+    enquirer: ^2.3.6
+    http-link-header: ^0.8.0
+    intl-messageformat: ^4.4.0
+    jpeg-js: ^0.4.3
+    js-library-detector: ^6.4.0
+    lighthouse-logger: ^1.3.0
+    lighthouse-stack-packs: ^1.7.0
+    lodash.clonedeep: ^4.5.0
+    lodash.get: ^4.4.2
+    lodash.isequal: ^4.5.0
+    lodash.set: ^4.3.2
+    lookup-closest-locale: 6.2.0
+    metaviewport-parser: 0.2.0
+    open: ^8.4.0
+    parse-cache-control: 1.0.1
+    ps-list: ^8.0.0
+    raven: ^2.2.1
+    robots-parser: ^3.0.0
+    semver: ^5.3.0
+    speedline-core: ^1.4.3
+    third-party-web: ^0.12.7
+    ws: ^7.0.0
+    yargs: ^17.3.1
+    yargs-parser: ^21.0.0
+  bin:
+    chrome-debug: lighthouse-core/scripts/manual-chrome-launcher.js
+    lighthouse: lighthouse-cli/index.js
+    smokehouse: lighthouse-cli/test/smokehouse/frontends/smokehouse-bin.js
+  checksum: 49212c7e727fc4a3f6df8541e7dd42eb8bbb8d70bfa478bfba3f32ba65e075a673b415898bd2b908f2ca23349d967f76d42e1176e20e82b3966e1d5e7153fbed
   languageName: node
   linkType: hard
 
