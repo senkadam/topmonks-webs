@@ -454,3 +454,19 @@ workflows:
           filters:
             branches:
               only: trunk
+      - test_site:
+          name: test-securitylab-topmonks-com
+          site_name: securitylab.topmonks.com
+          context: org-global
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-securitylab-topmonks-com
+          site_name: securitylab.topmonks.com
+          context: org-global
+          requires:
+            - provision
+            - test-securitylab-topmonks-com
+          filters:
+            branches:
+              only: trunk
