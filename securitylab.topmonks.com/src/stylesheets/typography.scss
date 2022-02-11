@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF Pro"),
+  url("/assets/css/SF-Pro.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Mono";
+  src: local("PT Mono Bold"),
+  url("/assets/css/SF-Pro-bold.ttf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 // Colors //
 :root {
   --mdc-theme--primary: #FFFFFF;
@@ -10,9 +29,7 @@ body {
   font-style: normal;
   background-color: var(--mdc-theme--primary-bg);
   letter-spacing: 0;
-  font: 18px/1.5 Lato, lato, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+  font: 18px/1.5 "SF Pro";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
