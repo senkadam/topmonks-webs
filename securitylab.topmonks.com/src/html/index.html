@@ -13,6 +13,9 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+
 
   <!-- Material Design Components -->
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
@@ -20,60 +23,212 @@
 </head>
 
 <body>
-<section class="">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+<header class="tm-app-bar">
+  <div class="mdc-layout-grid tm-layout-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="header__logo mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <a class="tm-logo tm-logo--desktop" href="/" title="Go to homepage">
+               <img alt="[Logo] TopMonks Security Lab" src="/assets/icon/logo-desktop.svg"/>
+         </a>
+        <a class="tm-logo tm-logo--phone" href="/" title="Go to homepage">
+               <img alt="[Logo] TopMonks Security Lab" src="/assets/icon/logo-phone.svg"/>
+         </a>
+      </div>
+
+      <div class="btn btn__action mdc-layout-grid__cell mdc-layout-grid__cell--span-3-tablet">
+          <a class="action-button" href="#">Chci od vás pomoc</a>
+      </div>
+      <div class="tm-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
+        <div class="tm-hamburger__container">
+          <div class="tm-hamburger__bar"></div>
+          <div class="tm-hamburger__bar"></div>
+          <div class="tm-hamburger__bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav id="navigation" class="tm-menu">
+    <ul class="tm-menu__list">
+      <li><a href="#">Hardware</a></li>
+      <li><a href="#">Software</a></li>
+      <li><a href="#">Social Engineering</a></li>
+    </ul>
+    <div class="btn__hamburger">
+      <a class="action-button" href="mailto:securitylab@topmonks.com">securitylab@topmonks.com</a>
+    </div>
+      </nav>
+  <script>
+    var appBar = document.querySelector(".tm-app-bar");
+    var hamburger = document.querySelector(".tm-hamburger__container");
+    var menu = document.querySelector(".tm-menu");
+    hamburger.addEventListener("click", toggleMenu(hamburger));
+
+    function toggleMenu(hamburger) {
+      return function() {
+        hamburger.classList.toggle("tm-hamburger__container--open");
+        appBar.classList.toggle("tm-app-bar--open");
+      };
+    }
+
+    // var lastPosition = 0;
+    // var ticking = false;
+    // document.addEventListener("scroll", function() {
+    //   lastPosition = window.scrollY;
+    //   if (!ticking) {
+    //     window.requestAnimationFrame(function() {
+    //       if (lastPosition > 0) {
+    //         appBar.classList.add("tm-app-bar--sticky");
+    //       }
+    //       else {
+    //         appBar.classList.remove("tm-app-bar--sticky");
+    //       }
+    //       ticking = false;
+    //     });
+    //     ticking = true;
+    //   }
+    // });
+
+  </script>
+</header>
+
+<section class="intro">
+  <div class="mdc-layout-grid tm-layout-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="intro__text mdc-layout-grid__cell mdc-layout-grid__cell--span-7">
         <h1>Kybernetické útoky jsou stále sofistikovanější</h1>
-        <p>Tradiční bezpečnostní řešení už na ně nestačí</p>
+        <p class="sub-title">
+          Tradiční bezpečnostní řešení už na ně nestačí</p>
+        <div class="btn btn__action">
+          <a class="action-button" href="#">Chci od vás pomoc</a>
+        </div>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-      </div>
-      <div class="btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <a class="action-button" href="#">Chci od vás pomoc</a>
+      <div class="intro__img mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
+        <img alt="[Image] Kybernetické útoky" src="/assets/icon/header-icon.svg"/>
       </div>
     </div>
   </div>
 </section>
 <section class="">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+  <div class="mdc-layout-grid tm-layout-wrapper">
+    <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Topmonks Security Lab Vám pomůže těchto oblastech:</h2>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <ul>
-          <li>Hardware</li>
-          <li>Software</li>
-          <li>Social Engineering</li>
+          <li class="active">Hardware</li>
+          <li class="inactive">Software</li>
+          <li class="inactive">Social Engineering</li>
         </ul>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <img alt="[Image] Hardware" src="/assets/icon/hardware-icon.svg"/>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <div class="security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         <h3>Hardware</h3>
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <p>Výroba HW pro speciální činnosti (odposlechy GSM. rádiových sítí,
               rušičky, kódovaná úložiště, útočný hw atd., zabezpečení,
               identifikace útočných prvků atd.)</p>
           </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <p>Penetrační testy HW prvků</p>
           </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <p>Low-level hardware vývoj i&nbsp;debugování implementace/kryp&shy;tografie/revi&shy;ew
               bezpečnosti v&nbsp;protokolech, kryptoměnách/bloc&shy;kchainu, jejich
               implementacích a skriptech v&nbsp;kódu jejich virtuálního stroje (Bitcoin,
               Ethereum, Monero, Zcash)</p>
           </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <p>Reverse engineering</p>
           </div>
         </div>
       </div>
 
+      <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <ul>
+          <li class="inactive">Hardware</li>
+          <li class="active">Software</li>
+          <li class="inactive">Social Engineering</li>
+        </ul>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>Software</h3>
+        <div class="mdc-layout-grid__inner">
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Ethical hacking</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Penetrační testy WWW (OWASP)</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Penetrační testy mobilních aplikací</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Penetrační testy API / web services</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Externí penetrační testy</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Interní penetrační testy</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Penetrační testy SCADA</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Penetrační testy Wi-Fi</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Zátěžové testy (DoS)</p>
+          </div>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <img alt="[Image] Software" src="/assets/icon/software-icon.svg"/>
+      </div>
+
+
+      <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <ul>
+          <li class="inactive">Hardware</li>
+          <li class="inactive">Software</li>
+          <li class="active">Social Engineering</li>
+        </ul>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <img alt="[Image] Social" src="/assets/icon/social-icon.svg"/>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>Read team</h3>
+        <div class="mdc-layout-grid__inner">
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Penetrace budov</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Napadení průmyslových systému na SCADA</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Napadení sítí</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Napadení bezdrátových sítí</p>
+          </div>
+          <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>Odposlech rádiové komunikace včetně GSM</p>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
+<section class="contact">
+  <h2>Kontakt</h2>
+  <div class="btn btn__email">
+    <a class="action-button" href="mailto:securitylab@topmonks.com">securitylab@topmonks.com</a>
   </div>
 </section>
 

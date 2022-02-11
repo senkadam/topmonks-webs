@@ -1,8 +1,85 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@topmonks/shared/common/colors";
 
+// Layout //
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
   --mdc-layout-grid-column-width-desktop: 60px;
+}
+
+.tm-layout-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+img, svg {
+  width: 100%;
+  height: auto;
+}
+
+// Main //
+// Intro //
+
+.intro {
+  .intro__img {
+    svg {
+      margin-top: 2em;
+    }
+  }
+  .btn__action {
+    margin: 2em 0;
+  }
+}
+
+.section-menu {
+  margin: 4em auto 2em !important;
+  padding: 6px;
+  border-radius: 30px;
+  box-shadow: 0 12px 10px 0 #2B06540F;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-flex;
+  }
+
+  li {
+    padding: 12px 28px;
+  }
+
+  li.active {
+    font-weight: 700;
+    color: #FFFFFF;
+    background-image: var(--mdc-theme--on-primary);
+    border-radius: 30px;
+  }
+
+  @media (max-width: 539px) {
+    box-shadow: none;
+    margin: 2em auto 0!important;
+    li.inactive {
+      display: none;
+    }
+  }
+}
+
+.security-fields__cell {
+  background-image: var(--mdc-theme--on-primary);
+  border-radius: 10px;
+  padding: 6px 20px;
+
+  p {
+    color: var(--mdc-theme--primary);
+  }
+}
+
+// Contact //
+.contact {
+  margin: 6em 0 10em;
+
+  h2 {
+    font-size: 24px;
+  }
 }
