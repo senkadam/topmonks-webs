@@ -43,7 +43,7 @@ body {
 }
 
 // Font-size typography //
-h1, h2, h3, p.sub-title {
+h1, h2, h3, li, p.sub-title {
   background: var(--mdc-theme--on-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
