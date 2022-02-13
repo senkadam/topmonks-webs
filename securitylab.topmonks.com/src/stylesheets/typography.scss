@@ -20,14 +20,18 @@
 // Colors //
 :root {
   --mdc-theme--primary: #FFFFFF;
+  --mdc-theme--primary-grey: #E0E0E0;
+  --mdc-theme--primary-dark-grey: #828282;
+
   --mdc-theme--on-primary: linear-gradient(to bottom right, #45108A, #3D065F, #10054D);
   --mdc-theme--secondary: linear-gradient(102.49deg, #1504B2 -1.28%, #CC00B6 50.41%, #A01FD1 104.29%);
+  --mdc-theme--third: #45108A;
 }
 
 // Body typography //
 body {
   font-style: normal;
-  background-color: var(--mdc-theme--primary-bg);
+  background-color: var(--mdc-theme--primary);
   letter-spacing: 0;
   font: 18px/1.5 "SF Pro";
   font-kerning: normal;
@@ -43,7 +47,7 @@ body {
 }
 
 // Font-size typography //
-h1, h2, h3, li, p.sub-title {
+h1, h2, h3, p.sub-title {
   background: var(--mdc-theme--on-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
