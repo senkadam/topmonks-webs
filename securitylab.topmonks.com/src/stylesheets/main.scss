@@ -9,6 +9,10 @@
   --mdc-layout-grid-column-width-desktop: 60px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .tm-layout-wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -23,7 +27,6 @@ img, svg {
 // Intro //
 
 .intro {
-  background-image: url("");
   .intro__img {
     svg {
       margin-top: 2em;
