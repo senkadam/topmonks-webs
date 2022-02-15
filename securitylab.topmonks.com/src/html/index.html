@@ -55,13 +55,12 @@
   </div>
   <nav id="navigation" class="tm-menu">
     <ul class="tm-menu__list">
-      <li><a href="#">Hardware</a></li>
-      <li><a href="#">Software</a></li>
-      <li><a href="#">Social Engineering</a></li>
+      <li><a href="/" title="Go to homepage">Home</a></li>
+      <li><a href="#section__hardware">Hardware</a></li>
+      <li><a href="#section__software">Software</a></li>
+      <li><a href="#section__social">Social Engineering</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="btn__hamburger">
-      <a class="action-button" href="mailto:securitylab@topmonks.com">securitylab@topmonks.com</a>
-    </div>
   </nav>
   <script>
     var appBar = document.querySelector(".tm-app-bar");
@@ -114,7 +113,7 @@
     </div>
   </div>
 </section>
-<section class="">
+<section class="main">
   <div class="mdc-layout-grid tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -122,16 +121,15 @@
       </div>
       <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <ul>
-          <li class="menu--active">Hardware</li>
-          <li class="menu--inactive">Software</li>
-          <li class="menu--inactive">Social Engineering</li>
+          <li class="menu--active"><a href="#section__hardware">Hardware</a></li>
+          <li class="menu--inactive"><a href="#section__software">Software</a></li>
+          <li class="menu--inactive"><a href="#section__social">Social Engineering</a></li>
         </ul>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         <img alt="[Image] Hardware" src="/assets/css/hardware-icon.svg"/>
       </div>
-      <div class="security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-        <h3>Hardware</h3>
+      <div id="section__hardware" class="security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         <div class="mdc-layout-grid__inner">
           <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <p>Výroba HW pro speciální činnosti (odposlechy GSM. rádiových sítí,
@@ -153,14 +151,14 @@
         </div>
       </div>
 
-      <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div class="section-menu section-menu--software mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <ul>
-          <li class="menu--inactive">Hardware</li>
-          <li class="menu--active">Software</li>
-          <li class="menu--inactive">Social Engineering</li>
+          <li class="menu--inactive"><a href="#section__hardware">Hardware</a></li>
+          <li class="menu--active"><a href="#section__software">Software</a></li>
+          <li class="menu--inactive"><a href="#section__social">Social Engineering</a></li>
         </ul>
       </div>
-      <div class="tabs mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <div id="section__software" class="tabs mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         <ul id="tabs_ul">
           <li class="active" data-list="tab_1">
             <p>Technická bezpečnost</p>
@@ -250,18 +248,18 @@
         <img alt="[Image] Software" src="/assets/css/software-icon.svg"/>
       </div>
 
-      <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div class="section-menu section-menu--social mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <ul>
-          <li class="menu--inactive">Hardware</li>
-          <li class="menu--inactive">Software</li>
-          <li class="menu--active">Social Engineering</li>
+          <li class="menu--inactive"><a href="#section__hardware">Hardware</a></li>
+          <li class="menu--inactive"><a href="#section__software">Software</a></li>
+          <li class="menu--active"><a href="#section__social">Social Engineering</a></li>
         </ul>
       </div>
 
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         <img alt="[Image] Social" src="/assets/icon/social-icon.svg"/>
       </div>
-      <div class="tabs2 mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <div id="section__social" class="tabs2 mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         <ul id="tabs_ul2">
           <li class="active2" data-list="tab_3">
             <p>Read team</p>
@@ -369,7 +367,7 @@
     </div>
   </div>
 </section>
-<footer class="contact">
+<footer id="contact" class="contact">
   <h2>Kontakt</h2>
   <div class="btn btn__email">
     <a class="action-button" href="mailto:securitylab@topmonks.com">securitylab@topmonks.com</a>
