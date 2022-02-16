@@ -18,23 +18,23 @@ html {
   margin: 0 auto;
 }
 
-img, svg {
-  width: 100%;
-  height: auto;
-}
-
 // Main //
 // Intro //
 
 .intro {
   .intro__img {
-    svg {
-      margin-top: 2em;
-    }
+    width: 100%;
+    height: auto;
   }
 
   .btn__action {
     margin: 2em 0;
+  }
+  .sub-title {
+    .sub-title__icon svg {
+      width: 34px;
+      height: 34px;
+    }
   }
 
   @media (max-width: 539px) {
@@ -44,12 +44,17 @@ img, svg {
   }
 }
 
-.main h2 {
-  margin-bottom: 0;
+.main__title {
+  padding: 24px 32px;
+  border-radius: 10px;
+  background-color: var(--mdc-theme--primary);
+  h2 {
+    margin: 0;
+  }
 }
 
 .section-menu {
-  margin: 0 auto!important;
+  margin: 2em auto 1em!important;
   padding: 6px;
   border-radius: 30px;
   box-shadow: 0 12px 10px 0 #2B06540F;
@@ -93,9 +98,6 @@ img, svg {
   }
 }
 
-.section-menu--software, .section-menu--social {
-  margin-top: 3em !important;
-}
 
 .security-fields__cell {
   background-image: var(--mdc-theme--on-primary);
@@ -161,8 +163,7 @@ img, svg {
 
     @media screen and (min-width: 540px) {
       & > ::before {
-        content: ">";
-        // content: url("/assets/css/tab-inactive.svg");
+        content: url("tab-inactive.svg");
         display: inline-block;
         width: 27px;
         height: 27px;
@@ -205,8 +206,7 @@ img, svg {
     width: 50%;
     @media screen and (min-width: 540px) {
       & > ::before {
-        content: "@";
-        // content: url("/assets/css/tab-active.svg");
+        content: url("tab-active");
         display: inline-block;
         width: 27px;
         height: 27px;
