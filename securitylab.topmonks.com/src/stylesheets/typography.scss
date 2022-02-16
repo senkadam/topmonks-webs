@@ -163,7 +163,7 @@ h1, h2, h3, p.sub-title {
     margin-top: 0;
 
     &:before {
-      content: url("/assets/css/security-icon.svg");
+      content: url("security-icon.svg");
       display: inline-block;
       width: 34px;
       height: 34px;

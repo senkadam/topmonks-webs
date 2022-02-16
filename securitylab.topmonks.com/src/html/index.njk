@@ -19,21 +19,27 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
   <style>
-    main {
-      background-image: url({{ "/securitylab.topmonks.com/header_bg02.png"| cloudinaryUrl(width=900) }});
-      background-size: 800px auto;
-      background-position: top right;
-      background-repeat: no-repeat;
-    }
-
-    .intro {
-      padding-top: 4em;
-      align-self: center;
-      background-image: url({{ "/securitylab.topmonks.com/header_bg01.png"| cloudinaryUrl(width=900) }});
-      background-size: 100% auto, 900px auto;
-      background-position: center, top right;
-      background-repeat: no-repeat;
-      min-height: 600px;
+    @media screen and (min-width: 840px) {
+      body {
+        background-image: url({{ "/securitylab.topmonks.com/footer_bg.png"| cloudinaryUrl(width=900) }});
+        background-size: 1000px auto;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+      }
+      main {
+        background-image: url({{ "/securitylab.topmonks.com/header_bg02.png"| cloudinaryUrl(width=900) }}), url({{ "/securitylab.topmonks.com/main_bg01.png"| cloudinaryUrl(width=900) }}),
+        url({{ "/securitylab.topmonks.com/main_bg02.png"| cloudinaryUrl(width=900) }}), url({{ "/securitylab.topmonks.com/main_bg03.png"| cloudinaryUrl(width=900) }});
+        background-size: 800px auto,340px auto, 340px auto, 340px auto;
+        background-position: top right, left 36%, right 64%, left 96%, bottom;
+        background-repeat: no-repeat;
+      }
+      .intro {
+        background-image: url({{ "/securitylab.topmonks.com/header_bg01.png"| cloudinaryUrl(width=900) }});
+        background-size: 100% auto;
+        background-position: center, top right;
+        background-repeat: no-repeat;
+        min-height: 600px;
+      }
     }
   </style>
 {% endblock %}
@@ -45,7 +51,6 @@
         <div class="intro__text mdc-layout-grid__cell mdc-layout-grid__cell--span-7">
           <h1>Kybernetické útoky jsou stále sofistikovanější</h1>
           <p class="sub-title">
-            {{ sprite("security-icon", alt="Icon", viewBox="0 0 34 34", class="sub-title__icon") }}
             Tradiční bezpečnostní řešení už na ně nestačí</p>
           <div class="btn btn__action">
             <a class="action-button" href="#">Chci od vás pomoc</a>
@@ -64,7 +69,7 @@
                   srcset="{{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=540) }} 1x,
                 {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=540) }} 1.5x,
                 {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=540) }} 2x">
-          <img alt="Fotografie PostCube u domu" loading="lazy"
+          <img alt="Security lab" loading="lazy"
                src="{{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl }}" width="540" height="480">
         </picture>
       </div>
@@ -80,16 +85,28 @@
           <h2>Topmonks Security Lab Vám pomůže těchto oblastech:</h2>
         </div>
         <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <label class="sliding-menu__tab tab--active"><a href="#section__hardware">Hardware</a></label>
-            <label class="sliding-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
-            <label class="sliding-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
-            <span class="glider"></span>
+          <label class="sliding-menu__tab tab--active"><a href="#section__hardware">Hardware</a></label>
+          <label class="sliding-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
+          <label class="sliding-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
         </div>
-
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-          <img alt="[Image] Hardware" src="/assets/css/hardware-icon.svg"/>
-        </div>
-        <div id="section__hardware" class="security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+        <picture class="security-fields__bg security-fields__bg--hardware mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <source media="screen and (max-width: 399px)"
+                  srcset="{{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=400) }} 1x,
+                      {{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=400) }} 1.5x,
+                      {{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=400) }} 2x">
+          <source media="screen and (min-width: 400px) and (max-width: 599px)"
+                  srcset="{{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=420) }} 1x,
+                {{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=600) }} 1.5x,
+                {{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=600) }} 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="{{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=540) }} 1x,
+                {{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=540) }} 1.5x,
+                {{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=540) }} 2x">
+          <img alt="Security lab - Hardware" loading="lazy"
+               src="{{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl }}" width="540" height="480">
+        </picture>
+        <div id="section__hardware"
+             class="security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
              data-aos="fade-left">
           <div class="mdc-layout-grid__inner">
             <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -117,7 +134,8 @@
           <label class="sliding-menu__tab tab--active"><a href="#section__software">Software</a></label>
           <label class="sliding-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
         </div>
-        <div id="section__software" class="tabs mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+        <div id="section__software"
+             class="tabs security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
              data-aos="fade-right">
           <ul id="tabs_ul">
             <li class="active" data-list="tab_1">
@@ -204,9 +222,22 @@
 
           </script>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-          <img alt="[Image] Software" src="/assets/css/software-icon.svg"/>
-        </div>
+        <picture class="security-fields__bg security-fields__bg--software mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <source media="screen and (max-width: 399px)"
+                  srcset="{{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=400) }} 1x,
+                      {{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=400) }} 1.5x,
+                      {{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=400) }} 2x">
+          <source media="screen and (min-width: 400px) and (max-width: 599px)"
+                  srcset="{{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=420) }} 1x,
+                {{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=600) }} 1.5x,
+                {{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=600) }} 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="{{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=540) }} 1x,
+                {{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=540) }} 1.5x,
+                {{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=540) }} 2x">
+          <img alt="Security lab - Software" loading="lazy"
+               src="{{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl }}" width="540" height="480">
+        </picture>
 
 
         <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -214,10 +245,24 @@
           <label class="sliding-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
           <label class="sliding-menu__tab tab--active"><a href="#section__social">Social Engineering</a></label>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-          <img alt="[Image] Social" src="/assets/icon/social-icon.svg"/>
-        </div>
-        <div id="section__social" class="tabs2 mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+        <picture class="security-fields__bg security-fields__bg--social mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <source media="screen and (max-width: 399px)"
+                  srcset="{{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=400) }} 1x,
+                      {{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=400) }} 1.5x,
+                      {{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=400) }} 2x">
+          <source media="screen and (min-width: 400px) and (max-width: 599px)"
+                  srcset="{{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=420) }} 1x,
+                {{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=600) }} 1.5x,
+                {{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=600) }} 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="{{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=540) }} 1x,
+                {{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=540) }} 1.5x,
+                {{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=540) }} 2x">
+          <img alt="Security lab - Social Engineering" loading="lazy"
+               src="{{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl }}" width="540" height="480">
+        </picture>
+        <div id="section__social"
+             class="tabs2 security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
              data-aos="fade-left">
           <ul id="tabs_ul2">
             <li class="active2" data-list="tab_3">
