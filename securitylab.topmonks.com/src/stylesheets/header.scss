@@ -13,6 +13,16 @@
       height: 60px;
     }
   }
+  .tm-logo--desktop {
+    @media (max-width: 539px) {
+      display: none;
+    }
+  }
+  .tm-logo--phone {
+    @media (min-width: 540px) {
+      display: none;
+    }
+  }
 
   .btn__action {
     align-self: center;
