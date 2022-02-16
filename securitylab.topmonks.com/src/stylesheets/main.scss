@@ -20,7 +20,6 @@ html {
 
 // Main //
 // Intro //
-
 .intro {
   .intro__img {
     width: 100%;
@@ -30,6 +29,7 @@ html {
   .btn__action {
     margin: 2em 0;
   }
+
   .sub-title {
     .sub-title__icon svg {
       width: 34px;
@@ -48,11 +48,66 @@ html {
   padding: 24px 32px;
   border-radius: 10px;
   background-color: var(--mdc-theme--primary);
+
   h2 {
     margin: 0;
   }
 }
 
+// Section sliding menu
+.sliding-menu {
+  margin: 0 auto;
+  display: flex;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+  padding: 0.75rem;
+  border-radius: 99px; // just a high number to create pill effect
+
+  a {
+    text-decoration: none;
+  }
+
+  .tab--active {
+    display: flex;
+    height: 54px;
+    width: 200px;
+    background-image: var(--mdc-theme--on-primary);
+    a {
+      color: var(--mdc-theme--primary);
+    }
+  }
+
+  .tab--inactive:hover, .tab--inactive:active {
+    box-shadow: 0 0 0 2px var(--mdc-theme--third);
+    transition: all 0.7s ease-in-out;
+  }
+  .tab--inactive a:active {
+    color: var(--mdc-theme--third);
+  }
+}
+
+.sliding-menu__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 200px;
+  margin: 0 10px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 99px; // just a high number to create pill effect
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+@media (max-width: 700px) {
+  .sliding-menu {
+    transform: scale(0.6);
+  }
+}
+
+
+/*
 .section-menu {
   margin: 2em auto 1em!important;
   padding: 6px;
@@ -97,7 +152,7 @@ html {
     }
   }
 }
-
+*/
 
 .security-fields__cell {
   background-image: var(--mdc-theme--on-primary);
@@ -218,6 +273,8 @@ html {
     }
   }
 }
+
+
 
 
 

@@ -70,19 +70,22 @@
       </div>
     </div>
   </section>
+
+
+
   <section class="main">
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
         <div class="main__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Topmonks Security Lab Vám pomůže těchto oblastech:</h2>
         </div>
-        <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <ul>
-            <li class="menu--active"><a href="#section__hardware">Hardware</a></li>
-            <li class="menu--inactive"><a href="#section__software">Software</a></li>
-            <li class="menu--inactive"><a href="#section__social">Social Engineering</a></li>
-          </ul>
+        <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <label class="sliding-menu__tab tab--active"><a href="#section__hardware">Hardware</a></label>
+            <label class="sliding-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
+            <label class="sliding-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
+            <span class="glider"></span>
         </div>
+
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <img alt="[Image] Hardware" src="/assets/css/hardware-icon.svg"/>
         </div>
@@ -109,12 +112,10 @@
           </div>
         </div>
 
-        <div class="section-menu section-menu--software mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <ul>
-            <li class="menu--inactive"><a href="#section__hardware">Hardware</a></li>
-            <li class="menu--active"><a href="#section__software">Software</a></li>
-            <li class="menu--inactive"><a href="#section__social">Social Engineering</a></li>
-          </ul>
+        <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <label class="sliding-menu__tab tab--inactive"><a href="#section__hardware">Hardware</a></label>
+          <label class="sliding-menu__tab tab--active"><a href="#section__software">Software</a></label>
+          <label class="sliding-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
         </div>
         <div id="section__software" class="tabs mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
              data-aos="fade-right">
@@ -207,14 +208,12 @@
           <img alt="[Image] Software" src="/assets/css/software-icon.svg"/>
         </div>
 
-        <div class="section-menu section-menu--social mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <ul>
-            <li class="menu--inactive"><a href="#section__hardware">Hardware</a></li>
-            <li class="menu--inactive"><a href="#section__software">Software</a></li>
-            <li class="menu--active"><a href="#section__social">Social Engineering</a></li>
-          </ul>
-        </div>
 
+        <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <label class="sliding-menu__tab tab--inactive"><a href="#section__hardware">Hardware</a></label>
+          <label class="sliding-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
+          <label class="sliding-menu__tab tab--active"><a href="#section__social">Social Engineering</a></label>
+        </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <img alt="[Image] Social" src="/assets/icon/social-icon.svg"/>
         </div>
