@@ -2,13 +2,12 @@ const createSharedTaskConfig = require("../../shared/config/createSharedTaskConf
 const pathConfig = require("./path-config.json");
 
 const config = createSharedTaskConfig(__dirname, {
+  javascripts: false,
   images: true,
   cloudinary: true,
   fonts: true,
   static: true,
   svgSprite: true,
-  javascripts: false,
-  icons: true,
   stylesheets: true,
   workboxBuild: false,
   html: {
