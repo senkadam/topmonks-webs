@@ -1,0 +1,341 @@
+{% extends 'layouts/main.njk' %}
+{% from 'macros/helpers.njk' import css, sprite %}
+{% set page = 'security-lab' %}
+{% set language = 'cs' %}
+
+{% block title %}
+  TopMonks - Security Lab
+{% endblock %}
+
+{% block head %}
+  <meta name="description"
+        content="Security lab">
+  <link rel="canonical" href="https://www.securitylab.topmonks.com/">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="https://www.securitylab.topmonks.com/">
+  <meta property="og:site_name" content="securitylab.topmonks.com">
+
+  <!-- Animation library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+  <style>
+    main {
+      background-image: url({{ "/securitylab.topmonks.com/header_bg02.png"| cloudinaryUrl(width=900) }});
+      background-size: 800px auto;
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
+
+    .intro {
+      padding-top: 4em;
+      align-self: center;
+      background-image: url({{ "/securitylab.topmonks.com/header_bg01.png"| cloudinaryUrl(width=900) }});
+      background-size: 100% auto, 900px auto;
+      background-position: center, top right;
+      background-repeat: no-repeat;
+      min-height: 600px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <section class="intro">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="intro__text mdc-layout-grid__cell mdc-layout-grid__cell--span-7">
+          <h1>Kybernetické útoky jsou stále sofistikovanější</h1>
+          <p class="sub-title">
+            {{ sprite("security-icon", alt="Icon", viewBox="0 0 34 34", class="sub-title__icon") }}
+            Tradiční bezpečnostní řešení už na ně nestačí</p>
+          <div class="btn btn__action">
+            <a class="action-button" href="#">Chci od vás pomoc</a>
+          </div>
+        </div>
+        <picture class="intro__img mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
+          <source media="screen and (max-width: 399px)"
+                  srcset="{{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=400) }} 1x,
+                      {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=400) }} 1.5x,
+                      {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=400) }} 2x">
+          <source media="screen and (min-width: 400px) and (max-width: 599px)"
+                  srcset="{{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=420) }} 1x,
+                {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=600) }} 1.5x,
+                {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=600) }} 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="{{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=540) }} 1x,
+                {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=540) }} 1.5x,
+                {{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl(width=540) }} 2x">
+          <img alt="Fotografie PostCube u domu" loading="lazy"
+               src="{{ "/securitylab.topmonks.com/header_icon.svg" | cloudinaryUrl }}" width="540" height="480">
+        </picture>
+      </div>
+    </div>
+  </section>
+  <section class="main">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="main__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Topmonks Security Lab Vám pomůže těchto oblastech:</h2>
+        </div>
+        <div class="section-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <ul>
+            <li class="menu--active"><a href="#section__hardware">Hardware</a></li>
+            <li class="menu--inactive"><a href="#section__software">Software</a></li>
+            <li class="menu--inactive"><a href="#section__social">Social Engineering</a></li>
+          </ul>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <img alt="[Image] Hardware" src="/assets/css/hardware-icon.svg"/>
+        </div>
+        <div id="section__hardware" class="security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+             data-aos="fade-left">
+          <div class="mdc-layout-grid__inner">
+            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+              <p>Výroba HW pro speciální činnosti (odposlechy GSM. rádiových sítí,
+                rušičky, kódovaná úložiště, útočný hw atd., zabezpečení,
+                identifikace útočných prvků atd.)</p>
+            </div>
+            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+              <p>Penetrační testy HW prvků</p>
+            </div>
+            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+              <p>Low-level hardware vývoj i&nbsp;debugování implementace/kryp&shy;tografie/revi&shy;ew
+                bezpečnosti v&nbsp;protokolech, kryptoměnách/bloc&shy;kchainu, jejich
+                implementacích a skriptech v&nbsp;kódu jejich virtuálního stroje (Bitcoin,
+                Ethereum, Monero, Zcash)</p>
+            </div>
+            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+              <p>Reverse engineering</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-menu section-menu--software mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <ul>
+            <li class="menu--inactive"><a href="#section__hardware">Hardware</a></li>
+            <li class="menu--active"><a href="#section__software">Software</a></li>
+            <li class="menu--inactive"><a href="#section__social">Social Engineering</a></li>
+          </ul>
+        </div>
+        <div id="section__software" class="tabs mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+             data-aos="fade-right">
+          <ul id="tabs_ul">
+            <li class="active" data-list="tab_1">
+              <p>Technická bezpečnost</p>
+            </li>
+            <li data-list="tab_2">
+              <p>Konfigurační audit</p>
+          </ul>
+          <div class="mdc-layout-grid__inner">
+            <div class="content mdc-layout-grid__cell--span-12">
+              <div class="tab_content tab_1" id="tab_1">
+                <div class="security-fields__cell">
+                  <p>Ethical hacking</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Penetrační testy WWW (OWASP)</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Penetrační testy mobilních aplikací</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Penetrační testy API / web services</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Externí penetrační testy</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Interní penetrační testy</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Penetrační testy SCADA</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Penetrační testy Wi-Fi</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Zátěžové testy (DoS)</p>
+                </div>
+              </div>
+              <div class="tab_content tab_2" id="tab_2" style="display:none;">
+                <div class="security-fields__cell">
+                  <p>Hardening Microsoft Windows</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Hardening UNIX</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Hardening Microsoft SQL</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Hardening Oracle DB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            $(".content .tab_content").hide();
+            $(".content .tab_content:first-child").show();
+
+            $("ul li").click(function() {
+
+              $("ul li").removeClass("active");
+              $(this).addClass("active");
+
+              var current_tab = $(this).attr("data-list");
+              $(".content .tab_content").hide();
+              $("." + current_tab).show();
+            });
+
+
+            var ul = document.getElementById("tabs_ul");
+            var li_tabs = ul.getElementsByTagName("li");
+            for (var i = 0; i < li_tabs.length; i++) {
+              li_tabs[i].addEventListener("click", function() {
+                var current = ul.getElementsByClassName("active");
+                current[0].className = current[0].className.replace("active", "");
+                this.className += "active";
+
+                var current_tab_value = this.getAttribute("data-list");
+                document.getElementById(current_tab_value).style.display = "block";
+
+              });
+            }
+
+          </script>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <img alt="[Image] Software" src="/assets/css/software-icon.svg"/>
+        </div>
+
+        <div class="section-menu section-menu--social mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <ul>
+            <li class="menu--inactive"><a href="#section__hardware">Hardware</a></li>
+            <li class="menu--inactive"><a href="#section__software">Software</a></li>
+            <li class="menu--active"><a href="#section__social">Social Engineering</a></li>
+          </ul>
+        </div>
+
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <img alt="[Image] Social" src="/assets/icon/social-icon.svg"/>
+        </div>
+        <div id="section__social" class="tabs2 mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+             data-aos="fade-left">
+          <ul id="tabs_ul2">
+            <li class="active2" data-list="tab_3">
+              <p>Read team</p>
+            </li>
+            <li data-list="tab_4">
+              <p>Ostatní</p>
+            </li>
+            <li data-list="tab_5">
+              <p>Procesní bezpečnost</p>
+            </li>
+          </ul>
+          <div class="mdc-layout-grid__inner">
+            <div class="content2 mdc-layout-grid__cell--span-12">
+              <div class="tab_content2 tab_3" id="tab_3">
+                <div class="security-fields__cell">
+                  <p>Penetrace budov</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Napadení průmyslových systému na SCADA</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Napadení sítí</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Napadení bezdrátových sítí</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Odposlech rádiové komunikace včetně GSM</p>
+                </div>
+              </div>
+              <div class="tab_content2 tab_4" id="tab_4">
+                <div class="security-fields__cell">
+                  <p>Code review</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>OSINT&nbsp;&ndash; Maltego, vytěžení veřejně dostupných informací&nbsp;atd.</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Exploit development</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Incident response&nbsp;&ndash; analyzovat logy, dumpnout RAMku&nbsp;atd.</p>
+                </div>
+              </div>
+              <div class="tab_content2 tab_5" id="tab_5">
+                <div class="security-fields__cell">
+                  <p>Analýzy a audity</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Analýza rizik</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Analýza dopadů (BIA)</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Analýza shody se ZoKB</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Analýza shody s&nbsp;GDPR</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Bezpečnostní audit ICT</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Informační bezpečnost</p>
+                </div>
+                <div class="security-fields__cell">
+                  <p>Školení: bezpečnost pro uživatele</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            $(".content2 .tab_content2").hide();
+            $(".content2 .tab_content2:first-child").show();
+
+            $(".tabs2 ul li").click(function() {
+
+              $(".tabs2 ul li").removeClass("active2");
+              $(this).addClass("active2");
+
+              var current_tab = $(this).attr("data-list");
+              $(".content2 .tab_content2").hide();
+              $("." + current_tab).show();
+            });
+
+
+            var ul = document.getElementById("tabs_ul2");
+            var li_tabs = ul.getElementsByTagName("li");
+            for (var i = 0; i < li_tabs.length; i++) {
+              li_tabs[i].addEventListener("click", function() {
+                var current = ul.getElementsByClassName("active2");
+                current[0].className = current[0].className.replace("active2", "");
+                this.className += "active2";
+
+                var current_tab_value = this.getAttribute("data-list");
+                document.getElementById(current_tab_value).style.display = "block";
+
+              });
+            }
+
+          </script>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+{% endblock %}
+
+{% block footer %}
+  {% include "components/footer.njk" %}
+{% endblock %}
