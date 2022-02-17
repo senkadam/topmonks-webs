@@ -34,15 +34,7 @@
   }
 
   @media (max-width: 539px) {
-    .tm-logo--desktop {
-      display: none;
-    }
     .btn__action {
-      display: none;
-    }
-  }
-  @media (min-width: 540px) {
-    .tm-logo--phone {
       display: none;
     }
   }
@@ -150,6 +142,7 @@
   .tm-menu__list {
     list-style-type: none;
     font-size: 4em;
+    padding-left: 0;
   }
 
   .tm-menu__list li {
@@ -169,10 +162,7 @@
       transition: 0.3s;
       /* Transition effects on hover (color) */
       &:hover {
-        color: #818181;
-        text-decoration: none;
-        display: block;
-        /* Display block instead of inline */
+        color: #CC00B6;
       }
 
       @media (max-width: 539px) {
