@@ -127,7 +127,6 @@ html {
   margin: 1em 0 3em;
 }
 .security-fields__bg {
-  align-self: center;
   img {
     width: 100%;
     height: auto;
@@ -202,7 +201,7 @@ html {
     transition: all 0.35s ease-in-out;
     @media screen and (min-width: 540px) {
       & > ::before {
-        content: url("tab-inactive.svg");
+        background-image: url("#tab-inactive")!important;
         display: inline-block;
         width: 27px;
         height: 27px;
@@ -245,7 +244,7 @@ html {
     width: 50%;
     @media screen and (min-width: 540px) {
       & > ::before {
-        content: url("tab-active");
+        background-image: url("#tab-active");
         display: inline-block;
         width: 27px;
         height: 27px;
