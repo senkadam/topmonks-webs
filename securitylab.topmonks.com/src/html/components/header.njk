@@ -1,68 +1,60 @@
 {% from 'macros/helpers.njk' import css, sprite, spriteTarget %}
 {{ css("header") }}
-<header class="tm-app-bar">
-  <div class="mdc-layout-grid tm-layout-wrapper">
-    <div class="mdc-layout-grid__inner">
-      <div class="header__logo mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <a class="tm-logo tm-logo--desktop" href="/" title="Go to homepage">{{ sprite('logo-desktop', alt="Logo", viewBox="0 0 236 60") }}
-        </a>
-        <a class="tm-logo tm-logo--phone" href="/" title="Go to homepage">
-          {{ sprite('logo-phone', alt="Logo", viewBox="0 0 800 800") }}
-        </a>
-      </div>
 
-      <div class="btn btn__action mdc-layout-grid__cell mdc-layout-grid__cell--span-3-tablet">
-        <a class="action-button" href="#">Chci od vás pomoc</a>
-      </div>
-      <div
-        class="tm-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-        <div class="tm-hamburger__container">
-          <div class="tm-hamburger__bar"></div>
-          <div class="tm-hamburger__bar"></div>
-          <div class="tm-hamburger__bar"></div>
+<header>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <nav class="navbar mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="mdc-layout-grid__inner">
+          <div class="logo mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+            <a class="logo" href="/"
+               title="Go to homepage">{{ sprite('logo-phone', alt="Logo", viewBox="0 0 800 800") }}
+            </a>
+          </div>
+          <div class="menu mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-5-desktop">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="#security-field__hardware" class="nav-link">Hardware</a>
+              </li>
+              <li class="nav-item">
+                <a href="#security-field__software" class="nav-link">Software</a>
+              </li>
+              <li class="nav-item">
+                <a href="#security-field__social" class="nav-link">Social Engineering</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+          <div class="button mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <div class="btn btn__action">
+              <a href="#contact">Chci od vás pomoc</a>
+            </div>
+          </div>
+          <div class="navigation mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
         </div>
-      </div>
+          <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", () => {
+              hamburger.classList.toggle("active");
+              navMenu.classList.toggle("active");
+            });
+
+            document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+            }));
+          </script>
+      </nav>
     </div>
   </div>
-  <nav id="navigation" class="tm-menu">
-    <ul class="tm-menu__list">
-      <li><a href="/" title="Go to homepage">Home</a></li>
-      <li><a href="#security-field__hardware">Hardware</a></li>
-      <li><a href="#security-field__software">Software</a></li>
-      <li><a href="#security-field__social">Social Engineering</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <script>
-    var appBar = document.querySelector(".tm-app-bar");
-    var hamburger = document.querySelector(".tm-hamburger__container");
-    var menu = document.querySelector(".tm-menu");
-    hamburger.addEventListener("click", toggleMenu(hamburger));
-
-    function toggleMenu(hamburger) {
-      return function() {
-        hamburger.classList.toggle("tm-hamburger__container--open");
-        appBar.classList.toggle("tm-app-bar--open");
-      };
-    }
-
-    // var lastPosition = 0;
-    // var ticking = false;
-    // document.addEventListener("scroll", function() {
-    //   lastPosition = window.scrollY;
-    //   if (!ticking) {
-    //     window.requestAnimationFrame(function() {
-    //       if (lastPosition > 0) {
-    //         appBar.classList.add("tm-app-bar--sticky");
-    //       }
-    //       else {
-    //         appBar.classList.remove("tm-app-bar--sticky");
-    //       }
-    //       ticking = false;
-    //     });
-    //     ticking = true;
-    //   }
-    // });
-
-  </script>
 </header>
