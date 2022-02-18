@@ -26,13 +26,15 @@
         background-position: bottom left;
         background-repeat: no-repeat;
       }
+
       main {
         background-image: url({{ "/securitylab.topmonks.com/header_bg02.png"| cloudinaryUrl(width=900) }}), url({{ "/securitylab.topmonks.com/main_bg01.png"| cloudinaryUrl(width=900) }}),
         url({{ "/securitylab.topmonks.com/main_bg02.png"| cloudinaryUrl(width=900) }}), url({{ "/securitylab.topmonks.com/main_bg03.png"| cloudinaryUrl(width=900) }});
-        background-size: 800px auto,340px auto, 340px auto, 340px auto;
+        background-size: 800px auto, 340px auto, 340px auto, 340px auto;
         background-position: top right, left 48em, right 70em, left bottom, bottom;
         background-repeat: no-repeat;
       }
+
       .intro {
         background-image: url({{ "/securitylab.topmonks.com/header_bg01.png"| cloudinaryUrl(width=900) }});
         background-size: 100% auto;
@@ -52,15 +54,20 @@
           <h1>Kybernetické útoky jsou stále sofistikovanější</h1>
           <p class="sub-title">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="#3D065F" xmlns="http://www.w3.org/2000/svg">
-              <path d="M26.9167 1.41666H7.08333C5.525 1.41666 4.26417 2.69166 4.26417 4.25L4.25 22.5675C4.25 23.545 4.74583 24.4092 5.49667 24.9192L17 32.5833L28.4892 24.9192C29.24 24.4092 29.7358 23.545 29.7358 22.5675L29.75 4.25C29.75 2.69166 28.475 1.41666 26.9167 1.41666ZM14.1667 22.6667L7.08333 15.5833L9.08083 13.5858L14.1667 18.6575L24.9192 7.905L26.9167 9.91666L14.1667 22.6667Z" fill="url(#paint0_linear_56_1663)"/>
+              <path
+                d="M26.9167 1.41666H7.08333C5.525 1.41666 4.26417 2.69166 4.26417 4.25L4.25 22.5675C4.25 23.545 4.74583 24.4092 5.49667 24.9192L17 32.5833L28.4892 24.9192C29.24 24.4092 29.7358 23.545 29.7358 22.5675L29.75 4.25C29.75 2.69166 28.475 1.41666 26.9167 1.41666ZM14.1667 22.6667L7.08333 15.5833L9.08083 13.5858L14.1667 18.6575L24.9192 7.905L26.9167 9.91666L14.1667 22.6667Z"
+                fill="url(#paint0_linear_56_1663)"/>
               <defs>
-                <linearGradient id="paint0_linear_56_1663" x1="3.56571" y1="3.93532" x2="35.472" y2="15.8563" gradientUnits="userSpaceOnUse">
+                <linearGradient id="paint0_linear_56_1663" x1="3.56571" y1="3.93532" x2="35.472" y2="15.8563"
+                                gradientUnits="userSpaceOnUse">
                   <stop offset="0.0202" stop-color="#45108A"/>
                   <stop offset="0.2929" stop-color="#3D065F"/>
                   <stop offset="1" stop-color="#10054D"/>
                 </linearGradient>
               </defs>
-            </svg> Tradiční bezpečnostní řešení už na ně nestačí</p>
+            </svg>
+            Tradiční bezpečnostní řešení už na ně nestačí
+          </p>
           <div class="btn btn__action">
             <a class="action-button" href="#">Chci od vás pomoc</a>
           </div>
@@ -84,19 +91,20 @@
       </div>
     </div>
   </section>
-
-  <section class="main">
+  <section id="security-field__hardware" class="security-field">
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
-        <div class="main__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="security-field__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Topmonks Security Lab Vám pomůže těchto oblastech:</h2>
         </div>
-        <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <label class="sliding-menu__tab tab--active"><a href="#section__hardware">Hardware</a></label>
-          <label class="sliding-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
-          <label class="sliding-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
+        <div class="content-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <label class="content-menu__tab tab--active"><a href="#section__hardware">Hardware</a></label>
+          <label class="content-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
+          <label class="content-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
         </div>
-        <picture class="security-fields__bg security-fields__bg--hardware mdc-layout-grid__cell mdc-layout-grid__cell--span-6" data-aos="fade-right">
+        <picture
+          class="security-field__bg security-field__bg--hardware mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+          data-aos="fade-right">
           <source media="screen and (max-width: 399px)"
                   srcset="{{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=400) }} 1x,
                       {{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl(width=400) }} 1.5x,
@@ -112,37 +120,41 @@
           <img alt="Security lab - Hardware" loading="lazy"
                src="{{ "/securitylab.topmonks.com/hardware.svg" | cloudinaryUrl }}" width="540" height="480">
         </picture>
-        <div id="section__hardware"
-             class="security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
+        <div
+             class="security-field__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
              data-aos="fade-left">
           <div class="mdc-layout-grid__inner">
-            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <div class="security-field__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <p>Výroba HW pro speciální činnosti (odposlechy GSM. rádiových sítí,
                 rušičky, kódovaná úložiště, útočný hw atd., zabezpečení,
                 identifikace útočných prvků atd.)</p>
             </div>
-            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <div class="security-field__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <p>Penetrační testy HW prvků</p>
             </div>
-            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <div class="security-field__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <p>Low-level hardware vývoj i&nbsp;debugování implementace/kryp&shy;tografie/revi&shy;ew
                 bezpečnosti v&nbsp;protokolech, kryptoměnách/bloc&shy;kchainu, jejich
                 implementacích a skriptech v&nbsp;kódu jejich virtuálního stroje (Bitcoin,
                 Ethereum, Monero, Zcash)</p>
             </div>
-            <div class="security-fields__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <div class="security-field__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <p>Reverse engineering</p>
             </div>
           </div>
         </div>
-
-        <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <label class="sliding-menu__tab tab--inactive"><a href="#section__hardware">Hardware</a></label>
-          <label class="sliding-menu__tab tab--active"><a href="#section__software">Software</a></label>
-          <label class="sliding-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
+      </div>
+    </div>
+  </section>
+  <section id="security-field__software" class="security-field">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="content-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <label class="content-menu__tab tab--inactive"><a href="#section__hardware">Hardware</a></label>
+          <label class="content-menu__tab tab--active"><a href="#section__software">Software</a></label>
+          <label class="content-menu__tab tab--inactive"><a href="#section__social">Social Engineering</a></label>
         </div>
-        <div id="section__software"
-             class="tabs security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
+        <div class="tabs security-field__content order-2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
              data-aos="fade-right">
           <ul id="tabs_ul">
             <li class="active" data-list="tab_1">
@@ -152,47 +164,47 @@
               <p>Konfigurační audit</p>
           </ul>
           <div class="mdc-layout-grid__inner">
-            <div class="content mdc-layout-grid__cell--span-12">
+            <div class="content mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <div class="tab_content tab_1" id="tab_1">
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Ethical hacking</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Penetrační testy WWW (OWASP)</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Penetrační testy mobilních aplikací</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Penetrační testy API / web services</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Externí penetrační testy</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Interní penetrační testy</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Penetrační testy SCADA</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Penetrační testy Wi-Fi</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Zátěžové testy (DoS)</p>
                 </div>
               </div>
               <div class="tab_content tab_2" id="tab_2" style="display:none;">
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Hardening Microsoft Windows</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Hardening UNIX</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Hardening Microsoft SQL</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Hardening Oracle DB</p>
                 </div>
               </div>
@@ -229,7 +241,9 @@
 
           </script>
         </div>
-        <picture class="security-fields__bg security-fields__bg--software mdc-layout-grid__cell mdc-layout-grid__cell--span-6" data-aos="fade-left">
+        <picture
+          class="security-field__bg security-field__bg--software order-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+          data-aos="fade-left">
           <source media="screen and (max-width: 399px)"
                   srcset="{{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=400) }} 1x,
                       {{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl(width=400) }} 1.5x,
@@ -245,14 +259,20 @@
           <img alt="Security lab - Software" loading="lazy"
                src="{{ "/securitylab.topmonks.com/software.svg" | cloudinaryUrl }}" width="540" height="480">
         </picture>
-
-
-        <div class="sliding-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <label class="sliding-menu__tab tab--inactive"><a href="#section__hardware">Hardware</a></label>
-          <label class="sliding-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
-          <label class="sliding-menu__tab tab--active"><a href="#section__social">Social Engineering</a></label>
+      </div>
+    </div>
+  </section>
+  <section id="security-field__social" class="security-field">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="content-menu mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <label class="content-menu__tab tab--inactive"><a href="#section__hardware">Hardware</a></label>
+          <label class="content-menu__tab tab--inactive"><a href="#section__software">Software</a></label>
+          <label class="content-menu__tab tab--active"><a href="#section__social">Social Engineering</a></label>
         </div>
-        <picture class="security-fields__bg security-fields__bg--social mdc-layout-grid__cell mdc-layout-grid__cell--span-6" data-aos="fade-right">
+        <picture
+          class="security-field__bg security-field__bg--social mdc-layout-grid__cell mdc-layout-grid__cell--span-6"
+          data-aos="fade-right">
           <source media="screen and (max-width: 399px)"
                   srcset="{{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=400) }} 1x,
                       {{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl(width=400) }} 1.5x,
@@ -268,8 +288,7 @@
           <img alt="Security lab - Social Engineering" loading="lazy"
                src="{{ "/securitylab.topmonks.com/social.svg" | cloudinaryUrl }}" width="540" height="480">
         </picture>
-        <div id="section__social"
-             class="tabs2 security-fields mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
+        <div class="tabs2 security-field__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
              data-aos="fade-left">
           <ul id="tabs_ul2">
             <li class="active2" data-list="tab_3">
@@ -283,61 +302,61 @@
             </li>
           </ul>
           <div class="mdc-layout-grid__inner">
-            <div class="content2 mdc-layout-grid__cell--span-12">
+            <div class="content2 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <div class="tab_content2 tab_3" id="tab_3">
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Penetrace budov</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Napadení průmyslových systému na SCADA</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Napadení sítí</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Napadení bezdrátových sítí</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Odposlech rádiové komunikace včetně GSM</p>
                 </div>
               </div>
               <div class="tab_content2 tab_4" id="tab_4">
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Code review</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>OSINT&nbsp;&ndash; Maltego, vytěžení veřejně dostupných informací&nbsp;atd.</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Exploit development</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Incident response&nbsp;&ndash; analyzovat logy, dumpnout RAMku&nbsp;atd.</p>
                 </div>
               </div>
               <div class="tab_content2 tab_5" id="tab_5">
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Analýzy a audity</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Analýza rizik</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Analýza dopadů (BIA)</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Analýza shody se ZoKB</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Analýza shody s&nbsp;GDPR</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Bezpečnostní audit ICT</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Informační bezpečnost</p>
                 </div>
-                <div class="security-fields__cell">
+                <div class="security-field__cell">
                   <p>Školení: bezpečnost pro uživatele</p>
                 </div>
               </div>
@@ -374,7 +393,6 @@
 
           </script>
         </div>
-
       </div>
     </div>
   </section>

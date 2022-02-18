@@ -115,13 +115,6 @@ h1, h2, h3, p.sub-title {
     font-weight: 274;
     line-height: 44px;
     margin-top: 0;
-
-    &:before {
-      background-image: url("#security-icon");
-      display: inline-block;
-      width: 34px;
-      height: 34px;
-    }
   }
 
   p, a, li {
@@ -161,13 +154,6 @@ h1, h2, h3, p.sub-title {
     text-align: center;
     line-height: 26px;
     margin-top: 0;
-
-    &:before {
-      content: url("security-icon.svg");
-      display: inline-block;
-      width: 34px;
-      height: 34px;
-    }
   }
 
   p, a, li {
