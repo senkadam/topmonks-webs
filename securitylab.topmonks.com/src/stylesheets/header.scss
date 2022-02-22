@@ -20,13 +20,20 @@ header {
     align-self: center;
   }
   .logo {
-    width: 60px;
-    height: 60px;
+    @media (min-width: 740px) {
+      .logo--phone {
+        display: none;
+      }
+    }
     @media (max-width: 739px) {
       width: 56px;
       height: 56px;
+      .logo--desktop {
+        display: none;
+      }
     }
   }
+
   .button {
     text-align: right;
     @media (max-width: 739px) {
