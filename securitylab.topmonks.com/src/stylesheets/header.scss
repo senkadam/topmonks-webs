@@ -38,7 +38,6 @@ header {
     align-items: center;
     .nav-menu {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       gap: 60px;
 
@@ -68,11 +67,11 @@ header {
       width: 56px;
       height: 56px;
       border-radius: 30px;
+      z-index: 100;
 
       .hamburger {
         display: block;
         margin-top: 19px;
-
         .bar {
           display: block;
           width: 25px;
@@ -102,13 +101,16 @@ header {
       padding: 44px 0;
       position: fixed;
       left: -100%;
-      top: 80px;
+      top: 0;
       gap: 0;
       flex-direction: column;
       background: linear-gradient(114.54deg, #45108A 2.67%, #3D065F 29.36%, #10054D 98.58%);
       width: 100%;
+      height: 100vh;
       text-align: center;
       transition: 0.3s;
+      margin-top: 0;
+      z-index: 100;
 
       .nav-item {
         margin: 20px 0;
