@@ -465,7 +465,7 @@ workflows:
           site_name: securitylab.topmonks.com
           context: org-global
           requires:
-            - provision
+            #- provision
             - test-securitylab-topmonks-com
           filters:
             branches:
