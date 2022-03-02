@@ -209,20 +209,19 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 54px;
-    width: 200px;
     margin: 0 10px;
     font-size: 1.25rem;
     font-weight: 500;
     border-radius: 99px; // just a high number to create pill effect
     cursor: pointer;
-    transition: color 0.15s ease-in;
+    transition: color 0.4s ease-in;
+    a {
+      padding: 14px 44px;
+    }
   }
 
   .tab--active {
     display: flex;
-    height: 54px;
-    width: 200px;
     background-image: var(--mdc-theme--on-primary);
 
     a {
