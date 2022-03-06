@@ -35,8 +35,7 @@
 <main>
   {% block content %}{% endblock %}
 </main>
-{% block footer %}
-{% endblock %}
+{% include '../components/footer.njk' %}
 
 {{ spriteTarget() }}
 
