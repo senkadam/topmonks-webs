@@ -1,0 +1,113 @@
+:root {
+  --hm-black: #000000;
+  --hm-white: #ffffff;
+  --hm-grey: #4F4F4F;
+  --hm-dark-grey: #333333;
+  --hm-light-grey: #828282;
+  --hm-lighter-grey: #dfdfdf;
+  --hm-orange: #EDA643;
+  --hm-light-orange: #FFE6C5;
+  --hm-green: #35B289;
+  --hm-light-green: #D1EDE4;
+
+  --hm-secondary-bg: #F8FAFC;
+}
+
+body {
+  color: var(--hm-black);
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  font: 18px/1.25 "Work Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+// Buttons
+.btn {
+  margin-top: 2em;
+  a {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+    padding: 16px 60px;
+    text-decoration: none;
+    border-radius: 4px;
+    &:hover {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.btn a.btn--dark {
+    color: var(--hm-white);
+    background-color: var(--hm-dark-grey);
+    &:hover {
+      background-color: var(--hm-orange);
+    }
+}
+
+.btn a.btn--light {
+    color: var(--hm-dark-grey);
+    background-color: var(--hm-white);
+    &:hover {
+      color: var(--hm-white);
+      background-color: var(--hm-orange);
+  }
+}
+
+//
+
+
+h1 {
+  font-size: 78px;
+  font-weight: 600;
+  line-height: 93px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 70px;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.title__prefix {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--hm-light-grey);
+  margin-bottom: 8px;
+}
+.title__suffix {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 30px;
+  color: var(--hm-grey);
+  margin-top: 8px;
+}
+.text--orange {
+  color: var(--hm-orange);
+}
+
