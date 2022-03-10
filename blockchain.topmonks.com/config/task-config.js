@@ -16,7 +16,7 @@ module.exports = {
   workboxBuild: false,
 
   html: {
-    collections: ["articles", "podcasts", "images"],
+    collections: ["articles", "podcasts", "avatar"],
     nunjucksRender: {
       manageEnv(env) {
         env.addFilter("longDate", (str, locale) =>
