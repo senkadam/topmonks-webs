@@ -144,6 +144,7 @@
     "lhci": {
       "assert": {
         "assertions": {
+          "uses-responsive-images": "warn",
           "offscreen-images": "warn",
           "preload-lcp-image": "warn",
           "is-crawlable": "warn",
