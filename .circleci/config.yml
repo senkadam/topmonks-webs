@@ -6,7 +6,7 @@ orbs:
   browser-tools: circleci/browser-tools@1.2.4
   docker: circleci/docker@2.0.1
   github: topmonks/github@1.1.0
-  node: circleci/node@4.9.0
+  node: circleci/node@5.0.1
   pulumi: pulumi/pulumi@2.0.0
   swarmpit: topmonks/swarmpit@1.2.0
 
