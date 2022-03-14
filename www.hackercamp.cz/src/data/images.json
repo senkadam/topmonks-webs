@@ -1103,5 +1103,27 @@
     "existing": false,
     "original_filename": "IMG_5867",
     "api_key": "389916164315219"
+  },
+  "Photo_6553923_DJI_323_jpg_11359125_0_202164175016_photo_original.jpg": {
+    "asset_id": "9ba092b3d7c495d3a6fc4fd821dbeb4a",
+    "public_id": "www.hackercamp.cz/Photo_6553923_DJI_323_jpg_11359125_0_202164175016_photo_original",
+    "version": 1647276869,
+    "version_id": "a930eb8a10ebf203430c7ac47ef0ede6",
+    "signature": "80a53f3a244d1002b95087dc4773e70730f089b5",
+    "width": 2048,
+    "height": 1152,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2022-03-14T16:54:29Z",
+    "tags": [],
+    "bytes": 2244008,
+    "type": "upload",
+    "etag": "9fd261071d21a5ad85b000df2735a6ca",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1647276869/www.hackercamp.cz/Photo_6553923_DJI_323_jpg_11359125_0_202164175016_photo_original.jpg",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1647276869/www.hackercamp.cz/Photo_6553923_DJI_323_jpg_11359125_0_202164175016_photo_original.jpg",
+    "existing": false,
+    "original_filename": "Photo_6553923_DJI_323_jpg_11359125_0_202164175016_photo_original",
+    "api_key": "389916164315219"
   }
 }
