@@ -671,7 +671,7 @@
     </h2>
     <div class="mdc-layout-grid__inner">
       <div
-        class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        class="hc-card hc-card--decorated mdc-layout-grid__cell"
       >
         <p>
           Každý účastník je zároveň tvůrce akce. Od každého čekáme aktivní
@@ -679,16 +679,58 @@
         </p>
       </div>
       <div
-        class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["A7R04297.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+      <div
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["IMG_5182.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+      <div
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["IMG_5287.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+      <div
+        class="hc-card hc-card--decorated mdc-layout-grid__cell"
       >
         <p>Můžeš přispět přednáškou, workshopem, naštípat dřevo, přivést
           legacy hrací konzoli, deskovku, zorganizovat ranní výběh nebo turnaj
           v&nbsp;jakémkoliv sportu.</p>
       </div>
       <div
-        class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
       >
-        <p>Pokud zapadne, přivez svůj produkt&nbsp;&ndash; Rekola,
+        {% set publicId = images["IMG_20210903_014005.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+      <div
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["IMG_5274.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+      <div
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["IMG_20210903_143853.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+      <div
+        class="hc-card hc-card--decorated mdc-layout-grid__cell"
+      >
+        <p>Pokud zapadne, přivez svůj produkt jako třeba Rekola,
           Hookamonk, meteoradar a podobně.</p>
       </div>
     </div>
@@ -1016,30 +1058,9 @@
         Tykáme si
       </div>
 
-      <div
-        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
-      >
-        {% set publicId = images["DSC01380.jpeg"]["public_id"] %}
-        <picture>
-          <img class="responsive" loading="lazy" alt=""
-               src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
-        </picture>
-      </div>
-
-
       <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
         Vstupenku si kupuješ na celou akci a budeme rádi, když s&nbsp;námi
         zůstaneš všechny tři dny
-      </div>
-
-      <div
-        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
-      >
-        {% set publicId = images["68592294_10157524875643035_7721315333700583424_n.jpg"]["public_id"] %}
-        <picture>
-          <img class="responsive" loading="lazy" alt=""
-               src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
-        </picture>
       </div>
 
       <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
@@ -1048,51 +1069,72 @@
         se, noční klid a podobně)
       </div>
 
+
+      <div
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["A7R04296.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+
       <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
         Jsme v&nbsp;přírodě a chováme se i&nbsp;k&nbsp;ní ohleduplně
         (třídíme odpad a ideálně odjíždíme beze&nbsp;stop)
       </div>
 
       <div
-        class="hc-card hc-card--decorated hc-card--centered mdc-layout-grid__cell"
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["IMG_20210902_212833.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+      </div>
+
+      <div
+        class="hc-card hc-card--decorated hc-card--centered mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop"
       >
         Nemáme žádné VIP zóny
+      </div>
+
+      <div class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+        Každý účastník je zároveň tvůrce akce.
+      </div>
+
+
+      <div
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["IMG_5068.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
       </div>
 
       <div
         class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
       >
-        {% set publicId = images["DSC05231.jpg"]["public_id"] %}
-        <picture>
-          <img class="responsive" loading="lazy" alt=""
-               src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
-        </picture>
+        {% set publicId = images["IMG_5822.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
       </div>
-
 
       <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
         Přivést můžeš i&nbsp;jakýkoliv doprovodný program&nbsp;&ndash;
         uvítáme vše od pípy, baristy a přípravy kávy až po&nbsp;DJs.
       </div>
 
-      <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
-        Každý účastník je zároveň tvůrce akce.
+      <div
+        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+      >
+        {% set publicId = images["IMG_5046.jpg"]["public_id"] %}
+        <img class="responsive" loading="lazy" alt="" width="500" height="281"
+             src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
       </div>
 
       <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
         Hacker Camp je z&nbsp;principu nekomerční akce. Svoji vlastní službu
         nebo produkt můžeš propagovat a nabízet jen pokud to obohatí
         samotnou&nbsp;akci #NoDirectSales #NoDirectHiring
-      </div>
-
-      <div
-        class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
-      >
-        {% set publicId = images["106340091_1166165130412802_2437425872883373385_n.jpeg"]["public_id"] %}
-        <picture>
-          <img class="responsive" loading="lazy" alt=""
-               src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
-        </picture>
       </div>
     </div>
   </section>
@@ -1125,6 +1167,16 @@
         Víme, že v netradičních set-upech a prostředích vznikají ty
         nejlepší nečekané nápady. Pojeďte si s námi užít první ročník Hacker Campu!
       </p>
+    </div>
+    <div
+      class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+    >
+      {% set publicId = images["IMG_20210903_144120.jpg"]["public_id"] %}
+      <img class="responsive" loading="lazy" alt="" width="1200" height="600"
+           src="{{ publicId | cloudinaryUrl(width=1200, height=600, crop="fill", dpr="auto") }}"
+        srcset="{{ publicId | cloudinaryUrl(width=1200, height=600, crop="fill", dpr="1") }} 1x,
+                {{ publicId | cloudinaryUrl(width=1200, height=600, crop="fill", dpr="1.5") }} 1.5x,
+                {{ publicId | cloudinaryUrl(width=1200, height=600, crop="fill", dpr="2") }} 2x">
     </div>
   </div>
 </section>
