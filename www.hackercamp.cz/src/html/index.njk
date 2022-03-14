@@ -16,6 +16,9 @@
     name="description"
     content="Zažijte první ročník netradičního třídenního festivalu pro lidi z české tech scény. V duchu nekonference či barcampu se od sebe budeme vzájemně učit, bavit se a poznávat."
   />
+  {%- set publicId = images["IMG_5429.jpg"]["public_id"] -%}
+  <meta name="twitter:image" property="og:image" content="{{ publicId | cloudinaryUrl(width=1200, height=630, crop="fill", dpr="1") }}">
+  <meta name="twitter:card" content="summary_large_image">
   <style>
     /* Font PT Mono: Copyright © ParaType, 2018. All rights reserved.*/
     @font-face {
