@@ -10,8 +10,16 @@ const config = createSharedTaskConfig(__dirname, {
   javascripts: false,
   stylesheets: true,
   workboxBuild: false,
+
   html: {
-    collections: ["images"]
+    collections: ["images"],
+    nunjucksRender: {
+      filters: {
+        year() {
+          return new Date().getFullYear();
+        }
+      }
+    }
   },
 
   browserSync: {

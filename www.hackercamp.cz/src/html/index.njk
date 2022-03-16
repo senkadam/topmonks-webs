@@ -15,7 +15,7 @@
   />
   <meta
     name="description"
-    content="Zažijte první ročník netradičního třídenního festivalu pro lidi z české tech scény. V duchu nekonference či barcampu se od sebe budeme vzájemně učit, bavit se a poznávat."
+    content="Zažijte netradiční třídenní festival pro lidi z české tech scény. V duchu nekonference či barcampu se od sebe budeme vzájemně učit, bavit se a poznávat."
   />
   {%- set publicId = images["IMG_5429.jpg"]["public_id"] -%}
   <meta name="twitter:image" property="og:image" content="{{ publicId | cloudinaryUrl(width=1200, height=630, crop="fill", dpr="1") }}">
@@ -1254,13 +1254,14 @@
     <a
       href="https://docs.google.com/forms/d/e/1FAIpQLScYlv1ginKjyss_66JmsOGNGZpahg27NDoAe2nNUXHd7H1eqQ/viewform"
       class="hc-cta"
-    >Zažij s námi první ročník Hacker Campu</a
+    >Zažij s námi Hacker Camp</a
     >
   </p>
 </section>
 
 <footer class="mdc-layout-grid">
-  <p style="text-align: center">© 2021-2022 Hacker Camp</p>
+  <p style="text-align: center">© 2021-{{ "this" | year }} Hacker Camp</p>
+  <p style="text-align: center">Photos © <a href="https://cz.linkedin.com/in/petrmihle">Petr Mihle</a> & <a href="https://ptrnka.cz/">Pavel Trnka</a></p>
 </footer>
 
 <script type="module">
