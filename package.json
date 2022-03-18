@@ -134,7 +134,7 @@
   "resolutions": {
     "bluebird": "3.7.2",
     "chokidar": "3.5.2",
-    "debug": "4.3.1",
+    "debug": "4.3.4",
     "lodash": "4.17.21",
     "uuid": "8.3.2"
   },
