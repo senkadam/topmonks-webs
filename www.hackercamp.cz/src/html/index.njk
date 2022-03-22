@@ -18,7 +18,8 @@
     content="Zažijte netradiční třídenní festival pro lidi z české tech scény. V duchu nekonference či barcampu se od sebe budeme vzájemně učit, bavit se a poznávat."
   />
   {%- set publicId = images["IMG_5429.jpg"]["public_id"] -%}
-  <meta name="twitter:image" property="og:image" content="{{ publicId | cloudinaryUrl(width=1200, height=630, crop="fill", dpr="1") }}">
+  <meta name="twitter:image" property="og:image"
+        content="{{ publicId | cloudinaryUrl(width=1200, height=630, crop="fill", dpr="1") }}">
   <meta name="twitter:card" content="summary_large_image">
   <style>
     /* Font PT Mono: Copyright © ParaType, 2018. All rights reserved.*/
@@ -223,6 +224,7 @@
     .hc-card.hc-card--picture {
       padding: 0
     }
+
     .hc-card.hc-card--picture img.responsive {
       height: 100%;
       object-fit: cover;
@@ -1125,7 +1127,7 @@
       <div
         class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
       >
-        {% set publicId = images["IMG_20210902_212833.jpg"]["public_id"] %}
+        {% set publicId = images["IMG_5867.jpg"]["public_id"] %}
         <img
           class="responsive" loading="lazy" alt="" width="500" height="281"
           src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}"
@@ -1261,14 +1263,23 @@
 
 <footer class="mdc-layout-grid">
   <p style="text-align: center">© 2021-{{ "this" | year }} Hacker Camp</p>
-  <p style="text-align: center">Photos © <a href="https://cz.linkedin.com/in/petrmihle">Petr Mihle</a> & <a href="https://ptrnka.cz/">Pavel Trnka</a></p>
+  <p style="text-align: center">Photos ©
+    <a href="https://cz.linkedin.com/in/petrmihle">Petr Mihle</a> &amp;
+    <a href="https://ptrnka.cz/">Pavel Trnka</a>
+  </p>
 </footer>
 
 <script type="module">
-  const stylesheet = document.createElement("link");
-  stylesheet.rel = "stylesheet";
-  stylesheet.href = "/assets/css/main.css";
-  document.head.appendChild(stylesheet);
+  function el(tagName, attrs) {
+    const el = document.createElement(tagName);
+    for (const [key, val] of Object.entries(attrs))
+      el.setAttribute(key, val);
+    return el;
+  }
+  document.head.appendChild(el("link", {
+    rel: "stylesheet",
+    href: "/assets/css/main.css"
+  }));
 </script>
 </body>
 </html>
