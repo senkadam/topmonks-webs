@@ -1,14 +1,11 @@
 /* eslint-disable */
 import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
 import {
   registerAutoTags,
   createCertificate,
-  createGoogleMxRecords,
-  createTxtRecord,
-  Website,
   AssetsCachingLambda,
-  SecurityHeadersLambda
+  SecurityHeadersLambda,
+  Website
 } from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
 import * as monksroom from "./room.monks.cloud/infra";
@@ -22,10 +19,6 @@ registerAutoTags({
   "user:Stack": pulumi.getStack()
 });
 
-const usProvider = new aws.Provider(`topmonks-webs/us-east-1`, {
-  region: aws.USEast1Region
-});
-
 createCertificate("www.topmonks.cz");
 createCertificate("www.topmonks.com");
 
@@ -34,14 +27,6 @@ createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("monks.cloud");
 createCertificate("www.zive.tv");
-
-createCertificate("www.hackercamp.cz");
-createGoogleMxRecords("hackercamp.cz");
-createTxtRecord(
-  "hc-google-site-verification",
-  "hackercamp.cz",
-  "google-site-verification=eIaBVqhznPV-0AAEEbFJN82j3w063w_tW0-DUZWX5C0"
-);
 
 const assetsCachingLambda = AssetsCachingLambda.create("topmonks-webs-caching");
 const securityHeadersLambda = SecurityHeadersLambda.create(
