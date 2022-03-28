@@ -439,22 +439,6 @@ workflows:
             branches:
               only: trunk
       - test_site:
-          name: test-www-hackercamp-cz
-          site_name: www.hackercamp.cz
-          context: org-global
-          requires:
-            - build
-      - deploy_site:
-          name: deploy-www-hackercamp-cz
-          site_name: www.hackercamp.cz
-          context: org-global
-          requires:
-            #  - provision
-            - test-www-hackercamp-cz
-          filters:
-            branches:
-              only: trunk
-      - test_site:
           name: test-securitylab-topmonks-com
           site_name: securitylab.topmonks.com
           context: org-global

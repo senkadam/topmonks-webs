@@ -140,22 +140,6 @@
       }
     }
   },
-  "www.hackercamp.cz": {
-    "lhci": {
-      "assert": {
-        "assertions": {
-          "uses-responsive-images": "warn",
-          "offscreen-images": "warn",
-          "preload-lcp-image": "warn",
-          "is-crawlable": "warn",
-          "errors-in-console": "warn"
-        }
-      },
-      "upload": {
-        "token": "c18f07e4-d6ed-430d-ad9c-ba008107d9fb"
-      }
-    }
-  },
   "securitylab.topmonks.com": {
     "lhci": {
       "upload": {
