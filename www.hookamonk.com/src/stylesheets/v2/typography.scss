@@ -140,15 +140,15 @@ a.button__contained--gradient {
 }
 
 a.button__contained--light {
-  background-color: var(--hm-white);
   color: var(--hm-grey--dark);
   font-weight: normal;
   height: 16px;
   width: 60px;
+  transition: all 0.5s ease;
+  background: var(--hm-white);
 
   &:hover {
-    opacity: 60%;
-    transition: all 0.8s;
+    background: linear-gradient(to left, #2B96A8 0%, #C22C2D 105.45%);
   }
 }
 
