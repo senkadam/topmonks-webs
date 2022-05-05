@@ -32,14 +32,12 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <h1>For Workspace</h1>
           <ul>
-            <li>✔︎ No initial down payment</li>
-            <li>✔︎ Monthly rental charge</li>
-            <li>✔︎ Transparent pricing</li>
-            <li>✔︎ Additional services</li>
+            <li>✓ No initial down payment</li>
+            <li>✓ Monthly rental charge</li>
+            <li>✓ Transparent pricing</li>
+            <li>✓ Additional services</li>
           </ul>
-          <button class="button button__contained button__contained--orange">
-            <a href="#hm-warp" class="button__label">Next</a>
-          </button>
+          <a class="button button__contained button__contained--light" href="#hm-warp">Next</a><br>
         </div>
         <div
           class="hm-intro__header-bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop wow bounceInLeft zoom">
@@ -117,22 +115,20 @@
 {#      </div>#}
 {#    </div>#}
 {#  </section>#}
-  <section class="hm-submit-form">
+  <section class="hm-submit-form hm-submit-form_bg">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner hm-layout-wrapper">
         <div class="hm-submit-form__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
-          <h2>Get in Touch</h2>
+          <h2>Get in <span class="text--orange">Touch</span></h2>
           <div id="contact-container">
             <form id="contact-form" action="https://hookamonk-api.monks.cloud/v1/contact-form" method="POST">
-              <input type="hidden" name="productName" value="Warp for workspace"/>
-              <input type="hidden" name="productUrl" value="for-workspace"/>
+              <input type="hidden" name="productName" value="Warp for home"/>
+              <input type="hidden" name="productUrl" value="for-home"/>
               <input type="text" name="name" placeholder="Name" required/>
               <input type="text" name="email" placeholder="Email" required/>
               <input type="number" name="telephone" placeholder="Telephone"/>
               <textarea rows="4" cols="50" name="message" form="contact-form" placeholder="Enter text here..."></textarea><br>
-              <button class="button button__contained button__contained--orange" type="submit">
-                <a class="button__label">Submit</a>
-              </button>
+              <a class="button button__contained button__contained--light" type="submit">Submit</a>
             </form>
           </div>
           <script type="module">

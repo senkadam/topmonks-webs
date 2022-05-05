@@ -1,0 +1,13 @@
+.hm-intro {
+  @media (max-width: 839px) {
+    background: linear-gradient(to left, #2B96A8 0%, #C22C2D 105.45%);
+  }
+}
+
+.hm-submit-form {
+  .hm-submit-form__content {
+    @media screen and (min-width: 840px) {
+      background: linear-gradient(to left, #2B96A8 0%, #C22C2D 105.45%);
+    }
+  }
+}

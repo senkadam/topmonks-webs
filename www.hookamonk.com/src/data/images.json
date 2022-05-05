@@ -1256,5 +1256,28 @@
     "existing": false,
     "original_filename": "img_for_hookah_lounge",
     "api_key": "389916164315219"
+  },
+  "img_for_hookah_lounge.png": {
+    "asset_id": "d2802531db123ccb418151204240f07d",
+    "public_id": "hookamonk.com/img_for_hookah_lounge",
+    "version": 1651764281,
+    "version_id": "2237bd6c7e57cec4ad3c34d06526fae2",
+    "signature": "44066a9dd41a43de5ea83e1c8cf2e7a316c4aed0",
+    "width": 1662,
+    "height": 1512,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2022-05-05T15:24:41Z",
+    "tags": [],
+    "bytes": 3061201,
+    "type": "upload",
+    "etag": "bc7f09cde9429a2ab6632ee281d57454",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1651764281/hookamonk.com/img_for_hookah_lounge.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1651764281/hookamonk.com/img_for_hookah_lounge.png",
+    "folder": "hookamonk.com",
+    "existing": false,
+    "original_filename": "img_for_hookah_lounge",
+    "api_key": "389916164315219"
   }
 }

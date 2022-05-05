@@ -6,6 +6,7 @@
   --mdc-layout-grid-column-width-desktop: 60px;
   --hm-btn-transition: all 100ms ease-in-out;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -127,18 +128,11 @@ main .material-icons {
   }
 
   @media screen and (min-width: 840px) {
-    position: relative;
-    min-height: 700px;
-    background-repeat: no-repeat;
-    background-image: cloudinaryUrl("hookamonk.com/bg_form.png", ("width": 1200px));
-    background-size: 100% auto;
-    background-position: center;
     .hm-submit-form__content {
       padding: 3.5em 2.5em 2.5em;
       height: 660px;
       width: 1000px;
       background-color: rgba(60, 60, 60, 0.35);
-      position: absolute;
       margin: auto;
       top: 0;
       right: 0;
@@ -182,6 +176,17 @@ main .material-icons {
         height: 140px;
       }
     }
+  }
+}
+
+.hm-submit-form_bg {
+  @media screen and (min-width: 840px) {
+    position: relative;
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-image: cloudinaryUrl("hookamonk.com/bg_form.png", ("width": 1200px));
+    background-size: 100% auto;
+    background-position: center;
   }
 }
 

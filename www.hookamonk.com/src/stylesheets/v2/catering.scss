@@ -25,9 +25,17 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 8em 0;
 
+  @media (max-width: 2000px) {
+    padding: 8em 0;
+  }
+  @media (min-width: 2001px) {
+    padding: 16em 0;
+  }
   .hm-intro__header-bg {
+    @media (max-width: 539px) {
+      margin: 38px 0;
+    }
     picture {
       z-index: 100;
     }
@@ -72,7 +80,7 @@
   text-align: center;
 
   .hm-features__content {
-    background-color: var(--hm-orange);
+    background: linear-gradient(to left, #2B96A8 0%, #C22C2D 105.45%);
     h3 {
       font-size: 20px;
       font-weight: normal;
