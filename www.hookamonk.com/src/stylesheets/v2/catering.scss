@@ -16,14 +16,16 @@
 // Section 1: Introduction AKA Header Info //
 .hm-intro {
   position: relative;
-  background-image: cloudinaryUrl("hookamonk.com/bg_header-smoke-2.jpg");
-  background-position: -25%;
+  background-image: cloudinaryUrl("hookamonk.com/bg_header-smoke-5.jpg");
+  background-position: 0;
   background-repeat: no-repeat;
   height: 100%;
+  color: #fff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding: 8em 0;
 
   .hm-intro__header-bg {
     picture {
