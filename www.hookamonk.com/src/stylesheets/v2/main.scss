@@ -6,6 +6,9 @@
   --mdc-layout-grid-column-width-desktop: 60px;
   --hm-btn-transition: all 100ms ease-in-out;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   padding: 0;
