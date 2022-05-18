@@ -1,0 +1,92 @@
+{% extends 'layouts/topmonks.njk' %}
+{% from 'macros/helpers.njk' import css, sprite %}
+{% set language = en %}
+
+{% block title %}
+  Meetvers.io
+{% endblock %}
+
+{% block head %}
+  <meta name="description"
+        content="We are Meetvers.">
+  <meta name="twitter:description" property="og:description"
+        content="We are your software development partners, experienced with both startup and corporate environment.">
+  <link rel="canonical" href="https://www.meetvers.io/">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="https://www.meetvers.io/">
+  <meta property="og:site_name" content="Meetvers.io">
+  {{ css("header") }}
+  {{ css("main") }}
+  {{ css("typography") }}
+
+{% endblock %}
+
+{% block content %}
+  <section class="intro">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h1>Your game changing</h1>
+          <p>Blockchain-based, decentralised, and tokenized social network of
+            the&nbsp;future</p>
+        </div>
+        <div class="countdown mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Launch countdown</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <p class="title__prefix">What's</p>
+          <p>Meetvers is a starting point in the metaverse, where you can meet people
+            without worrying about your privacy or personality being violated. It's&nbsp;a new
+            way of connecting people, in the metaverse and beyond!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="network">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="network__list mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+          <h2>MEETVERS SOCIAL NETWORK</h2>
+          <h3>FUNDAMENTAL VALUES AND PRINCIPLES OF MEETVERS</h3>
+          <ul>
+            <li>→ TOKENIZATION</li>
+            <li>→ DECENTRALIZATION</li>
+            <li>→ TRANSPARENCY</li>
+            <li>→ SECURITY</li>
+            <li>→ COMPLIANCE</li>
+          </ul>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8">
+          <div class="mdc-layout-grid__inner">
+            <div class="network__box network__box--light mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+              <h3>Profile NFTs</h3>
+              <p>Unique NFTs allowing Meetvers users the most simple and secure way to acces
+                their Meetvers account via the Metamask or Wallet connect</p>
+            </div>
+            <div class="network__box network__box--dark mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+              <h3>Advanced Asset Networking</h3>
+              <p>System of algorithms containing blockchain data that is able to personalize
+                user’s&nbsp;feed without inadmissible aktivity tracking</p>
+            </div>
+            <div class="network__box network__box--dark mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+              <h3>P2P Messenger</h3>
+              <p>an address to address messenger, the most convenient way to contact any
+                address at any&nbsp;time</p>
+            </div>
+            <div class="network__box network__box--light mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+              <h3>Incentivizing Award System</h3>
+              <p>Automatic, transparent, and community&nbsp;&ndash; based system of awards to the most
+                active or successful Meetvers creators and&nbsp;users</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

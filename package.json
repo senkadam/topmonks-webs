@@ -129,7 +129,9 @@
     "start:cbx.cz": "BLENDID_CONFIG_PATH=./cbx.cz/config/ dotenv blendid",
     "build:cbx.cz": "BLENDID_CONFIG_PATH=./cbx.cz/config/ dotenv blendid -- build",
     "start:securitylab.topmonks.com": "BLENDID_CONFIG_PATH=./securitylab.topmonks.com/config/ dotenv blendid",
-    "build:securitylab.topmonks.com": "BLENDID_CONFIG_PATH=./securitylab.topmonks.com/config/ dotenv blendid -- build"
+    "build:securitylab.topmonks.com": "BLENDID_CONFIG_PATH=./securitylab.topmonks.com/config/ dotenv blendid -- build",
+    "start:meetvers.io": "BLENDID_CONFIG_PATH=./meetvers.io/config/ dotenv blendid",
+    "build:meetvers.io": "BLENDID_CONFIG_PATH=./meetvers.io/config/ dotenv blendid -- build"
   },
   "resolutions": {
     "bluebird": "3.7.2",

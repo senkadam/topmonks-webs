@@ -1,0 +1,75 @@
+:root {
+  --primary: #fff;
+  --secondary: #171717;
+
+  --grey: #4F4F4F;
+  --dark-grey: #333333;
+  --light-grey: #F2F2F2;
+}
+
+body {
+  background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  font: 16px/1.5 Lato, lato, -apple-system, BlinkMacSystemFont, Roboto,
+  "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 96px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+  }
+
+  .title__prefix {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .intro p {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+  }
+
+  .countdown h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    opacity: 0.77;
+  }
+}

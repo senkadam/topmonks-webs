@@ -1,0 +1,76 @@
+@import "@material/layout-grid/mdc-layout-grid";
+
+:root {
+  --mdc-layout-grid-margin-desktop: 24px;
+  --mdc-layout-grid-gutter-desktop: 20px;
+  --mdc-layout-grid-column-width-desktop: 60px;
+}
+
+.layout-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Section Intro
+//
+
+// Section About
+.about {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+//
+
+// Section Network
+.network {
+  .network__list {
+    h3 {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 30px;
+    }
+
+    ul {
+      color: var(--light-grey);
+      padding: 0;
+
+      li {
+        font-size: 22px;
+        line-height: 30px;
+        list-style: none;
+      }
+    }
+  }
+
+  .network__box {
+    padding: 16px 32px;
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+
+  .network__box--light {
+    background-color: var(--primary);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+
+    h3 {
+      color: var(--dark-grey);
+    }
+
+    p {
+      color: var(--grey);
+    }
+  }
+
+  .network__box--dark {
+    background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+//
+
