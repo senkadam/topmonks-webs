@@ -13,9 +13,7 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: 0;
-  font: 16px/1.5 Lato, lato, -apple-system, BlinkMacSystemFont, Roboto,
-  "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Inter', sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -30,6 +28,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   h1 {
+    font-family: 'VT323', monospace;
     font-size: 96px;
     font-weight: 400;
     line-height: 96px;
@@ -37,6 +36,7 @@ body {
     margin-bottom: 0;
   }
   h2 {
+    font-family: 'VT323', monospace;
     font-size: 60px;
     font-weight: 400;
     line-height: 60px;
@@ -58,18 +58,5 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
-  }
-
-  .intro p {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 39px;
-  }
-
-  .countdown h2 {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 29px;
-    opacity: 0.77;
   }
 }
