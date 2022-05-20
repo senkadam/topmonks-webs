@@ -9,11 +9,11 @@
 // General styles
 .layout-wrapper {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 
-.title__prefix {
-
+section {
+  padding: 5em 0 6em;
 }
 
 .title__suffix {
@@ -51,17 +51,9 @@
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
 }
 
-
 // Section Intro
 .intro {
-  h1 {
-    width: 881px;
-  }
   p {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 39px;
-    width: 682px;
     margin: 0;
   }
 
@@ -71,14 +63,32 @@
     line-height: 29px;
     opacity: 0.77;
   }
+
+  @media (min-width: 1024px) {
+    h1 {
+      width: 881px;
+    }
+    p {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 39px;
+      width: 682px;
+    }
+  }
 }
+
 //
 
 // Section About
 .about {
+  background-color: var(--secondary);
   text-align: center;
-  max-width: 760px;
-  margin: 0 auto;
+
+  .about__content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
   .title__prefix {
     font-family: 'VT323', monospace;
   }
@@ -112,6 +122,8 @@
 
 // Section Token
 .token {
+  background-color: var(--secondary);
+
   .token__intro {
     text-align: center;
   }
@@ -163,7 +175,10 @@
 
 // Section System
 .system {
+  background-color: var(--light-grey);
+
   --mdc-layout-grid-gutter-desktop: 0;
+
   ul {
     padding-left: 14px;
 
@@ -204,6 +219,8 @@
 }
 
 .supply, .visualization {
+  background-color: var(--light-grey);
+
   h2 {
     font-size: 40px;
     font-weight: 400;
@@ -215,6 +232,64 @@
     text-fill-color: transparent;
   }
 }
-//
+
+// Section FAQ
+.faq {
+  background-color: var(--secondary);
+
+  .accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .contentBx {
+      position: relative;
+      margin: 10px 20px;
+
+      .label {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        color: var(--secondary);
+        position: relative;
+        background-color: var(--primary);
+        padding: 24px;
+        cursor: pointer;
+
+        &:before {
+          content: "+";
+          color: var(--secondary);
+          font-size: 1.5em;
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+        }
+      }
+      .content {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        color: var(--primary);
+        position: relative;
+        padding: 0 10px;
+        background-color: var(--secondary);
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: auto;
+      }
+    }
+    .contentBx.active {
+      .content {
+        height: 150px;
+        padding: 10px;
+      }
+      .label:before {
+        color: var(--secondary);
+        content: "-";
+      }
+    }
+  }
+}
 
 //
