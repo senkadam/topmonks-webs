@@ -1,8 +1,17 @@
 .footer {
   background-color: var(--secondary);
   padding: 2em 0 6em;
+
   p {
     font-size: 18px;
     margin: 0.5em 0 2em;
+  }
+
+  svg {
+    margin-bottom: 2em;
+    @media (max-width: 539px) {
+      width: clamp(10rem, 14vw, 17rem);
+      height: auto;
+    }
   }
 }
