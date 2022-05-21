@@ -53,12 +53,19 @@ p {
 
 a {
   font-family: Inter, sans-serif;
+  text-decoration: none;
 }
 
-.title__prefix {
+.prefix {
+  font-family: 'VT323', monospace;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+}
+
+.suffix {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -85,23 +92,29 @@ a {
 
 // Button
 .wrapper {
-  padding: 1.5rem 0;
+  padding: 1.2em 0;
   filter: url('#goo');
 }
 
 .button {
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
   color: var(--dark-grey);
   background: var(--primary);
   text-decoration: none;
-  text-align: center;
   display: inline-block;
-  padding: 1.18em 1.82em 1.03em;
-  line-height: 1;
-  border-radius: 1em;
+  padding: 1.18em 3em 1.03em;
+  border-radius: 6px;
   position: relative;
   min-width: 8.23em;
+  @media (max-width: 839px) {
+      padding: 20px 0;
+      width: 100%;
+  }
 }
 
 .button:before,
