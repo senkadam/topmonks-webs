@@ -91,6 +91,7 @@ nav.active {
   }
 
   .btn--menu {
+    position: relative;
     color: var(--primary);
     background-color: var(--primary);
     border: none;
@@ -110,10 +111,6 @@ nav.active {
     text-transform: uppercase;
   }
 
-  .btn--menu[aria-expanded="true"] {
-    transform: rotate(180deg);
-  }
-
   .btn--menu[aria-expanded="true"] + .nav-links {
     transform: translate3d(0, 0, 0);
   }
@@ -121,6 +118,34 @@ nav.active {
     .nav-socials, .nav-btn--white {
       display: none;
     }
+  }
+}
+
+.hamburger__bar {
+  background-color: black;
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transition: transform 0.4s;
+  &:first-of-type {
+    transform: translateY(-6px);
+  }
+  &:last-of-type {
+    transform: translateY(6px);
+  }
+}
+.btn--menu[aria-expanded="true"] {
+  .hamburger__bar:first-of-type {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger__bar:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .hamburger__bar:last-of-type {
+    transform: rotate(45deg);
   }
 }
 
