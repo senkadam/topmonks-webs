@@ -53,7 +53,7 @@ p {
 
 a {
   font-family: Inter, sans-serif;
-  text-decoration: none;
+
 }
 
 .prefix {
@@ -66,6 +66,12 @@ a {
 .suffix {
   max-width: 760px;
   margin: 0 auto;
+}
+
+.gradient--text {
+  background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (min-width: 1024px) {

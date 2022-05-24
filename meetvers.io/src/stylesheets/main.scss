@@ -11,6 +11,9 @@
   max-width: 1200px;
   margin: 0 auto !important;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 section {
   padding: 5em 0 6em;
@@ -36,13 +39,6 @@ section {
 .box--light {
   background-color: var(--primary);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
-
-  h3 {
-    background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   p, li {
     color: var(--grey);
   }
@@ -164,10 +160,6 @@ svg.underline {
     font-weight: 400;
     line-height: 40px;
     text-align: center;
-    background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
   }
 
   .supply__content {
@@ -241,10 +233,6 @@ svg.underline {
 
   h2 {
     text-align: center;
-    background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
     @media (min-width: 540px) {
       font-size: 40px;
       font-weight: 400;
@@ -276,10 +264,6 @@ svg.underline {
       font-weight: 400;
       font-size: 40px;
       line-height: 40px;
-      background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
       margin-bottom: 0;
     }
 
@@ -293,9 +277,6 @@ svg.underline {
       font-weight: 700;
       font-size: 16px;
       line-height: 19px;
-      background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       text-fill-color: transparent;
 
       &:hover {

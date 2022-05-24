@@ -15,24 +15,30 @@
       height: auto;
     }
   }
+
   .navigation {
     nav {
       padding: 0;
+
       ul {
         padding: 0;
         list-style: none;
+
         li {
           padding-bottom: 1em;
+
           a {
-          font-weight: 700;
-          line-height: 19px;
-          letter-spacing: 0.24em;
-          color: var(--primary);
-          text-transform: uppercase;
+            font-weight: 700;
+            line-height: 19px;
+            letter-spacing: 0.24em;
+            color: var(--primary);
+            text-decoration: none;
+            text-transform: uppercase;
+
             &:hover {
               text-decoration: underline;
             }
-        }
+          }
         }
       }
     }
