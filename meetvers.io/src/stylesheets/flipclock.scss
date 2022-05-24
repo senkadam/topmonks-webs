@@ -5,7 +5,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    margin-bottom: 3em;
   }
 
   @media (min-width: 1024px) {
@@ -34,10 +33,10 @@
 .flip-clock-wrapper a {
   cursor: pointer;
   text-decoration: none;
-  color: #ccc; }
+  color: var(--secondary); }
 
 .flip-clock-wrapper a:hover {
-  color: #fff; }
+  color: var(--secondary); }
 
 .flip-clock-wrapper ul {
   list-style: none; }
@@ -171,10 +170,10 @@
   z-index: 1;
   width: 100%;
   height: 200%;
-  color: #ccc;
+  color: var(--secondary);
   text-shadow: 0 1px 2px #000;
   text-align: center;
-  background-color: #333;
+  background-color: var(--primary);
   border-radius: 6px;
   font-size: 70px; }
 
@@ -201,7 +200,9 @@
   display: inline-block;
   position: relative;
   width: 20px;
-  height: 100px; }
+  height: 100px;
+
+}
 
 .flip-clock-divider:first-child {
   width: 0; }
@@ -217,10 +218,11 @@
   left: 5px; }
 
 .flip-clock-divider .flip-clock-label {
+  font-family: 'VT323', monospace;
+  color: var(--primary);
   position: absolute;
   top: -1.5em;
   right: -86px;
-  color: black;
   text-shadow: none; }
 
 .flip-clock-divider.minutes .flip-clock-label {
