@@ -1,4 +1,5 @@
 .footer {
+  color: var(--primary);
   background-color: var(--secondary);
   padding: 2em 0 6em;
 
@@ -12,6 +13,28 @@
     @media (max-width: 539px) {
       width: clamp(10rem, 14vw, 17rem);
       height: auto;
+    }
+  }
+  .navigation {
+    nav {
+      padding: 0;
+      ul {
+        padding: 0;
+        list-style: none;
+        li {
+          padding-bottom: 1em;
+          a {
+          font-weight: 700;
+          line-height: 19px;
+          letter-spacing: 0.24em;
+          color: var(--primary);
+          text-transform: uppercase;
+            &:hover {
+              text-decoration: underline;
+            }
+        }
+        }
+      }
     }
   }
 }
