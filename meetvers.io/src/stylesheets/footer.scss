@@ -15,6 +15,12 @@
       height: auto;
     }
   }
+  .button {
+    @media (max-width: 839px) {
+      padding: 20px 0;
+      width: 100%;
+    }
+  }
 
   .navigation {
     nav {
