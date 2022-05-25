@@ -356,12 +356,10 @@ svg.underline {
       }
 
       .content {
-        color: var(--primary);
+        color: var(--secondary);
         position: relative;
         padding: 0 10px;
-        background-color: var(--secondary);
         height: 0;
-        overflow: hidden;
         transition: 0.5s;
         overflow-y: auto;
         p {
