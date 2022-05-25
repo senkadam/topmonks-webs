@@ -11,6 +11,7 @@
   max-width: 1200px;
   margin: 0 auto !important;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,6 +40,7 @@ section {
 .box--light {
   background-color: var(--primary);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+
   p, li {
     color: var(--grey);
   }
@@ -55,6 +57,8 @@ svg.underline {
 
 // Section Intro
 .intro {
+  background-color: var(--secondary);
+  background-image: cloudinaryUrl("meetvers.io/stars_bg01.png", ('width': 1440, 'dpr': 2));
   p {
     margin: 0;
   }
@@ -69,6 +73,12 @@ svg.underline {
       line-height: 39px;
       width: 682px;
     }
+  }
+  @media (max-width: 539px) {
+    h1 {
+      margin-bottom: 24px;
+    }
+    text-align: center;
   }
 }
 
@@ -89,6 +99,8 @@ svg.underline {
 
 // Section Network
 .network {
+  background-image: cloudinaryUrl("meetvers.io/stars_bg02.png", ('width': 1440, 'dpr': 2));
+
   h2 {
     margin-bottom: 0;
   }
@@ -118,6 +130,24 @@ svg.underline {
         line-height: 30px;
       }
     }
+    @media (max-width: 539px) {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 539px) {
+    .order-1 {
+      order: 1;
+    }
+    .order-2 {
+      order: 2;
+    }
+    .order-3 {
+      order: 3;
+    }
+    .order-4 {
+      order: 4;
+    }
   }
 }
 
@@ -125,6 +155,7 @@ svg.underline {
 
 // Section Token
 .token {
+  background-image: cloudinaryUrl("meetvers.io/stars_bg03.png", ('width': 1440, 'dpr': 2));
   background-color: var(--secondary);
 
   h2 {
@@ -192,6 +223,7 @@ svg.underline {
 // Section System
 .system {
   --mdc-layout-grid-gutter-desktop: 0;
+
   ul {
     padding-left: 14px;
 
@@ -245,6 +277,7 @@ svg.underline {
 
 // Section Team
 .team {
+  background-image: cloudinaryUrl("meetvers.io/stars_bg04.png", ('width': 1440, 'dpr': 2));
   background-color: var(--secondary);
 
   .team__intro {
@@ -297,6 +330,8 @@ svg.underline {
 
 // Section FAQ
 .faq {
+  background-image: cloudinaryUrl("meetvers.io/stars_bg04.png", ('width': 840, 'dpr': 2));
+  background-repeat: no-repeat;
   background-color: var(--secondary);
 
   .faq__intro {
@@ -341,6 +376,7 @@ svg.underline {
         margin: 12px;
         background: linear-gradient(73.63deg, #E30D7F -18.26%, #0B050F 44.46%, #2A2962 100.96%);
         cursor: pointer;
+
         svg {
           width: 25px;
           height: 15px;
@@ -362,11 +398,13 @@ svg.underline {
         height: 0;
         transition: 0.5s;
         overflow-y: auto;
+
         p {
           font-size: 24px;
           font-weight: 400;
           line-height: 29px;
         }
+
         @media (max-width: 539px) {
           p {
             font-size: 16px;
@@ -374,6 +412,7 @@ svg.underline {
           }
         }
       }
+
       @media (max-width: 539px) {
         margin: 10px 0;
       }
@@ -387,9 +426,9 @@ svg.underline {
 
       .label-icon {
         svg {
-          transform:rotate(180deg);
-          -ms-transform:rotate(180deg);
-          -webkit-transform:rotate(180deg);
+          transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
         }
       }
     }
