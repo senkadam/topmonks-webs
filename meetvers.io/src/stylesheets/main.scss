@@ -55,12 +55,67 @@ svg.underline {
   margin: 2em 0 2em;
 }
 
+
+body {
+  background-image: linear-gradient(to right top, #E30D7F 0%, #0B050F 75%, #2A2962 100%);
+}
+
+//Animation
+@keyframes move-around {
+  0% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1) rotate(5deg);
+  }
+  80% {
+    transform: scale(1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(0.9) rotate(0);
+  }
+}
+
+//
+
 // Section Intro
 .intro {
-  background-color: var(--secondary);
-  background-image: cloudinaryUrl("meetvers.io/stars_bg01.png", ('width': 1440, 'dpr': 2));
+  position: relative;
+  background-image: cloudinaryUrl("meetvers.io/stars_bg01.png", ('width': 440, 'dpr': 2));
+  background-position: right;
+  background-repeat: no-repeat;
+
   p {
     margin: 0;
+  }
+
+  svg {
+    width: clamp(22rem, 46vw, 80rem);
+    overflow: visible;
+
+    .planet-mask {
+      animation: move-around 5s alternate-reverse infinite;
+    }
+
+    .planet-body {
+      animation: move-around 5s infinite;
+    }
+
+    @media (max-width: 1024px) {
+      z-index: -1;
+    }
+    @media (min-width: 550px) {
+      position: absolute;
+      right: 0;
+      top: 8%;
+    }
+    @media (max-width: 549px) {
+      width: 100%;
+      position: absolute;
+      top: -20%;
+      left: 0;
+      right: 0;
+    }
   }
 
   @media (min-width: 1024px) {
