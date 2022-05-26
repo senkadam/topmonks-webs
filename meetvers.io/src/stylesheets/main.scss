@@ -24,6 +24,7 @@ section {
 }
 
 .box {
+  z-index: 1;
   padding: 32px 32px 16px;
 
   p {
@@ -51,16 +52,20 @@ section {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
 }
 
+svg.cube01, svg.cube02 {
+  overflow: hidden;
+}
+
 svg.underline {
   margin: 2em 0 2em;
 }
 
 
 body {
-  background-image: linear-gradient(to right top, #E30D7F 0%, #0B050F 75%, #2A2962 100%);
+  background-image: linear-gradient(to right top, #E30D7F 0, #0B050F 56%, #2A2962 100%);
 }
 
-//Animation
+//Animations
 @keyframes move-around {
   0% {
     transform: scale(0.9);
@@ -76,13 +81,37 @@ body {
   }
 }
 
+@keyframes floating-up {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes floating-down {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
 //
 
 // Section Intro
 .intro {
   position: relative;
-  background-image: cloudinaryUrl("meetvers.io/stars_bg01.png", ('width': 440, 'dpr': 2));
-  background-position: right;
+  background-image: cloudinaryUrl("meetvers.io/bg_stars01.png");
+  background-position: right 20%;
   background-repeat: no-repeat;
 
   p {
@@ -91,7 +120,6 @@ body {
 
   svg {
     width: clamp(22rem, 46vw, 80rem);
-    overflow: visible;
 
     .planet-mask {
       animation: move-around 5s alternate-reverse infinite;
@@ -154,7 +182,8 @@ body {
 
 // Section Network
 .network {
-  background-image: cloudinaryUrl("meetvers.io/stars_bg02.png", ('width': 1440, 'dpr': 2));
+  position: relative;
+  background: cloudinaryUrl("meetvers.io/bg_stars01.png", ('width': 340, 'dpr': 2)) left center no-repeat, linear-gradient(to left bottom, #E30D7F 0%, #0B050F 30%, #2A2962 100%),;
 
   h2 {
     margin-bottom: 0;
@@ -162,6 +191,33 @@ body {
 
   svg {
     text-align: left;
+  }
+
+  .box {
+    z-index: 1;
+  }
+
+  svg.cube01 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @media (max-width: 839px) {
+      display: none;
+    }
+  }
+
+  svg.cube02 {
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    top: 1%;
+    @media (max-width: 839px) {
+      display: none;
+    }
+  }
+
+  svg.cube01, svg.cube02 {
+    animation: floating-up 5s infinite;
   }
 
   .network__list {
@@ -210,8 +266,8 @@ body {
 
 // Section Token
 .token {
-  background-image: cloudinaryUrl("meetvers.io/stars_bg03.png", ('width': 1440, 'dpr': 2));
-  background-color: var(--secondary);
+  position: relative;
+  background: cloudinaryUrl("meetvers.io/bg_token.png", ('width': 440, 'dpr': 2)) top center no-repeat, var(--secondary);
 
   h2 {
     margin-bottom: 0;
@@ -221,6 +277,7 @@ body {
     margin-top: 0;
   }
 
+
   .token__intro {
     text-align: center;
     margin-bottom: 6em;
@@ -229,7 +286,25 @@ body {
     }
   }
 
+  svg.cube01 {
+    z-index: 0;
+    position: absolute;
+    top: 42%;
+    left: 0;
+    animation: floating-down 5s infinite;
+  }
+
+  svg.cube02 {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: floating-up 5s infinite;
+  }
+
   .box {
+    z-index: 1;
+
     p {
       font-size: 16px;
       margin-bottom: 0;
@@ -241,6 +316,10 @@ body {
 
 // Section Supply
 .supply {
+  background-image: cloudinaryUrl("meetvers.io/bg_supply.png");
+  background-size: 100% auto;
+  background-color: var(--primary);
+
   h2 {
     font-size: 40px;
     font-weight: 400;
@@ -277,6 +356,10 @@ body {
 
 // Section System
 .system {
+  position: relative;
+  background-image: cloudinaryUrl("meetvers.io/bg_supply.png");
+  background-size: 100% auto;
+  background-color: var(--primary);
   --mdc-layout-grid-gutter-desktop: 0;
 
   ul {
@@ -285,6 +368,16 @@ body {
     li {
       font-size: 18px;
       line-height: 40px;
+    }
+  }
+
+  svg.cube01 {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    animation: floating-down 5s infinite;
+    @media (max-width: 839px) {
+      display: none;
     }
   }
 
@@ -300,6 +393,7 @@ body {
   }
 
   .box--shadow {
+    position: relative;
     text-align: center;
     align-self: center;
     justify-self: self-end;
@@ -311,6 +405,13 @@ body {
     }
     @media (max-width: 539px) {
       width: 100%;
+    }
+
+    svg.cube02 {
+      position: absolute;
+      bottom: -34%;
+      right: -4%;
+      animation: floating-up 5s infinite;
     }
   }
 }
@@ -332,8 +433,20 @@ body {
 
 // Section Team
 .team {
-  background-image: cloudinaryUrl("meetvers.io/stars_bg04.png", ('width': 1440, 'dpr': 2));
+  position: relative;
+  background-image: cloudinaryUrl("meetvers.io/bg_vector-map.png");
+  background-size: 100% auto;
   background-color: var(--secondary);
+
+  svg.cube01 {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    animation: floating-up 5s infinite;
+    @media (max-width: 839px) {
+      display: none;
+    }
+  }
 
   .team__intro {
     text-align: center;
@@ -385,9 +498,30 @@ body {
 
 // Section FAQ
 .faq {
-  background-image: cloudinaryUrl("meetvers.io/stars_bg04.png", ('width': 840, 'dpr': 2));
-  background-repeat: no-repeat;
+  position: relative;
+  background-image: cloudinaryUrl("meetvers.io/bg_vector-map.png");
+  background-size: 100% auto;
+  background-position: top;
   background-color: var(--secondary);
+  background-repeat: no-repeat;
+
+  svg.cube01 {
+    position: absolute;
+    top: 40%;
+    left: 0;
+  }
+
+  svg.cube02 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  svg.cube01, svg.cube02 {
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
 
   .faq__intro {
     text-align: center;
