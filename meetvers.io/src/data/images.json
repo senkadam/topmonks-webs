@@ -412,5 +412,28 @@
     "existing": false,
     "original_filename": "icon_cubic-half-right",
     "api_key": "389916164315219"
+  },
+  "team_test-photo.png": {
+    "asset_id": "123834413639225669b5b5719745a703",
+    "public_id": "meetvers.io/team_test-photo",
+    "version": 1653651547,
+    "version_id": "0e6773c8342d4f0e0c3850b2804fc15a",
+    "signature": "779f4018964f63c6bfc29ad75e50bbe6a4bfc060",
+    "width": 311,
+    "height": 300,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2022-05-27T11:39:07Z",
+    "tags": [],
+    "bytes": 117447,
+    "type": "upload",
+    "etag": "c3d0a7a6683dd7639b3d04e4bfa04cc5",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1653651547/meetvers.io/team_test-photo.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1653651547/meetvers.io/team_test-photo.png",
+    "folder": "meetvers.io",
+    "existing": false,
+    "original_filename": "team_test-photo",
+    "api_key": "389916164315219"
   }
 }
