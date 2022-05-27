@@ -82,7 +82,6 @@ nav.active {
     background-color: var(--secondary);
     z-index: 2;
     padding: 1.5rem;
-    border-bottom: 1px solid var(--primary);
     text-align: center;
 
     .nav-links__socials {
@@ -94,6 +93,8 @@ nav.active {
 
   .nav-links.activated {
     transition: transform 0.45s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+    height: 100vh;
+    opacity: 0.9;
   }
 
   .btn {
@@ -130,6 +131,12 @@ nav.active {
     list-style: none;
     font-size: 18px;
     text-transform: uppercase;
+    padding-top: 3em;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .btn--menu[aria-expanded="true"] + .nav-links {
