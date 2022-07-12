@@ -33,7 +33,8 @@ export const api = new awsx.apigateway.API("monksroom-api", {
       method: "GET",
       eventHandler: new aws.lambda.Function("monksroom-now-playing", {
         publish: true,
-        runtime: aws.lambda.Runtime.NodeJS14dX,
+        runtime: "nodejs16.x",
+        architectures: ["arm64"],
         role: defaultLambdaRole.arn,
         handler: "index.handler",
         code: codeAsset("now-playing/index.js")
@@ -44,7 +45,8 @@ export const api = new awsx.apigateway.API("monksroom-api", {
       method: "GET",
       eventHandler: new aws.lambda.Function("monksroom-beatport", {
         publish: true,
-        runtime: aws.lambda.Runtime.NodeJS14dX,
+        runtime: "nodejs16.x",
+        architectures: ["arm64"],
         role: defaultLambdaRole.arn,
         handler: "index.handler",
         code: codeAsset("beatport/index.js"),
