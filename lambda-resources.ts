@@ -12,7 +12,8 @@ const sesPolicy = new aws.iam.Policy("ses-policy", {policy: JSON.stringify({
       Effect: "Allow",
       Resource: "*",
     }],
-  })});
+  })
+});
 
 export const contactFormLambdaRole = new aws.iam.Role("contact-form-lambda-role", {
   assumeRolePolicy: JSON.stringify({
