@@ -302,6 +302,15 @@ img.responsive {
     }
   }
 
+  .box--hydra-dx {
+    background: cloudinaryUrl("blockchain.topmonks.com/cover-acqui-hired.png") right bottom no-repeat, #e53e57;
+    background-size: 50%;
+    box-shadow: 10px 10px 40px rgba(57, 95, 246, 0.2);
+    @media (max-width: 739px) {
+      background: #e53e57;
+    }
+  }
+
 
   @media screen and (min-width: 840px) {
     padding: 4em 0 6em;
