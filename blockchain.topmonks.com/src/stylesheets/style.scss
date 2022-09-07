@@ -303,11 +303,20 @@ img.responsive {
   }
 
   .box--hydra-dx {
-    background: cloudinaryUrl("blockchain.topmonks.com/cover-acqui-hired.png") right bottom no-repeat, #e53e57;
+    background: cloudinaryUrl("blockchain.topmonks.com/cover-acqui-hired.png") right bottom no-repeat, #0d106a;
     background-size: 50%;
     box-shadow: 10px 10px 40px rgba(57, 95, 246, 0.2);
     @media (max-width: 739px) {
-      background: #e53e57;
+      background: #0d106a;
+    }
+  }
+
+  .box--meetvers {
+    background: cloudinaryUrl("blockchain.topmonks.com/meetvers-io.png") right bottom no-repeat, #6b456b;
+    background-size: 50%;
+    box-shadow: 10px 10px 40px rgba(57, 95, 246, 0.2);
+    @media (max-width: 739px) {
+      background: #6b456b;
     }
   }
 
