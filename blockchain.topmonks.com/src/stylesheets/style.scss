@@ -320,6 +320,15 @@ img.responsive {
     }
   }
 
+  .box--brute-coin {
+    background: cloudinaryUrl("blockchain.topmonks.com/cover-brute-coin.png") right bottom no-repeat, #131415;
+    background-size: 50%;
+    box-shadow: 10px 10px 40px rgba(57, 95, 246, 0.2);
+    @media (max-width: 739px) {
+      background: #131415;
+    }
+  }
+
 
   @media screen and (min-width: 840px) {
     padding: 4em 0 6em;
