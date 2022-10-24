@@ -1,7 +1,11 @@
 .footer {
   content-visibility: auto;
-  background-color: #BB9EAA;
-  color: #2E2C49;
+  background: linear-gradient(
+      to bottom right,
+      #BB9EAA 0,
+     #7278DF 78%
+    );
+  color: #fff;
   h2 {
     font-size: 1.5em;
     font-weight: 500;
@@ -16,7 +20,7 @@
     }
   }
   a {
-    color: #2E2C49;
+    color: #fff;
     text-decoration: none;
     transition: all 0.4s ease;
     &:hover {
@@ -29,8 +33,8 @@
     }
   }
   .social-buttons {
-    background-color: transparent;
-    border: 1px solid #2E2C49;
+    background-color: #fff;
+    border: 1px solid #fff;
     border-radius: 52px;
     display: inline-block;
     margin-top: 14px;
