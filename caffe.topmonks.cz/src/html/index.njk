@@ -29,8 +29,14 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  {% include "common/lato.njk" %}
+<!-- Google Font - Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
   {% include "shared/app-icons.njk" %}
   {% include 'shared/analytics.njk' %}
 </head>
@@ -113,8 +119,8 @@
         class="caffe_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
         <nav id="navigation" class="tm-menu tm-menu--horizontal">
           <ul class="tm-menu__list">
-            <li><a href="#next-event">Nadcházející caffè</a></li>
-            <li><a href="#seance">Předchozí seance</a></li>
+            <li><a href="#next-event">Nadcházející akce</a></li>
+            <li><a href="#seance">Předchozí akce</a></li>
             <li><a href="#speakers">Staňte se řečníky</a></li>
             <li><a href="https://www.topmonks.cz/">TopMonks.cz</a></li>
           </ul>
@@ -165,6 +171,7 @@
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <p class="prefix">Learn from us</p>
           <h1>TopMonks Caffè</h1>
           <p>Přednášky a diskuze každé první úterý v&nbsp;měsíci se zajímavými
             lidmi a o&nbsp;tématech, která nás&nbsp;baví.
@@ -349,6 +356,15 @@
         <!--div class="seance_posters mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="">Zobrazit všechny...</a>
         </div-->
+      </div>
+    </div>
+  </section>
+    <section class="test">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Předchozí seance</h2>
+        </div>
       </div>
     </div>
   </section>
