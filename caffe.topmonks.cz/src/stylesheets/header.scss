@@ -11,7 +11,7 @@
   letter-spacing: -1px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #233341;
+  color: #2E2C49;
   @media screen and (max-width: 479px) {
     font-size: 24px;
     padding-top: 2px;
@@ -105,13 +105,11 @@
   z-index: 1000;
   transition: all 0.2s;
   top: 0;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
   align-self: center;
   height: 70px;
-  //background-color: #2d3d90;
   @media screen and (max-width: 839px) {
     position: fixed;
-    background-color: #233341;
+    background-color: #2E2C49;
   }
   @media screen and (min-width: 840px) {
     padding: 16px 0;
@@ -129,7 +127,7 @@
       vertical-align: center;
     }
     .tm-hamburger__bar {
-      background-color: #233341;
+      background-color: #2E2C49;
     }
     .tm-menu {
       transform: translate(-300px, -64px);
@@ -151,6 +149,7 @@
 .tm-menu {
   @media screen and (min-width: 1024px) {
     a {
+      font-weight: 600;
       border-bottom: 1px solid transparent;
     }
     a:hover {
@@ -169,7 +168,6 @@
     transition: transform 0.3s;
     overflow: hidden;
     background-color: var(--tm-secondary);
-    color: #2d3d90;
 
     .tm-menu__list li {
       margin: 0 24px;
@@ -179,14 +177,17 @@
       border-top: 1px solid rgba(45, 61, 144, 0.5);
     }
     .tm-menu__list a {
+      font-weight: 600;
       display: block;
       padding: 12px;
       margin: 4px;
       text-transform: capitalize;
+      text-decoration: none;
     }
   }
   @media (max-width: 1024px) {
     a {
+      font-weight: 600;
       font-size: 14px;
     }
   }

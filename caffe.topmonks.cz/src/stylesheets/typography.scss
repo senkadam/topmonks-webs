@@ -1,115 +1,131 @@
 :root {
-  --insight-negative-color: #e13c1e;
-  --insight-positive-color: #7e9204;
-  --topmonks-orange: #fe664b;
-  --topmonks-grey: #9b9b9b;
-  --topmonks-article-background: #f8fbfc;
-  --topmonks-black: #4a4a4a;
+  --topmonks-caffe-orange: #f06b4f;
+  --topmonks-caffe-pink: #f64060;
+  --topmonks-caffe-dark_blue: #233341;
+
+  --tm-btn-transition: all 100ms ease-in-out;
 }
 
 /*
 http://pxtoem.com/ - how to count px to em
 */
 
-body {
-  padding: 0;
-  margin: 0 auto;
-  max-width: 100%;
-  font-family: Lato, lato, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  -webkit-font-kerning: normal;
-  font-kerning: normal;
-  font-variant-numeric: lining-nums slashed-zero;
-  -webkit-font-variant-ligatures: common-ligatures contextual;
-  font-variant-ligatures: common-ligatures contextual;
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
-  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
-
-  background: url("/images/BG.svg") no-repeat;
-  background-position-x: 50%;
-  color: #233341;
-}
 
 .tm-logo {
-  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  @media (min-width: 2200px) {
+    svg {
+      width: 300px;
+      height: 100px;
+    }
+  }
 }
 
-@media (min-width: 840px) {
-  h1 {
-    font-size: 3em;
-    font-weight: normal;
+h1 {
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin: 8px 0;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+
+  &.h2_margin {
+    margin-bottom: 0;
+  }
+}
+
+p {
+  font-size: 1.125em;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+a {
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: none;
+
+  .btn_light {
+    color: #ffffff;
   }
 
-  h2 {
-    font-size: 2em;
-    font-weight: normal;
-  }
-
-  p {
-    font-size: 1.125em;
-    font-weight: normal;
-    line-height: 1.4;
+  .btn_dark {
+    color: var(--topmonks-caffe-dark_blue);
   }
 }
 
 @media (max-width: 839px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
   h2 {
-    font-size: 1.125em;
-  }
-  p {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 
-a {
-  font-weight: normal;
-  color: #02a3c8;
-  text-decoration: none;
-}
+@media (min-width: 1840px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 2.25em;
+  }
 
-ul,
-ul li {
-  padding: 0;
-
-  a {
-    color: #233341;
+  h4,
+  p,
+  span {
+    font-size: 1.75em;
   }
 }
 
-ul {
-  margin: 1em 0;
-}
-
-ul li {
-  list-style: none;
-  margin: 0;
-  display: inline-block;
-  padding: 4px 14px;
-  font-size: 14px;
-}
-
-ul#navigace {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  margin-top: 10px;
-
-  a {
-    font-size: 18px;
-    padding: 4px 8px;
-
-    &:hover {
-      border-bottom: 1px solid #02a3c8;
+body {
+  ul,
+  ul li {
+    padding: 0;
+  
+    a {
+      color: #ffffff;
+    }
+  }
+  
+  ul {
+    margin: 1em 0;
+  }
+  
+  ul li {
+    list-style: none;
+    margin: 0;
+    padding: 4px 14px;
+    font-size: 16px;
+    @media (min-width: 2200px) {
+      font-size: 24px;
+    }
+  }
+  
+  #navigation li {
+    display: inline-block;
+  }
+  
+  ul#navigace {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  
+    a {
+      font-size: 1.125em;
+      padding: 4px 8px;
+  
+      &:hover {
+        border-bottom: 1.4px solid var(--topmonks-caffe-orange);
+      }
     }
   }
 }
@@ -119,26 +135,3 @@ ul#navigace {
 //}
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
-@media (min-width: 480px) {
-  body {
-    font-size: 1.125em; //18px
-  }
-  h1,
-  h2 {
-    font-size: 2.25em; //36px
-    line-height: 46px;
-  }
-  h3 {
-    font-size: 1.5em; //24px
-  }
-  h4 {
-    font-size: 20px; //20px
-  }
-}
-
-nav {
-  .active {
-    color: var(--nav-active);
-    font-weight: bold;
-  }
-}

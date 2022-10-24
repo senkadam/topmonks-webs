@@ -1,13 +1,5 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
-:root {
-  --topmonks-caffe-orange: #f06b4f;
-  --topmonks-caffe-pink: #f64060;
-  --topmonks-caffe-dark_blue: #233341;
-
-  --tm-btn-transition: all 100ms ease-in-out;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -15,9 +7,7 @@ html {
 body {
   margin: 0 auto;
   max-width: 100%;
-  font-family: Lato, lato, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  font-family: 'Poppins', sans-serif;
   -webkit-font-kerning: normal;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -30,7 +20,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
   color: var(--topmonks-caffe-dark_blue);
-  background: url("/images/caffe-bgnd.png") top no-repeat;
+  background:linear-gradient(
+    to right,
+    #2E2C49 0,
+    #444076 90%
+  );
 
   @media (min-width: 1724px) {
     background: url("/images/caffe-bgnd.png") top no-repeat;
@@ -88,80 +82,6 @@ img.responsive {
   }
 }
 
-.tm-logo {
-  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
-    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-  @media (min-width: 2200px) {
-    svg {
-      width: 300px;
-      height: 100px;
-    }
-  }
-}
-
-h1 {
-  font-size: 3em;
-  font-weight: normal;
-  line-height: 1.4em;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: normal;
-
-  &.h2_margin {
-    margin-bottom: 0;
-  }
-}
-
-p {
-  font-size: 1.125em;
-  font-weight: normal;
-  line-height: 1.6;
-}
-
-@media (max-width: 839px) {
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-}
-
-a {
-  color: #ffffff;
-  font-weight: normal;
-  text-decoration: none;
-
-  .btn_light {
-    color: #ffffff;
-  }
-
-  .btn_dark {
-    color: var(--topmonks-caffe-dark_blue);
-  }
-}
-
-@media (min-width: 1840px) {
-  h1 {
-    font-size: 4em;
-  }
-  h2 {
-    font-size: 2.25em;
-  }
-  h3 {
-    font-size: 2.25em;
-  }
-
-  h4,
-  p,
-  span {
-    font-size: 1.75em;
-  }
-}
-
 .btn {
   border: 2px solid var(--topmonks-caffe-orange);
   border-radius: 100px;
@@ -204,46 +124,11 @@ a {
   }
 }
 
-ul,
-ul li {
-  padding: 0;
-
-  a {
-    color: #ffffff;
-  }
-}
-
-ul {
-  margin: 1em 0;
-}
-
-ul li {
-  list-style: none;
-  margin: 0;
-  padding: 4px 14px;
-  font-size: 16px;
-  @media (min-width: 2200px) {
-    font-size: 24px;
-  }
-}
-
-#navigation li {
-  display: inline-block;
-}
-
-ul#navigace {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-
-  a {
-    font-size: 1.125em;
-    padding: 4px 8px;
-
-    &:hover {
-      border-bottom: 1.4px solid var(--topmonks-caffe-orange);
-    }
-  }
+.prefix {
+  font-weight: 600;
+  color: #B7BBC8;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 //* Section: Introduction*//
@@ -252,6 +137,9 @@ ul#navigace {
   color: #ffffff;
   @media (max-width: 839px) {
     padding: 5em 1em 2em;
+  }
+  p {
+    color: #B7BBC8;
   }
   a.link {
     text-decoration: none;
@@ -419,7 +307,7 @@ footer {
     font-size: 1.125em; //18px
   }
   h1 {
-    font-size: 2.111em; //38px
+    font-size: 3em; //48px
     line-height: 1.5em; //24px
   }
   h2 {
