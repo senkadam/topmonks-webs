@@ -34,7 +34,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-
+<!-- Google Icon - EXAMPLE ONLY, DELETE!!! -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+ 
+ 
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/typography.css">
   {% include "shared/app-icons.njk" %}
@@ -183,7 +186,6 @@
                    enable-background="new 0 0 5573.111 1990.154"
                    xml:space="preserve">
                 <title>[logo] Meet Up</title>
-
                 <path fill="#F64060" d="M3283.748,1072.614c-7.664,11.584-12.557,19.528-17.893,27.18
 	c-49.844,71.39-105.776,136.571-182.021,181.676c-102.199,60.419-212.97,85.341-328.428,60.315
 	c-59.242-12.853-114.359-46.009-170.154-72.463c-12.86-6.069-19.889-6.223-31.32,0.524c-47.857,28.227-94.404,59.867-145.076,81.812
@@ -272,8 +274,7 @@
     <div class="mdc-layout-grid next-caffe_box">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2 class="h2_margin">Nadcházející akce</h2>
-          <hr class="line">
+          <h2>Nadcházející akce</h2>
         </div>
 
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
@@ -293,7 +294,7 @@
 
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
           <h3>Kdy?</h3>
-          <span>{{ upcomingEvent.date }}</span>
+          <span>{{ upcomingEvent.shortDate }}</span>
         </div>
 
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
@@ -306,7 +307,7 @@
                   </div></div>-->
 
         <div
-          class="btn btn_dark mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-desktop">
+          class="btn btn--fill mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="{{ upcomingEvent.link }}" class="button">Přihlásit se na akci</a>
         </div>
       </div>
@@ -326,30 +327,66 @@
     </div>
   </section>
 
-  <section id="speakers">
-    <div class="mdc-layout-grid tm-layout-wrapper">
+  <section id="speakers" class="speakers">
+   <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2 class="h2_margin">Teach or die, learn or die.</h2>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <p class="prefix">Teach or die, learn or die</p>
+     <!--   <h2>Častí řečníci</h2>
+      </div>
+      <div class="speakers__box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="speakers__box--content mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <span class="material-symbols-outlined">account_circle</span>
+            <h3>Jirka Pénzeš</h3>
         </div>
-        <div class="speakers_box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h3>Staňte se řečníky!</h3>
+         <div class="speakers__box--content mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <span class="material-symbols-outlined">account_circle</span>
+            <h3>Jirka Pénzeš</h3>
+        </div>
+         <div class="speakers__box--content mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <span class="material-symbols-outlined">account_circle</span>
+            <h3>Jirka Pénzeš</h3>
+        </div>
+      </div>-->
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <p>Máte zajímavé téma, o&nbsp;kterém byste rádi mluvili?
             <br>Zkoušeli jste novou technologii a rádi se podělíte o&nbsp;vaše zkušenosti?
             <br> Napište nám, rádi se s&nbsp;Vámi domluvíme.</p>
         </div>
-        <div class="btn btn_dark mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="btn btn--fill mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a class="mail button" href="mailto:info@topmonks.com?subject=TopMonks+Caffe">caffe&#64;topmonks.com</a>
         </div>
       </div>
     </div>
   </section>
+  
   <section id="seance" class="seance">
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="border-bottom: 1px solid #233341">
-          <h2 style="margin-bottom: 0.3em">Předchozí seance</h2>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Předchozí akce</h2>
         </div>
+
+        <!-- To be corrected
+        <a href="{{ upcomingEvent.link }}" class="seance__box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <img alt="TopMonks Caffè - Decentralised finances" loading="lazy" width="440" height="620" class="responsive" src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,fl_progressive,q_auto,w_440/v1/caffe.topmonks.cz/posters/2022-05-03">
+           <h3>{{ upcomingEvent.lecturers }}</h3>
+           <h4>{{ upcomingEvent.shortTitle }}</h4>
+          <span class="seance__date">{{ upcomingEvent.shortDate }}</span>
+          </a>
+           <a href="{{ upcomingEvent.link }}" class="seance__box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <img alt="TopMonks Caffè - Decentralised finances" loading="lazy" width="440" height="620" class="responsive" src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,fl_progressive,q_auto,w_440/v1/caffe.topmonks.cz/posters/2022-05-03">
+           <h3>{{ upcomingEvent.lecturers }}</h3>
+           <h4>{{ upcomingEvent.shortTitle }}</h4>
+          <span class="seance__date">{{ upcomingEvent.shortDate }}</span>
+          </a>
+              <a href="{{ upcomingEvent.link }}" class="seance__box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <img alt="TopMonks Caffè - Decentralised finances" loading="lazy" width="440" height="620" class="responsive" src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,fl_progressive,q_auto,w_440/v1/caffe.topmonks.cz/posters/2022-05-03">
+           <h3>{{ upcomingEvent.lecturers }}</h3>
+           <h4>{{ upcomingEvent.shortTitle }}</h4>
+          <span class="seance__date">{{ upcomingEvent.shortDate }}</span>
+          </a>
+-->
         {% for i in range(eventsCount -1, 0, -1) -%}
           {{ eventInfo(eventsList[i].value, posters) }}
         {%- endfor %}
@@ -359,26 +396,15 @@
       </div>
     </div>
   </section>
-    <section class="test">
-    <div class="mdc-layout-grid tm-layout-wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Předchozí seance</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <link rel="stylesheet" href="/assets/css/footer.css">
-<footer class="tm-caffe-footer">
+<footer class="footer tm-layout-wrapper">
   <div class="nav-and-contacts">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
-          <h2>Co děláme?</h2>
-          <nav>
+           <h3>Co děláme?</h3>
             <ul>
               <li><a href="https://www.topmonks.cz/">Software development</a></li>
               <li><a href="https://studio.topmonks.com/">Startup Studio</a></li>
@@ -386,11 +412,9 @@
               <li><a href="https://prodeti.topmonks.cz/">Programování pro děti</a></li>
               <li><a href="https://www.hlidacshopu.cz/">Hlídač shopů</a></li>
             </ul>
-          </nav>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
-          <h2>Hledáte něco?</h2>
-          <nav>
+           <h3>Hledáte něco?</h3>
             <ul>
               <li><a href="https://www.topmonks.cz/">TopMonks</a></li>
               <li><a href="https://www.topmonks.cz/tym/">Tým</a></li>
@@ -403,8 +427,8 @@
         </div>
         <div
           class="about mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
-          <h2>O nás</h2>
-          <p class="tm-text--margin-top">Jsme vývojáři softwaru pro váš byznys se zkušenostmi jak se startupy, tak s korporátním prostředím.</p>
+          <h3>O nás</h3>
+          <p>Jsme vývojáři softwaru pro váš byznys se zkušenostmi jak se startupy, tak s korporátním prostředím.</p>
           <div itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"><span
               itemprop="legalName">TopMonks s.r.o.</span>
             <div><a href="mailto:info&#64;topmonks.com" itemprop="email">info@topmonks.com</a></div>
@@ -413,12 +437,11 @@
       </div>
     </div>
   </div>
-  <hr class="line">
   <div class="copy-and-media">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
-          <p>© 2020 TopMonks s.r.o.</p></div>
+          <p>© 2022 TopMonks s.r.o.</p></div>
         <div
           class="footer_social-buttons mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
           <div class="social-buttons">

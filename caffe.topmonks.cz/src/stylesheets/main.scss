@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-  color: var(--topmonks-caffe-dark_blue);
+  color: #fff;
   background:linear-gradient(
     to right,
     #2E2C49 0,
@@ -82,48 +82,6 @@ img.responsive {
   }
 }
 
-.btn {
-  border: 2px solid var(--topmonks-caffe-orange);
-  border-radius: 100px;
-  color: #fff;
-  background-color: var(--topmonks-caffe-orange);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
-  width: fit-content;
-
-  transition: var(--tm-btn-transition);
-
-  &:hover {
-    background-color: var(--topmonks-caffe-dark_blue);
-    border: 2px solid var(--topmonks-caffe-orange);
-
-    a {
-      color: var(--topmonks-caffe-orange);
-      font-weight: 700;
-    }
-  }
-
-  @media screen and (min-width: 840px) {
-    padding: 14px 80px;
-  }
-
-  @media (max-width: 839px) {
-    font-size: 1em;
-    padding: 10px 18px;
-  }
-}
-
-.btn_dark {
-  &:hover {
-    background-color: transparent;
-    border: 2px solid var(--topmonks-caffe-dark_blue);
-
-    a {
-      color: var(--topmonks-caffe-dark_blue);
-      font-weight: 700;
-    }
-  }
-}
-
 .prefix {
   font-weight: 600;
   color: #B7BBC8;
@@ -134,6 +92,7 @@ img.responsive {
 //* Section: Introduction*//
 
 #introduction {
+  padding: 2em 0;
   color: #ffffff;
   @media (max-width: 839px) {
     padding: 5em 1em 2em;
@@ -157,16 +116,24 @@ img.responsive {
 
 #next-event {
   color: #ffffff;
-
   .next-caffe_box {
     padding: 2em 5em 3em;
     background: linear-gradient(
       to bottom right,
-      #ba3cd9 0,
-      var(--topmonks-caffe-orange) 58%
+      #7278DF 0,
+     #BB9EAA 78%
     );
+    border-radius: 34px;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+
     h3 {
-      margin-bottom: 6px;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0 0 6px;
+    }
+    span, a {
+      font-size: 20px;
+      font-weight: 500;
     }
     @media (max-width: 839px) {
       padding: 2em;
@@ -179,29 +146,11 @@ img.responsive {
     }
   }
 
-  hr.line {
-    background-color: #ffffff;
-    height: 0.0625em; //1px
-    border: none;
-  }
-
   .btn {
+    box-shadow: 0px 15px 20px rgba(126, 104, 159, 0.4);
     margin-top: 2em;
-    border: 2px solid var(--topmonks-caffe-dark_blue);
-    background-color: var(--topmonks-caffe-dark_blue);
-
-    &:hover {
-      color: #ffffff;
-      background-color: transparent;
-    }
-  }
-
-  .poster {
-    @media screen and (min-width: 1024px) {
-      background: url("/images/upcoming-poster.svg") center no-repeat;
-      width: 220px;
-      height: 274px;
-      margin: 0 auto;
+    a {
+      font-size: 18px;
     }
   }
 
@@ -213,88 +162,68 @@ img.responsive {
 //* Section: What is TM caffé*//
 
 #about-caffe {
-  h2 {
-    color: var(--topmonks-caffe-orange);
-  }
-
-  @media (min-width: 1740px) {
-    p {
-      width: 60%;
-    }
-  }
-  @media (min-width: 1880px) {
-    margin-top: 10em;
-    p {
-      width: 70%;
-    }
+  padding: 4em 0 2em;
+  text-align: center;
+  p {
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
-
-//* Section: Become a speaker! *//
-#speakers {
-  content-visibility: auto;
-  h2 {
-    font-weight: 700;
-  }
-
-  .speakers_box {
-    color: #ffffff;
-    background-color: var(--topmonks-caffe-orange);
-    padding: 1em 2em 2em;
-  }
-
-  @media screen and (min-width: 1400px) {
-    position: relative;
-    .speakers_box:after {
-      content: "";
-      display: block;
-      position: absolute;
-      background: url(/images/microphone_icon.svg) top right no-repeat;
-      width: 307px;
-      height: 490px;
-      top: -10px;
-      right: 238px;
-    }
-  }
-}
-
 //* Section: Seance *//
 #seance {
-  content-visibility: auto;
-  padding-top: 3em;
-  h4 {
-    margin: 0.5em 0;
-  }
-  p {
-    margin: 0.5em 0;
-  }
-  img {
-    width: 100%;
-  }
+  padding: 4em 0;
+  .seance__box {
+    display: flex;
+    flex-direction: column;
+    background-color: #4B467D;
+    border-radius: 24px;
+    padding: 24px 24px 12px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 24px;
+    }
+    h4 {
+      font-size: 1.75em;
+      margin-top: 0;
+    }
+
+    .seance__date {
+      color: #B5ACEE;
+      font-weight: 600;
+    }
+    transition: all 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.06);
+    }
 }
-
-footer {
-  background-color: var(--topmonks-caffe-dark_blue);
-  color: #ffffff;
-
-  a {
-    text-decoration: none;
-  }
-
-  li {
-    padding-left: 0;
-  }
-
-  .menu ul li {
-    display: block;
-  }
-
-  @media screen and (min-width: 840px) {
-    padding: 0 12%;
-    .footer_social-buttons {
-      text-align: right;
+}
+//* Section: Become a speaker! *//
+#speakers {
+  padding: 4em 0;
+  .speakers__box {
+    display: contents;
+      align-content: space-evenly;
+    .speakers__box--content {
+      display: inline-flex;
+    span {
+      padding-right: 20px;  
+      align-self: center;
+      }
     }
   }
+  p {
+    color: #B7BBC8;
+  }
+  .btn--fill:hover {
+    background-color: transparent;
+    border-color: #fff;
+    a {
+      color: #fff;
+    }
+}
 }
 
 ///* MD GRID DESKTOP BREAKPOINT*/
