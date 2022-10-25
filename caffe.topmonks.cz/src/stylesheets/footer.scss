@@ -30,7 +30,6 @@
   }
   .social-buttons {
     background-color: transparent;
-    border-radius: 52px;
     display: inline-block;
     margin-top: 14px;
     a {
@@ -42,9 +41,6 @@
     }
     &:last-child {
       padding-right: 6px;
-    }
-    @media screen and (min-width: 840px) {
-      border: 1px solid #2E2C49;
     }
     @media screen and (min-width: 340px) {
       padding: 4px 12px 0;

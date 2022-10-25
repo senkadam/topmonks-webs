@@ -21,22 +21,12 @@ body {
   text-rendering: geometricPrecision;
   color: #fff;
   background: linear-gradient(to right, #2e2c49 0, #444076 90%);
-
-  @media (min-width: 1724px) {
-    background: url("/images/caffe-bgnd.png") top no-repeat;
-    background-size: 100% 5.5%;
-  }
-  @media (min-width: 1500px) and (max-width: 1723px) {
-    background: url("/images/caffe-bgnd.png") top no-repeat;
-    background-size: 100% 6.5%;
-  }
   @media (min-width: 1024px) {
     .tm-layout-wrapper {
       padding: 0 12%;
     }
   }
   @media (max-width: 840px) {
-    background-size: auto;
     .tm-layout-wrapper {
       padding: 0 6%;
     }
