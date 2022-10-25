@@ -349,6 +349,7 @@
         </div>
       </div>-->
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Staňte se řečníkem</h2>
           <p>Máte zajímavé téma, o&nbsp;kterém byste rádi mluvili?
             <br>Zkoušeli jste novou technologii a rádi se podělíte o&nbsp;vaše zkušenosti?
             <br> Napište nám, rádi se s&nbsp;Vámi domluvíme.</p>
@@ -367,26 +368,15 @@
           <h2>Předchozí akce</h2>
         </div>
 
-        <!-- To be corrected
+        <!-- To be added
         <a href="{{ upcomingEvent.link }}" class="seance__box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           <img alt="TopMonks Caffè - Decentralised finances" loading="lazy" width="440" height="620" class="responsive" src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,fl_progressive,q_auto,w_440/v1/caffe.topmonks.cz/posters/2022-05-03">
            <h3>{{ upcomingEvent.lecturers }}</h3>
            <h4>{{ upcomingEvent.shortTitle }}</h4>
           <span class="seance__date">{{ upcomingEvent.shortDate }}</span>
           </a>
-           <a href="{{ upcomingEvent.link }}" class="seance__box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <img alt="TopMonks Caffè - Decentralised finances" loading="lazy" width="440" height="620" class="responsive" src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,fl_progressive,q_auto,w_440/v1/caffe.topmonks.cz/posters/2022-05-03">
-           <h3>{{ upcomingEvent.lecturers }}</h3>
-           <h4>{{ upcomingEvent.shortTitle }}</h4>
-          <span class="seance__date">{{ upcomingEvent.shortDate }}</span>
-          </a>
-              <a href="{{ upcomingEvent.link }}" class="seance__box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <img alt="TopMonks Caffè - Decentralised finances" loading="lazy" width="440" height="620" class="responsive" src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,f_auto,fl_progressive,q_auto,w_440/v1/caffe.topmonks.cz/posters/2022-05-03">
-           <h3>{{ upcomingEvent.lecturers }}</h3>
-           <h4>{{ upcomingEvent.shortTitle }}</h4>
-          <span class="seance__date">{{ upcomingEvent.shortDate }}</span>
-          </a>
--->
+    -->
+
         {% for i in range(eventsCount -1, 0, -1) -%}
           {{ eventInfo(eventsList[i].value, posters) }}
         {%- endfor %}
