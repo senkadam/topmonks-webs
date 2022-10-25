@@ -10,7 +10,6 @@
 http://pxtoem.com/ - how to count px to em
 */
 
-
 .tm-logo {
   font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
     "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
@@ -58,7 +57,7 @@ a {
     font-size: 2em;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 }
 
@@ -87,13 +86,16 @@ body {
     border-radius: 100px;
     width: fit-content;
     transition: var(--tm-btn-transition);
-  
+
     @media screen and (min-width: 840px) {
       padding: 14px 36px;
     }
     @media (max-width: 839px) {
       font-size: 1em;
       padding: 10px 18px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
     }
     a {
       font-weight: 500;
@@ -102,61 +104,60 @@ body {
   }
 
   .btn--fill {
-    background-color: #5A42CC;
-    border-color:#5A42CC;
+    background-color: #5a42cc;
+    border-color: #5a42cc;
     &:hover {
       background-color: transparent;
-      border-color: #5A42CC;
+      border-color: #5a42cc;
       a {
-        color: #5A42CC;
+        color: #5a42cc;
       }
-  }
+    }
   }
 
   .btn--outlined {
     background-color: transparent;
-    border-color:#fff;
+    border-color: #fff;
   }
-
-
-
 
   ul,
   ul li {
     padding: 0;
-  
+
     a {
       color: #ffffff;
     }
   }
-  
+
   ul {
     margin: 1em 0;
   }
-  
+
   ul li {
     list-style: none;
     margin: 0;
-    padding: 4px 14px;
     font-size: 16px;
     @media (min-width: 2200px) {
       font-size: 24px;
     }
+    @media screen and (min-width: 840px) {
+      padding: 4px 14px;
+    }
   }
-  
+
   #navigation li {
     display: inline-block;
   }
-  
+
   ul#navigace {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-  
+
     a {
       font-size: 1.125em;
       padding: 4px 8px;
-  
+
       &:hover {
         border-bottom: 1.4px solid var(--topmonks-caffe-orange);
       }

@@ -7,7 +7,7 @@ html {
 body {
   margin: 0 auto;
   max-width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-kerning: normal;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -20,11 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
   color: #fff;
-  background:linear-gradient(
-    to right,
-    #2E2C49 0,
-    #444076 90%
-  );
+  background: linear-gradient(to right, #2e2c49 0, #444076 90%);
 
   @media (min-width: 1724px) {
     background: url("/images/caffe-bgnd.png") top no-repeat;
@@ -61,7 +57,7 @@ img.responsive {
   height: auto;
 }
 
-.screen-reader-shortcut{
+.screen-reader-shortcut {
   position: absolute;
   top: -1000em;
   &:focus {
@@ -73,8 +69,8 @@ img.responsive {
     font-size: 16px;
     font-weight: 600;
     padding: 15px 23px 14px;
-    background: #f06b4f;
-    color: #FFFFFF;
+    background: #2e2c49;
+    color: #ffffff;
     z-index: 100000;
     line-height: normal;
     text-decoration: none;
@@ -84,7 +80,7 @@ img.responsive {
 
 .prefix {
   font-weight: 600;
-  color: #B7BBC8;
+  color: #b7bbc8;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -98,7 +94,7 @@ img.responsive {
     padding: 5em 1em 2em;
   }
   p {
-    color: #B7BBC8;
+    color: #b7bbc8;
   }
   a.link {
     text-decoration: none;
@@ -118,30 +114,24 @@ img.responsive {
   color: #ffffff;
   .next-caffe_box {
     padding: 2em 5em 3em;
-    background: linear-gradient(
-      to bottom right,
-      #7278DF 0,
-     #BB9EAA 78%
-    );
+    background: linear-gradient(to bottom right, #7278df 0, #bb9eaa 78%);
     border-radius: 34px;
-    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+    box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
 
     h3 {
       font-size: 16px;
       font-weight: 400;
       margin: 0 0 6px;
     }
-    span, a {
+    span,
+    a {
       font-size: 20px;
       font-weight: 500;
     }
     @media (max-width: 839px) {
       padding: 2em;
-      h3 {
-        font-size: 1.5em;
-      }
       span {
-        font-size: 1.4em;
+        font-size: 18px;
       }
     }
   }
@@ -162,20 +152,24 @@ img.responsive {
 //* Section: What is TM caffé*//
 
 #about-caffe {
-  padding: 4em 0 2em;
-  text-align: center;
   p {
     max-width: 900px;
     margin: 0 auto;
   }
+  @media screen and (min-width: 840px) {
+    text-align: center;
+    padding: 4em 0 2em;
+  }
+  @media (max-width: 839px) {
+    padding: 1.5em 0;
+  }
 }
 //* Section: Seance *//
 #seance {
-  padding: 4em 0;
   .seance__box {
     display: flex;
     flex-direction: column;
-    background-color: #4B467D;
+    background-color: #4b467d;
     border-radius: 24px;
     padding: 24px 24px 12px;
 
@@ -190,7 +184,7 @@ img.responsive {
     }
 
     .seance__date {
-      color: #B5ACEE;
+      color: #b5acee;
       font-weight: 600;
     }
     transition: all 0.3s ease;
@@ -198,24 +192,30 @@ img.responsive {
       cursor: pointer;
       transform: scale(1.06);
     }
+  }
+  @media screen and (min-width: 840px) {
+    padding: 4em 0;
+  }
+  @media (max-width: 839px) {
+    padding: 1.5em 0;
+  }
 }
-}
+
 //* Section: Become a speaker! *//
 #speakers {
-  padding: 4em 0;
   .speakers__box {
     display: contents;
-      align-content: space-evenly;
+    align-content: space-evenly;
     .speakers__box--content {
       display: inline-flex;
-    span {
-      padding-right: 20px;  
-      align-self: center;
+      span {
+        padding-right: 20px;
+        align-self: center;
       }
     }
   }
   p {
-    color: #B7BBC8;
+    color: #b7bbc8;
   }
   .btn--fill:hover {
     background-color: transparent;
@@ -223,7 +223,13 @@ img.responsive {
     a {
       color: #fff;
     }
-}
+  }
+  @media screen and (min-width: 840px) {
+    padding: 4em 0;
+  }
+  @media (max-width: 839px) {
+    padding: 1.5em 0;
+  }
 }
 
 ///* MD GRID DESKTOP BREAKPOINT*/
